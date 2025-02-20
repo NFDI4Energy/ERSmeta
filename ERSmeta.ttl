@@ -1,0 +1,691 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix m4i: <http://w3id.org/nfdi4ing/metadata4ing#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vocabterms: <https://purl.org/coscine/terms/> .
+@prefix aps: <https://purl.org/coscine/ap/> .
+
+<https://purl.org/coscine/ap/2044933f-8037-4343-a386-be1b2151feba/> dcterms:created "2025-02-18"^^xsd:date ;
+	dcterms:creator "Stephan Ferenz" ;
+	dcterms:description "This metadata schema is meant to create general metadata for research software in the energy domain."@en ;
+	dcterms:license <http://spdx.org/licenses/CC0-1.0> ;
+	dcterms:subject <https://github.com/tibonto/dfgfo/408-03> ;
+	dcterms:title "EnergyResearchSoftware"@en ;
+	a rdfs:Class, sh:NodeShape ;
+	owl:imports <https://purl.org/coscine/ap/0da134cb-d106-409f-b4f2-a30f2cf85446/>, <https://purl.org/coscine/ap/0ff7a04a-3b71-4f7f-9086-0513e4bd3111/>, <https://purl.org/coscine/ap/3305962f-3ca2-4487-af28-73ebbdaf9fab/>, <https://purl.org/coscine/ap/374c7aff-2686-4cf4-83d4-dfed8d8cb722/>, <https://purl.org/coscine/ap/3e1a8359-5bf2-478c-96da-b02305e5d2a8/>, <https://purl.org/coscine/ap/467bbcdf-5072-4e2f-9fc0-b910d222355c/>, <https://purl.org/coscine/ap/7baa7e95-e961-49dc-adba-53d8f5c7724e/>, <https://purl.org/coscine/ap/8b6345e0-1cba-46c3-978e-dc7b0f67e118/>, <https://purl.org/coscine/ap/f44038ff-e5ee-4626-964b-6476ad868f3a/>, <https://schema.org/SoftwareApplication> ;
+	sh:closed false ;
+	sh:node <https://schema.org/SoftwareApplication> ;
+	sh:property [
+		sh:datatype xsd:string ;
+		sh:description "Name of the software."@en ;
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		sh:name "name"@en ;
+		sh:order 1 ;
+		sh:path <https://schema.org/name> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Abbreviation of the software name."@en ;
+		sh:maxCount 1 ;
+		sh:name "acronym"@en ;
+		sh:order 2 ;
+		sh:path <https://w3id.org/okn/o/sd#hasShortName> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "A description of the software. Max 200 words."@de ;
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		sh:name "description"@en ;
+		sh:order 9 ;
+		sh:path <https://schema.org/description> ;
+	], [
+		sh:datatype xsd:anyURI ;
+		sh:description "Graphical overview on the functionality of the software."@de ;
+		sh:name "graphicalAbstract"@en ;
+		sh:order 11 ;
+		sh:path <https://schema.org/image> ;
+	], [
+		sh:datatype xsd:anyURI ;
+		sh:description "The identifier property represents any kind of identifier for any kind of Thing, such as DOI, ISBNs, GTIN codes, UUIDs etc."@en ;
+		sh:maxCount 1 ;
+		sh:name "identifier"@en ;
+		sh:order 3 ;
+		sh:path <https://schema.org/identifier> ;
+	], [
+		sh:datatype xsd:boolean ;
+		sh:description "A flag to signal that the software is accessible for free."@en ;
+		sh:name "isAccessibleForFree"@de, "isAccessibleForFree"@en ;
+		sh:order 28 ;
+		sh:path schema:isAccessibleForFree ;
+	], [
+		sh:datatype xsd:anyURI ;
+		sh:description "If the file can be downloaded, URL to download the binary."@en ;
+		sh:minCount 1 ;
+		sh:name "downloadUrl"@de, "downloadUrl"@en ;
+		sh:order 38 ;
+		sh:path schema:downloadUrl ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex, institutional GitLab instance, etc.)."@en ;
+		sh:name "codeRepository"@de, "codeRepository"@en ;
+		sh:order 39 ;
+		sh:path schema:codeRepository ;
+	], [
+		sh:datatype xsd:date ;
+		sh:description "The date on which the software was initially created."@en ;
+		sh:minCount 1 ;
+		sh:name "dateCreated"@de, "dateCreated"@en ;
+		sh:order 30 ;
+		sh:path schema:dateCreated ;
+	], [
+		sh:datatype xsd:anyURI ;
+		sh:description "Link to the documentation describing the code and is usful for developers."@en ;
+		sh:name "documentation"@en ;
+		sh:order 40 ;
+		sh:path <https://w3id.org/okn/o/sd#hasDocumentation> ;
+	], [
+		sh:datatype xsd:anyURI ;
+		sh:description """Link to the documentation describing the code and is usful for developers.
+"""@en ;
+		sh:name "readme"@de, "readme"@en ;
+		sh:order 41 ;
+		sh:path <https://codemeta.github.io/terms/readme> ;
+	], [
+		sh:datatype xsd:anyURI ;
+		sh:description "Link to installation instructions/documentation."@en ;
+		sh:name "buildInstruction"@en ;
+		sh:order 42 ;
+		sh:path <https://codemeta.github.io/terms/buildInstruction> ;
+	], [
+		sh:node <https://purl.org/coscine/ap/8b6345e0-1cba-46c3-978e-dc7b0f67e118/> ;
+		sh:description "Institution which developed the software."@en ;
+		sh:name "sourceOrganization"@de, "sourceOrganization"@en ;
+		sh:order 35 ;
+		sh:path schema:sourceOrganization ;
+	], [
+		sh:datatype xsd:boolean ;
+		sh:description "Is support for the software provided?"@en ;
+		sh:name "supportGiven"@en ;
+		sh:order 43 ;
+		sh:path <http://ontosoft.org/software#hasSoftwareSupport> ;
+	], [
+		sh:description "Structure of the development team."@en ;
+		sh:name "developerStructure"@en ;
+		sh:order 21 ;
+		sh:path <https://purl.org/coscine/terms/5f6b7044-49c8-43c2-947f-bc31248390e2/> ;
+		sh:in (
+			"Individual Researcher"
+			"Local Research Group"
+			"Project Group"
+			"Community (Open Source Resarch Software, Closed Source Research Software, Research Software as a Service)"
+			"Contractor (Open Source Resarch Software, Closed Source Research Software, Research Software as a Service)"
+		) ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "How long would a researcher need to be able to use the software?"@en ;
+		sh:name "requiredTrainingPeriod"@en ;
+		sh:order 44 ;
+		sh:path <https://purl.org/coscine/terms/8e5e768d-7229-4f14-8ca9-6adff61c2cc6/> ;
+	], [
+		sh:node <https://purl.org/coscine/ap/3305962f-3ca2-4487-af28-73ebbdaf9fab/> ;
+		sh:description "Any academic publication which describes the software."@en ;
+		sh:name "referencePublication"@en ;
+		sh:order 24 ;
+		sh:path <https://codemeta.github.io/terms/referencePublication> ;
+	], [
+		sh:node <https://purl.org/coscine/ap/7baa7e95-e961-49dc-adba-53d8f5c7724e/> ;
+		sh:description "Code examples for using the software."@en ;
+		sh:name "example"@en ;
+		sh:order 45 ;
+		sh:path <https://w3id.org/okn/o/sd#hasExample> ;
+	], [
+		sh:datatype xsd:anyURI ;
+		sh:description "Homepage of the tool. URL of the item."@en ;
+		sh:name "website"@en ;
+		sh:order 19 ;
+		sh:path <https://schema.org/url> ;
+	], [
+		sh:description """Research category for which the software was written.
+"""@en ;
+		sh:name "category"@en ;
+		sh:order 13 ;
+		sh:path <https://schema.org/applicationSubCategory> ;
+		sh:in (
+			"Research on components"
+			"Control strategies for energy systems"
+			"Grid planning"
+			"Transition of the energy system,"
+			"Energy markets"
+			"Other"
+		) ;
+	], [
+		sh:description "Type of software application, e.g. 'script'."@en ;
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		sh:name "softwareType"@en ;
+		sh:order 14 ;
+		sh:path <https://purl.org/coscine/terms/5421d481-8e2d-4190-bde8-e0f60983d875/> ;
+		sh:in (
+			"GUI-framework"
+			"Command-line tool"
+			"Database portal"
+			"Desktop application"
+			"Library"
+			"Plug-in"
+			"Script"
+			"Web application"
+			"Web API"
+			"Web service"
+			"Workbench"
+			"Workflow"
+		) ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "A one-line summary of what the software does."@en ;
+		sh:maxCount 1 ;
+		sh:name "summary"@en ;
+		sh:order 8 ;
+		sh:path <https://schema.org/abstract> ;
+	], [
+		sh:description "Kind of tasks that the software tasks over in research."@en ;
+		sh:name "roleInResearch"@de, "roleInResearch"@en ;
+		sh:order 18 ;
+		sh:path prov:hadRole ;
+		sh:in (
+			"Modeling and Simulation"
+			"Numerical Modeling"
+			"Agent-based Modeling"
+			"Data Analytics"
+			"Observation Data Analytics"
+			" Simulation Data Analytics"
+			"Statistical Analysis"
+			"Machine Learning"
+			"Integrative Analysis"
+			"Data Assimilation"
+			"Decision Analysis"
+			"Scientific Visualization"
+			"Proof-of-Concept Software"
+			"Research Infrastructure Software"
+			"Control and Monitoring Software (Embedded, Web-based, Native)"
+			"Data Collection"
+			"Pipelines/Workflows"
+			"Libraries"
+			"Laboratiry Notebooks"
+			"Data Management"
+			"Software Management"
+			"Collaboration Software"
+		) ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Country where the software was developed. Country codes as defined by ISO 3166-1 alpha-2 should be used."@en ;
+		sh:name "countryOfOrigin"@de, "countryOfOrigin"@en ;
+		sh:order 36 ;
+		sh:path schema:countryOfOrigin ;
+		sh:maxLength 2 ;
+	], [
+		sh:description "Description of development status, e.g. Active, inactive, suspended. See repostatus.org"@en ;
+		sh:name "developmentStatus"@en ;
+		sh:order 20 ;
+		sh:path <https://codemeta.github.io/terms/developmentStatus> ;
+		sh:in (
+			"Concept"
+			"WIP"
+			"Suspended"
+			"Abandoned"
+			"Active"
+			"Inactive"
+			"Unsupported"
+			"Moved"
+		) ;
+	], [
+		sh:node <https://purl.org/coscine/ap/3e1a8359-5bf2-478c-96da-b02305e5d2a8/> ;
+		sh:description "Ways how the software developers interact with the software users (community)."@en ;
+		sh:name "communityInteractions"@en ;
+		sh:order 46 ;
+		sh:path <https://purl.org/coscine/terms/ec3d9e8a-995c-4366-8205-6362ea512218/> ;
+	], [
+		sh:datatype xsd:date ;
+		sh:description """"	The date on which the software was most recently modified."
+"""@en ;
+		sh:name "dateModified"@de, "dateModified"@en ;
+		sh:order 31 ;
+		sh:path schema:dateModified ;
+	], [
+		sh:node <https://purl.org/coscine/ap/0da134cb-d106-409f-b4f2-a30f2cf85446/> ;
+		sh:description "A person who has contributed to the software."@en ;
+		sh:minCount 1 ;
+		sh:name "contributor"@de, "contributor"@en ;
+		sh:order 32 ;
+		sh:path schema:contributor ;
+	], [
+		sh:node <https://purl.org/coscine/ap/467bbcdf-5072-4e2f-9fc0-b910d222355c/> ;
+		sh:description "Typical cost for licensing the software, if available."@en ;
+		sh:name "estimatedCost"@de, "estimatedCost"@en ;
+		sh:order 29 ;
+		sh:path schema:estimatedCost ;
+	], [
+		sh:node <https://purl.org/coscine/ap/3305962f-3ca2-4487-af28-73ebbdaf9fab/> ;
+		sh:description "A reference to another work that should be cited instead of the software or dataset itself. Note that the principles of  \"software citation\" and \"data citation\" require that software should be cited on the same basis as any other research product such as a paper or a book. Adding a different preferred citation may result in a violation of the respective primary principle, \"Importance\", when others cite this work."@en ;
+		sh:maxCount 1 ;
+		sh:name "preferredCitation"@en ;
+		sh:order 25 ;
+		sh:path <https://w3id.org/okn/o/sd#citation> ;
+	], [
+		sh:datatype xsd:anyURI ;
+		sh:description "Link to the logo of the software."@en ;
+		sh:maxCount 1 ;
+		sh:name "logo"@en ;
+		sh:order 4 ;
+		sh:path <https://schema.org/thumbnailUrl> ;
+	], [
+		sh:datatype xsd:anyURI ;
+		sh:description """Link to software bug reporting or issue tracking system
+"""@en ;
+		sh:name "issueTracker"@en ;
+		sh:order 23 ;
+		sh:path <https://codemeta.github.io/terms/issueTracker> ;
+	], [
+		sh:node <https://purl.org/coscine/ap/3305962f-3ca2-4487-af28-73ebbdaf9fab/> ;
+		sh:description "A publication which uses the software for its research."@en ;
+		sh:name "usedInPublication"@en ;
+		sh:order 47 ;
+		sh:path <http://ontosoft.org/software#usedInPublication> ;
+	], [
+		sh:node <https://purl.org/coscine/ap/374c7aff-2686-4cf4-83d4-dfed8d8cb722/> ;
+		sh:description "Description of the output functions of the software (e.g., APIs)"@en ;
+		sh:name "output"@en ;
+		sh:order 48 ;
+		sh:path <http://purl.obolibrary.org/obo/RO_0002234> ;
+	], [
+		sh:description """How often is the software updated?
+"""@en ;
+		sh:name "cycleOfUpdates"@en ;
+		sh:order 22 ;
+		sh:path <https://purl.org/coscine/terms/f2edc940-7a8c-435f-902e-f8f163c07f45/> ;
+		sh:in (
+			"Weekly"
+			"Monthly"
+			"Quarterly"
+			"Irregularly"
+		) ;
+	], [
+		sh:node <https://purl.org/coscine/ap/8b6345e0-1cba-46c3-978e-dc7b0f67e118/> ;
+		sh:description "The party holding the legal copyright to the CreativeWork."@en ;
+		sh:name "copyrightHolder"@de, "copyrightHolder"@en ;
+		sh:order 27 ;
+		sh:path schema:copyrightHolder ;
+	], [
+		sh:datatype xsd:string ;
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		sh:name "softwareVersion"@en ;
+		sh:order 5 ;
+		sh:path <https://schema.org/softwareVersion> ;
+	], [
+		sh:node <https://purl.org/coscine/ap/0da134cb-d106-409f-b4f2-a30f2cf85446/> ;
+		sh:description "A person who has authored the software."@en ;
+		sh:name "author"@de, "author"@en ;
+		sh:order 33 ;
+		sh:path schema:author ;
+	], [
+		sh:description "The computer programming language in which the software is written."@en ;
+		sh:minCount 1 ;
+		sh:name "programmingLanguage"@en ;
+		sh:order 6 ;
+		sh:path <https://schema.org/programmingLanguage> ;
+		sh:class <https://www.wikidata.org/wiki/Q9143> ;
+	], [
+		sh:node <https://purl.org/coscine/ap/0da134cb-d106-409f-b4f2-a30f2cf85446/> ;
+		sh:description "Individual responsible for maintaining the software."@en ;
+		sh:maxCount 1 ;
+		sh:name "maintainer"@de, "maintainer"@en ;
+		sh:order 34 ;
+		sh:path schema:maintainer ;
+	], [
+		sh:node <https://purl.org/coscine/ap/374c7aff-2686-4cf4-83d4-dfed8d8cb722/> ;
+		sh:description "Description of the input functions of the software (e.g., APIs)"@en ;
+		sh:name "input"@en ;
+		sh:order 49 ;
+		sh:path <http://purl.obolibrary.org/obo/RO_0002233> ;
+	], [
+		sh:node <https://purl.org/coscine/ap/f44038ff-e5ee-4626-964b-6476ad868f3a/> ;
+		sh:description "Information on the funding which was used to develop the software."@en ;
+		sh:name "funding"@de, "funding"@en ;
+		sh:order 37 ;
+		sh:path schema:funding ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Keywords or tags used to describe this software."@en ;
+		sh:minCount 1 ;
+		sh:name "keywords"@en ;
+		sh:order 10 ;
+		sh:path <https://schema.org/keywords> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Language used within the software (e.g. variables, documentation). Standard: IETF (BCP47)"@en ;
+		sh:name "naturalLanguage"@en ;
+		sh:order 7 ;
+		sh:path <https://schema.org/inLanguage> ;
+		sh:maxLength 2 ;
+	], [
+		sh:description """Research domain for which the software was written.
+"""@en ;
+		sh:name "domain"@en ;
+		sh:order 12 ;
+		sh:path <https://schema.org/applicationCategory> ;
+		sh:in (
+			"Social Science"
+			"Economics"
+			"Jurisprudence"
+			"Chemistry"
+			"Physics"
+			"Mathematics"
+			"Geosciences"
+			"Production Technology"
+			"Mechanics and Constructive Mechanical Engineering"
+			"Process Engineering, Technical Chemistry"
+			"Fluid Mechanics, Technical Thermodynamics and Thermal Energy Engineering"
+			"Materials Engineering"
+			"Materials Science"
+			"System Engineering; Electrical Engineering and Information Technology"
+			"Computer Science"
+			"Construction Engineering and Architecture"
+		) ;
+	], [
+		sh:node <https://purl.org/coscine/ap/0ff7a04a-3b71-4f7f-9086-0513e4bd3111/> ;
+		sh:description "A license document that applies to this software."@en ;
+		sh:minCount 1 ;
+		sh:name "license"@en ;
+		sh:order 26 ;
+		sh:path <https://schema.org/license> ;
+	], [
+		sh:node <https://purl.org/coscine/ap/0ff7a04a-3b71-4f7f-9086-0513e4bd3111/> ;
+		sh:description "A software which can directly be used with the software without further changes."@en ;
+		sh:name "compatibleSoftware"@en ;
+		sh:order 50 ;
+		sh:path <http://ontosoft.org/software#hasCompatibleSoftware> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Hardware which is compatible to this software (e.g., in labs)."@en ;
+		sh:name "compatibleHardware"@en ;
+		sh:order 51 ;
+		sh:path <https://purl.org/coscine/terms/e78dfc50-0a14-4ccf-9a23-df9b1a7da6fd/> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Data which is compatible to this software."@en ;
+		sh:name "compatibleData"@en ;
+		sh:order 52 ;
+		sh:path <http://ontosoft.org/software#hasRelevantDataSources> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Data that is directly used by the provided software"@en ;
+		sh:name "usedData"@en ;
+		sh:order 53 ;
+		sh:path <https://purl.org/coscine/terms/5f6e7dcf-232d-43c9-93ab-40656e85e0e8/> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "A general goal/purpose of the software."@en ;
+		sh:name "purpose"@en ;
+		sh:order 54 ;
+		sh:path <https://w3id.org/okn/o/sd#hasPurpose> ;
+	], [
+		sh:description "An used method in the software."@en ;
+		sh:name "implementsMethod"@en, "implementsMethod"@de ;
+		sh:order 55 ;
+		sh:path m4i:implementsMethod ;
+		sh:class m4i:Method ;
+	], [
+		sh:description "A supported sector of the software. A sector is generically dependent continuant that is a subdivision of a system."@en ;
+		sh:name "coversSector"@en ;
+		sh:order 56 ;
+		sh:path <http://openenergy-platform.org/ontology/oeo/OEO_00000505> ;
+		sh:class <http://openenergy-platform.org/ontology/oeo/OEO_00000367> ;
+	], [
+		sh:description "A supported energy technology of the software."@en ;
+		sh:name "technology"@en ;
+		sh:order 57 ;
+		sh:path <http://openenergy-platform.org/ontology/oeo/OEO_00000521> ;
+		sh:class <http://openenergy-platform.org/ontology/oeo/OEO_00000407> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "A required assumption of the software."@en ;
+		sh:name "assumption"@en ;
+		sh:order 58 ;
+		sh:path <https://w3id.org/okn/o/sd#hasAssumption> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Other supported use case, e.g., a research question which can be answered with the software besides the main goal."@en ;
+		sh:name "useCase"@en ;
+		sh:order 59 ;
+		sh:path <https://purl.org/coscine/terms/c6d349c3-e4f7-43f3-ae56-a98cbf67423c/> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "A component of the energy system included in the software."@en ;
+		sh:name "energyComponent"@en ;
+		sh:order 60 ;
+		sh:path <https://purl.org/coscine/terms/cb9a5fec-4a71-4465-9405-b571717a064d/> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "A limitation of the software."@en ;
+		sh:name "limitation"@en ;
+		sh:order 61 ;
+		sh:path <http://ontosoft.org/software#hasUseLimitations> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "A relevant internal parameter of the software."@en ;
+		sh:name "parameter"@en ;
+		sh:order 62 ;
+		sh:path <https://w3id.org/okn/o/sd#hasParameter> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description """A feature of the software.
+"""@en ;
+		sh:name "featureList"@en, "featureList"@de ;
+		sh:order 63 ;
+		sh:path schema:featureList ;
+	], [
+		sh:description "Supported temporal resolution of the software. Temporal resolution is the resolution that indicates time-dependent the level of detail."@en ;
+		sh:name "hasTemporalResolution"@en ;
+		sh:order 64 ;
+		sh:path <http://openenergy-platform.org/ontology/oeo/OEO_00000516\u0020> ;
+		sh:in (
+			"annual"
+			"monthly"
+			"weekly"
+			"daily"
+			"hourly"
+			"quarter-hourly"
+			"minutely"
+			"secondly"
+			"unlimited"
+			"other"
+			"none"
+		) ;
+	], [
+		sh:description "Time scope the software was developed for (e.g. 2010, 2050)."@en ;
+		sh:maxCount 1 ;
+		sh:name "temporalCoverage"@en, "temporalCoverage"@de ;
+		sh:order 65 ;
+		sh:path schema:temporalCoverage ;
+		sh:in (
+			"Short term (<= 5 years)"
+			"Medium term (>5-<15)"
+			"Long term (>=15)"
+			"Other"
+		) ;
+	], [
+		sh:description "Does the software support stationary or transient effects?"@en ;
+		sh:name "stationaryVsTransient"@en ;
+		sh:order 66 ;
+		sh:path <https://purl.org/coscine/terms/65341a2f-8212-40f9-be28-02743a0966e9/> ;
+		sh:in (
+			"Stationary"
+			"Transient"
+		) ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Supported spatial resolution of the software. Spatial resolution is the resolution that indicates the geographical level of detail."@en ;
+		sh:name "hasSpatialResolution"@en ;
+		sh:order 67 ;
+		sh:path <http://openenergy-platform.org/ontology/oeo/OEO_00000515\u0020> ;
+	], [
+		sh:description "Supported dimensions of the software."@en ;
+		sh:name "dimensions"@en ;
+		sh:order 68 ;
+		sh:path <https://purl.org/coscine/terms/b6ad4daa-dac1-41c7-9a7b-36ba977de711/> ;
+		sh:in (
+			"1D"
+			"2D"
+			"3D"
+		) ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Geo scope the software was developed for (e.g., microgrid, Germany, Europe)."@en ;
+		sh:maxCount 1 ;
+		sh:name "spatialScope"@en ;
+		sh:order 69 ;
+		sh:path <https://purl.org/coscine/terms/ceae3344-0604-4a88-97b7-bd015281a31e/> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Regions covered by the model. Leave this blank if the model and data are not limited to a specific region. Examples include: USA, Canada, Germany, western Europe."@en ;
+		sh:name "spatialCoverage"@en, "spatialCoverage"@de ;
+		sh:order 70 ;
+		sh:path schema:spatialCoverage ;
+	], [
+		sh:description "Supported voltage level of the software."@en ;
+		sh:name "supportedVoltageLevel"@en ;
+		sh:order 71 ;
+		sh:path <https://purl.org/coscine/terms/dec27fd2-3294-4ff0-bf2c-ea05a53be996/> ;
+		sh:in (
+			"Low Voltage"
+			"Medium Voltage"
+			"High Voltage"
+			""
+		) ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Information on an optimization included in the software."@en ;
+		sh:name "usedOptimization"@en ;
+		sh:order 72 ;
+		sh:path <https://purl.org/coscine/terms/caa024d4-884c-41a6-97ea-8778f3f5ada2/> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "A review of the software."@en ;
+		sh:name "review"@en, "review"@de ;
+		sh:order 73 ;
+		sh:path schema:review ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Information on the tests of the software."@en ;
+		sh:name "tests"@en ;
+		sh:order 74 ;
+		sh:path <https://purl.org/coscine/terms/664d8444-8e72-446a-920b-d6537b23755f/> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Information on validations done for the software. Validation refers to whether the software produces results that correspond to real-world properties."@en ;
+		sh:name "validation"@en ;
+		sh:order 75 ;
+		sh:path <https://purl.org/coscine/terms/0fdf7e4e-a2a0-428d-8b7e-388c52402b01/> ;
+	], [
+		sh:description "Typical minimal hardware which is required to run the software."@en ;
+		sh:name "typicalHardware"@en ;
+		sh:order 76 ;
+		sh:path schema:availableOnDevice ;
+		sh:in (
+			"Laptop"
+			"Desktop Computer/Work station"
+			"HPC"
+		) ;
+	], [
+		sh:datatype xsd:float ;
+		sh:description "Typical execution time of the software."@en ;
+		sh:name "typicalExcecutionTime"@en, "typicalExcecutionTime"@de ;
+		sh:order 77 ;
+		sh:path schema:timeRequired ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Processor architecture required to run the application (e.g. IA64)."@en ;
+		sh:maxCount 1 ;
+		sh:name "processorRequirements"@en, "processorRequirements"@de ;
+		sh:order 78 ;
+		sh:path schema:processorRequirements ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Minimum memory requirements."@en ;
+		sh:maxCount 1 ;
+		sh:name "memoryRequirements"@en, "memoryRequirements"@de ;
+		sh:order 79 ;
+		sh:path schema:memoryRequirements ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Storage requirements (free space required)."@en ;
+		sh:maxCount 1 ;
+		sh:name "storageRequirements"@en, "storageRequirements"@de ;
+		sh:order 80 ;
+		sh:path schema:storageRequirements ;
+	], [
+		sh:description "What kind of realtime simulations are supported by the software?"@en ;
+		sh:name "realtimeCapablity"@en ;
+		sh:order 81 ;
+		sh:path <https://purl.org/coscine/terms/70904a37-9da0-4c04-bd87-c4dafd4142b5/> ;
+		sh:in (
+			"Hard"
+			"Firm"
+			"Soft"
+			"None"
+		) ;
+	], [
+		sh:datatype xsd:boolean ;
+		sh:description "Does the software support parallization?"@en ;
+		sh:name "parallelizationCapability"@en ;
+		sh:order 82 ;
+		sh:path <https://purl.org/coscine/terms/d9b61525-69d3-486e-adbd-a051aba1e74e/> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Target programming enviroments to which the code applies. If applies to several versions, just the product name can be used."@en ;
+		sh:name "targetProduct"@en, "targetProduct"@de ;
+		sh:order 83 ;
+		sh:path schema:targetProduct ;
+	], [
+		sh:name "operatingSystem"@en, "operatingSystem"@de ;
+		sh:order 84 ;
+		sh:path schema:operatingSystem ;
+		sh:class <https://www.wikidata.org/wiki/Q9135> ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Required software dependencies."@en ;
+		sh:name "softwareRequirements"@en, "softwareRequirements"@de ;
+		sh:order 85 ;
+		sh:path schema:softwareRequirements ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed."@en ;
+		sh:name "fileSize"@en, "fileSize"@de ;
+		sh:order 86 ;
+		sh:path schema:fileSize ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "The type and version number of the metadata."@en ;
+		sh:name "schemaVersion"@en, "schemaVersion"@de ;
+		sh:order 87 ;
+		sh:path schema:schemaVersion ;
+		sh:defaultValue "1.5" ;
+	], [
+		sh:node <https://purl.org/coscine/ap/0ff7a04a-3b71-4f7f-9086-0513e4bd3111/> ;
+		sh:description "The license of the provided metadata."@en ;
+		sh:name "sdLicense"@en, "sdLicense"@de ;
+		sh:order 88 ;
+		sh:path schema:sdLicense ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisher property helps make such practices more explicit."@en ;
+		sh:name "sdPublisher"@en, "sdPublisher"@de ;
+		sh:order 89 ;
+		sh:path schema:sdPublisher ;
+	] .
+
