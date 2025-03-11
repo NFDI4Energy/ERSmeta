@@ -7,22 +7,22 @@
 @prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix okn: <https://w3id.org/okn/o/> .
+@prefix okn: <https://w3id.org/okn/o/sd#> .
 @prefix codemeta: <https://codemeta.github.io/terms/> .
-@prefix ontosoft: <http://ontosoft.org/> .
+@prefix ontosoft: <http://ontosoft.org/software#> .
 @prefix obo: <http://purl.obolibrary.org/obo> .
-@prefix oeo: <http://openenergy-platform.org/ontology/oeo> .
+@prefix oeo: <http://openenergy-platform.org/ontology/oeo/> .
 @prefix ersmeta: <https://nfdi4energy.github.io/terms/> .
 
-<ersmeta:EnergyResearchSoftware> dcterms:created "2025-02-18"^^xsd:date ;
+ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape;
+	dcterms:created "2025-02-18"^^xsd:date ;
 	dcterms:creator "Stephan Ferenz" ;
 	dcterms:description "This metadata schema is meant to create general metadata for research software in the energy domain."@en ;
 	dcterms:license <http://spdx.org/licenses/CC0-1.0> ;
 	dcterms:subject <https://github.com/tibonto/dfgfo/408-03> ;
 	dcterms:title "EnergyResearchSoftware"@en ;
-	a rdfs:Class, sh:NodeShape ;
+	sh:extends schema:SoftwareApplication ;
 	sh:closed false ;
-	sh:node ersmeta:EnergyResearchSoftware;
 	sh:property [
 		sh:datatype xsd:string ;
 		sh:description "Name of the software."@en ;
@@ -37,7 +37,7 @@
 		sh:maxCount 1 ;
 		sh:name "acronym"@en ;
 		sh:order 2 ;
-		sh:path okn:sd#hasShortName ;
+		sh:path okn:hasShortName ;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "A description of the software. Max 200 words."@en ;
@@ -93,7 +93,7 @@
 		sh:maxCount 1 ;
 		sh:name "documentation"@en ;
 		sh:order 40 ;
-		sh:path okn:sd#hasDocumentation ;
+		sh:path okn:hasDocumentation ;
 	], [
 		sh:datatype xsd:anyURI ;
 		sh:description """Link to the documentation describing the code and is usful for developers."""@en ;
@@ -120,7 +120,7 @@
 		sh:name "supportGiven"@en ;
 		sh:maxCount 1 ;
 		sh:order 43 ;
-		sh:path ontosoft:software#hasSoftwareSupport ;
+		sh:path ontosoft:hasSoftwareSupport ;
 	], [
 		sh:description "Structure of the development team."@en ;
 		sh:name "developerStructure"@en ;
@@ -151,7 +151,7 @@
 		sh:description "Code examples for using the software."@en ;
 		sh:name "example"@en ;
 		sh:order 45 ;
-		sh:path okn:sd#hasExample ;
+		sh:path okn:hasExample ;
 	], [
 		sh:datatype xsd:anyURI ;
 		sh:description "Homepage of the tool. URL of the item."@en ;
@@ -283,7 +283,7 @@
 		sh:maxCount 1 ;
 		sh:name "preferredCitation"@en ;
 		sh:order 25 ;
-		sh:path okn:sd#citation ;
+		sh:path okn:citation ;
 	], [
 		sh:datatype xsd:anyURI ;
 		sh:description "Link to the logo of the software."@en ;
@@ -302,7 +302,7 @@
 		sh:description "A publication which uses the software for its research."@en ;
 		sh:name "usedInPublication"@en ;
 		sh:order 47 ;
-		sh:path ontosoft:software#usedInPublication ;
+		sh:path ontosoft:usedInPublication ;
 	], [
 		sh:node ersmeta:Interface ;
 		sh:description "Description of the output functions of the software (e.g., APIs)"@en ;
@@ -415,7 +415,7 @@
 		sh:description "A software which can directly be used with the software without further changes."@en ;
 		sh:name "compatibleSoftware"@en ;
 		sh:order 50 ;
-		sh:path ontosoft:software#hasCompatibleSoftware ;
+		sh:path ontosoft:hasCompatibleSoftware ;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "Hardware which is compatible to this software (e.g., in labs)."@en ;
@@ -427,7 +427,7 @@
 		sh:description "Data which is compatible to this software."@en ;
 		sh:name "compatibleData"@en ;
 		sh:order 52 ;
-		sh:path ontosoft:software#hasRelevantDataSources ;
+		sh:path ontosoft:hasRelevantDataSources ;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "Data that is directly used by the provided software"@en ;
@@ -439,7 +439,7 @@
 		sh:description "A general goal/purpose of the software."@en ;
 		sh:name "purpose"@en ;
 		sh:order 54 ;
-		sh:path okn:sd#hasPurpose ;
+		sh:path okn:hasPurpose ;
 	], [
 		sh:description "An used method in the software."@en ;
 		sh:name "implementsMethod"@en, "implementsMethod"@de ;
@@ -463,7 +463,7 @@
 		sh:description "A required assumption of the software."@en ;
 		sh:name "assumption"@en ;
 		sh:order 58 ;
-		sh:path okn:sd#hasAssumption ;
+		sh:path okn:hasAssumption ;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "Other supported use case, e.g., a research question which can be answered with the software besides the main goal."@en ;
@@ -482,13 +482,13 @@
 		sh:description "A limitation of the software."@en ;
 		sh:name "limitation"@en ;
 		sh:order 61 ;
-		sh:path ontosoft:software#hasUseLimitations ;
+		sh:path ontosoft:hasUseLimitations ;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "A relevant internal parameter of the software."@en ;
 		sh:name "parameter"@en ;
 		sh:order 62 ;
-		sh:path okn:sd#hasParameter ;
+		sh:path okn:hasParameter ;
 	], [
 		sh:datatype xsd:string ;
 		sh:description """A feature of the software."""@en ;
@@ -701,3 +701,445 @@
 		sh:path schema:sdPublisher ;
 	] .
 
+ersmeta:CommunityInteraction a rdfs:Class, sh:NodeShape ;
+	dcterms:description "Describe the way a community around a software interacts."@en ;
+	sh:closed false ;
+	sh:extends schema:Thing ;
+	sh:property [
+		sh:description "Type of the interaction."@en ;
+		sh:in (
+			"Mailinglist"
+			"Issues"
+			"In-person meet-ups"
+			"Forum"
+			"Online meetings"
+			"Github discussions"
+		) ;
+		sh:name "additionalType"@de, "additionalType"@en ;
+		sh:order 1 ;
+		sh:maxCount 1 ;
+		sh:path schema:additionalType ;
+	], [
+		sh:description "Link to further information on the community interaction."@en ;
+		sh:name "url"@de, "url"@en ;
+		sh:order 2 ;
+		sh:maxCount 1 ;
+		sh:path schema:url ;
+		sh:datatype xsd:string ;
+	] .
+
+schema:DataSet a rdfs:Class, sh:NodeShape ;
+	dcterms:description "A body of structured information describing some topic(s) of interest."@en ;
+	sh:closed false ;
+	sh:property [
+		sh:path schema:identifier ;
+		sh:datatype xsd:string ;
+		sh:name "identifier"@en, "identifier"@de ;
+		sh:order 1 ;
+		sh:description "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc."@en ;
+	], [
+		sh:path schema:encodingFormat ;
+		sh:name "encodingFormat"@en, "encodingFormat"@de ;
+		sh:order 3 ;
+		sh:description "Format of the dataset."@en ;
+		sh:in (
+			"csv"
+			"xlsx"
+			"xml"
+			"mdf5"
+			"JSON"
+			"YAML"
+			"binary"
+			"Pandas"
+			"DataFrame/Serie"
+			"Python dict"
+			"db"
+			"mat"
+			"other"
+		) ;
+	], [
+		sh:path schema:url ;
+		sh:datatype xsd:string ;
+		sh:name "url"@en, "url"@de ;
+		sh:order 4 ;
+		sh:description "Link to the dataset."@en ;
+	] .
+
+ersmeta:EnergyComponent	a rdfs:Class, sh:NodeShape ;
+	dcterms:description "An energy component modelled within a simulation software"@en ;
+	sh:extends schema:Thing ;
+	sh:closed false ;
+	sh:property [
+		sh:path schema:identifier ;
+		sh:datatype xsd:string ;
+		sh:name "identifier"@en, "identifier"@de ;
+		sh:order 1 ;
+		sh:maxCount 1 ;
+		sh:description "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as Textual strings or as URL (URI) links. See background notes for more details."@en ;
+	], [
+		sh:path schema:name ;
+		sh:datatype xsd:string ;
+		sh:name "name"@en, "name"@de ;
+		sh:order 2 ;
+		sh:maxCount 1 ;
+		sh:description "Name of the component."@en ;
+	], [
+		sh:path schema:additionalType ;
+		sh:name "additionalType"@en, "additionalType"@de ;
+		sh:order 3 ;
+		sh:maxCount 1 ;
+		sh:description "Type of the component, e.g., pv"@en ;
+		sh:class oeo:OEO_00000407 ;
+	], [
+		sh:path ersmeta:levelOfDetail ;
+		sh:name "levelOfDetail"@en ;
+		sh:order 4 ;
+		sh:maxCount 1 ;
+		sh:description "Level of detail of the component."@en ;
+		sh:in (
+			"low (simple timeseries)"
+			"middle (linear equations with some parameters)"
+			"high (nonlinear equations with a high number of parameters)"
+		) ;
+	] .
+
+ersmeta:Example a rdfs:Class, sh:NodeShape ;
+	dcterms:description "Example for a Software Usage"@en ;
+	sh:extends schema:Thing ;
+	sh:property [
+		sh:description "Type of the example."@en ;
+		sh:in (
+			"Minimal"
+			"Long"
+			"Paper"
+			"Test"
+		) ;
+		sh:name "additionalType"@de, "additionalType"@en ;
+		sh:order 1 ;
+		sh:maxCount 1 ;
+		sh:path schema:additionalType ;
+	], [
+		sh:description "Name of the example."@en ;
+		sh:name "name"@de, "name"@en ;
+		sh:order 2 ;
+		sh:maxCount 1 ;
+		sh:path schema:name ;
+		sh:datatype xsd:string ;
+	], [
+		sh:description "Link to the example."@en ;
+		sh:name "url"@de, "url"@en ;
+		sh:order 3 ;
+		sh:maxCount 1 ;
+		sh:path schema:url ;
+		sh:datatype xsd:anyURI ;
+	] .
+
+schema:Grant a rdfs:Class, sh:NodeShape ;
+	dcterms:description "A grant, typically financial or otherwise quantifiable, of resources. Typically a funder sponsors some MonetaryAmount to an Organization or Person, sometimes not necessarily via a dedicated or long-lived Project, resulting in one or more outputs, or fundedItems. For financial sponsorship, indicate the funder of a MonetaryGrant. For non-financial support, indicate sponsor of Grants of resources (e.g. office space). Grants support activities directed towards some agreed collective goals, often but not always organized as Projects. Long-lived projects are sometimes sponsored by a variety of grants over time, but it is also common for a project to be associated with a single grant. The amount of a Grant is represented using amount as a MonetaryAmount."@en ;
+	sh:closed false ;
+	sh:property [
+		sh:datatype xsd:string ;
+		sh:description "Name of the project during which the software was developed."@en ;
+		sh:name "projectName"@de, "projectName"@en ;
+		sh:order 1 ;
+		sh:maxCount 1 ;
+		sh:path schema:name ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "An identifying grant number, in case of a publicly funded project, this number is assigned by the funding agency."@en ;
+		sh:name "grantNo"@de, "grantNo"@en ;
+		sh:order 2 ;
+		sh:maxCount 1 ;
+		sh:path schema:identifier ;
+	], [
+		sh:node schema:Organization ;
+		sh:description "A organization that supports (sponsors) something through some kind of financial contribution."@en ;
+		sh:name "funder"@de, "funder"@en ;
+		sh:order 3 ;
+		sh:path schema:funder ;
+	] .
+
+schema:MonetaryAmount a rdfs:Class, sh:NodeShape ;
+	dcterms:description "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use PriceSpecification Types to describe the price of an Offer, Invoice, etc."@en ;
+	sh:closed false ;
+	sh:property [
+		sh:datatype xsd:float ;
+		sh:name "value"@de, "value"@en ;
+		sh:description "The value of the estimatedCost."@en ;
+		sh:order 1 ;
+		sh:path schema:value ;
+	], [
+		sh:datatype xsd:string ;
+		sh:name "currency"@de, "currency"@en ;
+		sh:description "The currency in which the monetary amount is expressed. Use standard formats: ISO 4217 currency format, e.g. USD; Ticker symbol for cryptocurrencies, e.g. BTC; well known names for Local Exchange Trading Systems (LETS) and other currency types, e.g. Ithaca HOUR."@en ;
+		sh:order 2 ;
+		sh:path schema:currency ;
+	] .
+
+ersmeta:OptimizationTool a rdfs:Class, sh:NodeShape ;
+	sh:extends schema:SoftwareApplication ;
+	dcterms:description "A tool used for optimization"@en ;
+	sh:closed false ;
+	sh:property [
+		sh:path m4i:implementsMethod ;
+		sh:datatype xsd:string ;
+		sh:name "implementsMethod"@en, "implementsMethod"@de ;
+		sh:order 1 ;
+		sh:description "Method of the optimization."@en ;
+	], [
+		sh:path schema:featureList ;
+		sh:name "featureList"@en, "featureList"@de ;
+		sh:order 2 ;
+		sh:description "Features of the optimization."@en ;
+		sh:datatype xsd:string ;
+	], [
+		sh:path oeo:OEO_00000392 ;
+		sh:name "solver"@en ;
+		sh:order 3 ;
+		sh:description "Used solver for the optimization."@en ;
+		sh:datatype xsd:string ;
+	], [
+		sh:path ersmeta:problemType ;
+		sh:name "problemType"@en ;
+		sh:order 4 ;
+		sh:maxCount 1 ;
+		sh:description "Problem class of the optimization."@en ;
+		sh:datatype xsd:string ;
+	] .
+
+schema:Organization a rdfs:Class, sh:NodeShape ;
+	dcterms:description "An organization such as a school, NGO, corporation, club, etc."@en ;
+	sh:closed false ;
+	sh:property [
+		sh:datatype xsd:anyURI ;
+		sh:description "URL identifier, ideally a ROR for institutions."@en ;
+		sh:name "identifier"@de, "identifier"@en ;
+		sh:order 1 ;
+		sh:path schema:identifier ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "The official name of the organization, e.g. the registered company name."@en ;
+		sh:name "legalName"@de, "legalName"@en ;
+		sh:maxCount 1 ;
+		sh:order 2 ;
+		sh:path schema:legalName ;
+	] .
+
+schema:Person a rdfs:Class, sh:NodeShape ;
+	dcterms:description "A person (alive, dead, undead, or fictional)."@en ;
+	sh:closed false ;
+	sh:property [
+		sh:datatype xsd:anyURI ;
+		sh:description "URL identifier, ideally an ORCID ID for individuals, a FundRef ID for funders."@en ;
+		sh:name "identifier"@de, "identifier"@en ;
+		sh:order 1 ;
+		sh:path schema:identifier ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property."@en ;
+		sh:name "givenName"@de, "givenName"@en ;
+		sh:order 2 ;
+		sh:path schema:givenName ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property."@en ;
+		sh:name "familyName"@de, "familyName"@en ;
+		sh:order 3 ;
+		sh:path schema:familyName ;
+		sh:minCount 1 ;
+		sh:maxCount 1 ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Email address."@en ;
+		sh:name "email"@de, "email"@en ;
+		sh:order 4 ;
+		sh:path schema:email ;
+	], [
+		sh:description "Detailed role of a person."@en ;
+		sh:name "roleName"@de, "roleName"@en ;
+		sh:order 5 ;
+		sh:path schema:roleName ;
+		sh:in (
+			"Design"
+			"Coding"
+			"Testing"
+			"Debugging"
+			"Architecture"
+			"Support"
+			"Maintenance"
+			"Documentation"
+			"Management"
+		) ;
+	] .
+
+schema:Review a rdfs:Class, sh:NodeShape;
+	dcterms:description "Review of a software"@en ;
+	sh:closed false ;
+	sh:property [
+		sh:path schema:abstract ;
+		sh:datatype xsd:string ;
+		sh:name "abstract"@en, "abstract"@de ;
+		sh:order 1 ;
+		sh:description "A review of the source code."@en ;
+		sh:maxCount 1 ;
+	], [
+		sh:path schema:reviewBody ;
+		sh:datatype xsd:string ;
+		sh:name "reviewBody"@en, "reviewBody"@de ;
+		sh:order 2 ;
+		sh:description "The actual body of the review."@en ;
+		sh:maxCount 1 ;
+	], [
+		sh:path schema:reviewAspect ;
+		sh:datatype xsd:string ;
+		sh:name "reviewAspect"@en, "reviewAspect"@de ;
+		sh:order 3 ;
+		sh:description "This Review is relevant to this part or facet of the object being review."@en ;
+		sh:maxCount 1 ;
+	] .
+
+schema:ScholarlyArticle a rdfs:Class, sh:NodeShape ;
+	dcterms:description "A scholarly article."@en ;
+	sh:closed false ;
+	sh:property [
+		sh:datatype xsd:anyURI ;
+		sh:description "URL identifier, ideally a DOI for a publication."@en ;
+		sh:maxCount 1 ;
+		sh:name "identifier"@en ;
+		sh:order 1 ;
+		sh:path schema:identifier ;
+	] .
+
+ersmeta:TestCollection a rdfs:Class, sh:NodeShape ;
+	dcterms:description "Collection of Software Tests"@en ;
+	sh:extends schema:Collection ;
+	sh:closed false ;
+	sh:property [
+		sh:path schema:collectionSize ;
+		sh:datatype xsd:integer ;
+		sh:maxCount 1 ;
+		sh:name "collectionSize"@en, "collectionSize"@de ;
+		sh:order 1 ;
+		sh:description "Number of the tests of the software."@en ;
+	], [
+		sh:path schema:url ;
+		sh:datatype xsd:string ;
+		sh:name "url"@en, "url"@de ;
+		sh:order 2 ;
+		sh:description "Link to one or multiple test case."@en ;
+	] .
+
+ersmeta:Validation a rdfs:Class, sh:NodeShape ;
+	dcterms:description "Description of a validation of a software"@en ;
+	sh:extends schema:Thing ;
+	sh:closed false ;
+	sh:property [
+		sh:description "Type of the validation."@en ;
+		sh:in (
+			"Empirical validation"
+			"Analytical verification"
+			"Inter-model comparison"
+		) ;
+		sh:maxCount 1 ;
+		sh:name "additionalType"@de, "additionalType"@en ;
+		sh:order 1 ;
+		sh:path schema:additionalType ;
+	], [
+		sh:description "Link to further information on the validation."@en ;
+		sh:name "url"@de, "url"@en ;
+		sh:order 2 ;
+		sh:maxCount 1 ;
+		sh:path schema:url ;
+		sh:datatype xsd:anyURI ;
+	], [
+		sh:description "Factor on how close the validation was."@en ;
+		sh:name "similarityOfResults"@en ;
+		sh:order 3 ;
+		sh:maxCount 1 ;
+		sh:path ersmeta:similarityOfResults ;
+		sh:datatype xsd:float ;
+	] .
+
+schema:CreativeWork a rdfs:Class, sh:NodeShape ;
+	dcterms:description "The most generic kind of creative work, including books, movies, photographs, software programs, etc."@en ;
+	sh:extends schema:Thing ;
+	sh:closed false ;
+	sh:property [
+		sh:datatype xsd:anyURI ;
+		sh:name "identifier"@de, "identifier"@en ;
+		sh:order 1 ;
+		sh:path schema:identifier ;
+	], [
+		sh:datatype xsd:string ;
+		sh:name "name"@de, "name"@en ;
+		sh:order 2 ;
+		sh:path schema:name ;
+	] .
+
+ersmeta:Interface a rdfs:Class, sh:NodeShape ;
+	dcterms:description "Interface of a software"@en ;
+	sh:extends schema:Thing ;
+	sh:closed false ;
+	sh:property [
+		sh:path schema:identifier ;
+		sh:datatype xsd:anyURI ;
+		sh:name "identifier"@en, "identifier"@de ;
+		sh:order 1 ;
+		sh:maxCount 1 ;
+		sh:description "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as Textual strings or as URL (URI) links. See background notes for more details."@en ;
+	], [
+		sh:path schema:description ;
+		sh:datatype xsd:string ;
+		sh:name "description"@en, "description"@de ;
+		sh:order 2 ;
+		sh:maxCount 1 ;
+		sh:description "Description of the content exchanged via the interface."@en ;
+	], [
+		sh:path oeo:OEO_00000516 ;
+		sh:datatype xsd:string ;
+		sh:name "hasTemporalResolution"@en ;
+		sh:order 3 ;
+		sh:description "Description on the required temporal resolution for the interface."@en ;
+	], [
+		sh:path schema:encodingFormat ;
+		sh:name "encodingFormat"@en, "encodingFormat"@de ;
+		sh:order 4 ;
+		sh:description "Description of the allowed encoding format of the interface, e.g., csv"@en ;
+		sh:in (
+			"csv"
+			"xlsx"
+			"xml"
+			"txt"
+			"mdf5"
+			"JSON"
+			"YAML"
+			"binary"
+			"Pandas"
+			"DataFrame/Serie"
+			"Python dict"
+			"db"
+			"mat"
+			"other"
+		) ;
+	], [
+		sh:path ersmeta:required ;
+		sh:datatype xsd:boolean ;
+		sh:name "required"@en ;
+		sh:order 5 ;
+		sh:maxCount 1 ;
+		sh:description "Is it required to provide input to the interface?"@en ;
+	], [
+		sh:path ersmeta:usedStandard ;
+		sh:datatype xsd:string ;
+		sh:name "usedStandard"@en ;
+		sh:order 6 ;
+		sh:description "Supported standards of the API."@en ;
+	], [
+		sh:datatype xsd:string ;
+		sh:description "Example for the interface."@en ;
+		sh:name "example"@en ;
+		sh:order 7 ;
+		sh:path okn:hasExample ;
+	].
