@@ -13,15 +13,20 @@
 @prefix obo: <http://purl.obolibrary.org/obo> .
 @prefix oeo: <http://openenergy-platform.org/ontology/oeo/> .
 @prefix ersmeta: <https://nfdi4energy.github.io/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape;
+ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
+	dcterms:title "EnergyResearchSoftware"@en ;
+	rdfs:label "EnergyResearchSoftware";
 	dcterms:created "2025-02-18"^^xsd:date ;
+	dcterms:modified "2025-03-11"^^xsd:date ;
 	dcterms:creator "Stephan Ferenz" ;
-	dcterms:description "This metadata schema is meant to create general metadata for research software in the energy domain."@en ;
+	dcterms:description "This metadata schema includes general metadata elements for research software in the energy domain."@en ;
 	dcterms:license <http://spdx.org/licenses/CC0-1.0> ;
 	dcterms:subject <https://github.com/tibonto/dfgfo/408-03> ;
-	dcterms:title "EnergyResearchSoftware"@en ;
+	skos:definition "This is the main element to describe energy research software." ;
 	sh:extends schema:SoftwareApplication ;
+	sh:order 1;
 	sh:closed false ;
 	sh:property [
 		sh:datatype xsd:string ;
@@ -702,7 +707,9 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape;
 	] .
 
 ersmeta:CommunityInteraction a rdfs:Class, sh:NodeShape ;
-	dcterms:description "Describe the way a community around a software interacts."@en ;
+	rdfs:comment "Interaction with the community of the research software."@en ;
+	rdfs:label "CommunityInteraction";
+	sh:order 2;
 	sh:closed false ;
 	sh:extends schema:Thing ;
 	sh:property [
@@ -729,7 +736,9 @@ ersmeta:CommunityInteraction a rdfs:Class, sh:NodeShape ;
 	] .
 
 schema:DataSet a rdfs:Class, sh:NodeShape ;
-	dcterms:description "A body of structured information describing some topic(s) of interest."@en ;
+	rdfs:comment "A body of structured information describing some topic(s) of interest."@en ;
+	rdfs:label "DataSet" ;
+	sh:order 4;
 	sh:closed false ;
 	sh:property [
 		sh:path schema:identifier ;
@@ -766,7 +775,9 @@ schema:DataSet a rdfs:Class, sh:NodeShape ;
 	] .
 
 ersmeta:EnergyComponent	a rdfs:Class, sh:NodeShape ;
-	dcterms:description "An energy component modelled within a simulation software"@en ;
+	rdfs:comment "An energy component modelled within a simulation software"@en ;
+	rdfs:label "EnergyComponent";
+	sh:order 5;
 	sh:extends schema:Thing ;
 	sh:closed false ;
 	sh:property [
@@ -804,7 +815,9 @@ ersmeta:EnergyComponent	a rdfs:Class, sh:NodeShape ;
 	] .
 
 ersmeta:Example a rdfs:Class, sh:NodeShape ;
-	dcterms:description "Example for a Software Usage"@en ;
+	rdfs:comment "Example for a software usage"@en ;
+	rdfs:label "Example" ;
+	sh:order 6;
 	sh:extends schema:Thing ;
 	sh:property [
 		sh:description "Type of the example."@en ;
@@ -835,7 +848,8 @@ ersmeta:Example a rdfs:Class, sh:NodeShape ;
 	] .
 
 schema:Grant a rdfs:Class, sh:NodeShape ;
-	dcterms:description "A grant, typically financial or otherwise quantifiable, of resources. Typically a funder sponsors some MonetaryAmount to an Organization or Person, sometimes not necessarily via a dedicated or long-lived Project, resulting in one or more outputs, or fundedItems. For financial sponsorship, indicate the funder of a MonetaryGrant. For non-financial support, indicate sponsor of Grants of resources (e.g. office space). Grants support activities directed towards some agreed collective goals, often but not always organized as Projects. Long-lived projects are sometimes sponsored by a variety of grants over time, but it is also common for a project to be associated with a single grant. The amount of a Grant is represented using amount as a MonetaryAmount."@en ;
+	rdfs:comment "A grant, typically financial or otherwise quantifiable, of resources. Typically a funder sponsors some MonetaryAmount to an Organization or Person, sometimes not necessarily via a dedicated or long-lived Project, resulting in one or more outputs, or fundedItems. For financial sponsorship, indicate the funder of a MonetaryGrant. For non-financial support, indicate sponsor of Grants of resources (e.g. office space). Grants support activities directed towards some agreed collective goals, often but not always organized as Projects. Long-lived projects are sometimes sponsored by a variety of grants over time, but it is also common for a project to be associated with a single grant. The amount of a Grant is represented using amount as a MonetaryAmount."@en ;
+	sh:order 7;
 	sh:closed false ;
 	sh:property [
 		sh:datatype xsd:string ;
@@ -860,7 +874,9 @@ schema:Grant a rdfs:Class, sh:NodeShape ;
 	] .
 
 schema:MonetaryAmount a rdfs:Class, sh:NodeShape ;
-	dcterms:description "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use PriceSpecification Types to describe the price of an Offer, Invoice, etc."@en ;
+	rdfs:comment "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use PriceSpecification Types to describe the price of an Offer, Invoice, etc."@en ;
+	rdfs:label "MonetaryAmount";
+	sh:order 9;
 	sh:closed false ;
 	sh:property [
 		sh:datatype xsd:float ;
@@ -878,7 +894,9 @@ schema:MonetaryAmount a rdfs:Class, sh:NodeShape ;
 
 ersmeta:OptimizationTool a rdfs:Class, sh:NodeShape ;
 	sh:extends schema:SoftwareApplication ;
-	dcterms:description "A tool used for optimization"@en ;
+	rdfs:label "OptimizationTool";
+	rdfs:comment "A tool used for optimization"@en ;
+	sh:order 10;
 	sh:closed false ;
 	sh:property [
 		sh:path m4i:implementsMethod ;
@@ -908,7 +926,9 @@ ersmeta:OptimizationTool a rdfs:Class, sh:NodeShape ;
 	] .
 
 schema:Organization a rdfs:Class, sh:NodeShape ;
-	dcterms:description "An organization such as a school, NGO, corporation, club, etc."@en ;
+	rdfs:comment "An organization such as a school, NGO, corporation, club, etc."@en ;
+	rdfs:label "Organization";
+	sh:order 11;
 	sh:closed false ;
 	sh:property [
 		sh:datatype xsd:anyURI ;
@@ -926,7 +946,9 @@ schema:Organization a rdfs:Class, sh:NodeShape ;
 	] .
 
 schema:Person a rdfs:Class, sh:NodeShape ;
-	dcterms:description "A person (alive, dead, undead, or fictional)."@en ;
+	rdfs:comment "A person (alive, dead, undead, or fictional)."@en ;
+	rdfs:label "Person";
+	sh:order 12;
 	sh:closed false ;
 	sh:property [
 		sh:datatype xsd:anyURI ;
@@ -975,7 +997,9 @@ schema:Person a rdfs:Class, sh:NodeShape ;
 	] .
 
 schema:Review a rdfs:Class, sh:NodeShape;
-	dcterms:description "Review of a software"@en ;
+	rdfs:comment "A review of a software."@en ;
+	rdfs:label "Review";
+	sh:order 13;
 	sh:closed false ;
 	sh:property [
 		sh:path schema:abstract ;
@@ -1001,7 +1025,9 @@ schema:Review a rdfs:Class, sh:NodeShape;
 	] .
 
 schema:ScholarlyArticle a rdfs:Class, sh:NodeShape ;
-	dcterms:description "A scholarly article."@en ;
+	rdfs:comment "A scholarly article."@en ;
+	rdfs:label "ScholarlyArticle";
+	sh:order 14 ;
 	sh:closed false ;
 	sh:property [
 		sh:datatype xsd:anyURI ;
@@ -1013,7 +1039,9 @@ schema:ScholarlyArticle a rdfs:Class, sh:NodeShape ;
 	] .
 
 ersmeta:TestCollection a rdfs:Class, sh:NodeShape ;
-	dcterms:description "Collection of Software Tests"@en ;
+	rdfs:comment "A collection of Software Tests"@en ;
+	rdfs:label "TestCollection";
+	sh:order 15;
 	sh:extends schema:Collection ;
 	sh:closed false ;
 	sh:property [
@@ -1032,8 +1060,9 @@ ersmeta:TestCollection a rdfs:Class, sh:NodeShape ;
 	] .
 
 ersmeta:Validation a rdfs:Class, sh:NodeShape ;
-	dcterms:description "Description of a validation of a software"@en ;
+	dcterms:description "A validation of a software."@en ;
 	sh:extends schema:Thing ;
+	rdfs:label "Validation";
 	sh:closed false ;
 	sh:property [
 		sh:description "Type of the validation."@en ;
@@ -1063,8 +1092,10 @@ ersmeta:Validation a rdfs:Class, sh:NodeShape ;
 	] .
 
 schema:CreativeWork a rdfs:Class, sh:NodeShape ;
-	dcterms:description "The most generic kind of creative work, including books, movies, photographs, software programs, etc."@en ;
+	rdfs:comment "The most generic kind of creative work, including books, movies, photographs, software programs, etc."@en ;
 	sh:extends schema:Thing ;
+	rdfs:label "CreativeWork";
+	sh:order 3 ;
 	sh:closed false ;
 	sh:property [
 		sh:datatype xsd:anyURI ;
@@ -1079,8 +1110,10 @@ schema:CreativeWork a rdfs:Class, sh:NodeShape ;
 	] .
 
 ersmeta:Interface a rdfs:Class, sh:NodeShape ;
-	dcterms:description "Interface of a software"@en ;
+	rdfs:comment "An interface of a software"@en ;
+	rdfs:label "Interface";
 	sh:extends schema:Thing ;
+	sh:order 8 ;
 	sh:closed false ;
 	sh:property [
 		sh:path schema:identifier ;
