@@ -12,7 +12,7 @@
 @prefix ontosoft: <http://ontosoft.org/software#> .
 @prefix obo: <http://purl.obolibrary.org/obo> .
 @prefix oeo: <http://openenergy-platform.org/ontology/oeo/> .
-@prefix ersmeta: <https://nfdi4energy.github.io/terms/> .
+@prefix ersmeta: <https://nfdi4energy.github.io/ERSmeta/#ersmeta:> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
