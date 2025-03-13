@@ -60,7 +60,7 @@ http://ontosoft.org/software#hasUseLimitations,limitation,Text,n,Bonus,A limitat
 https://w3id.org/okn/o/sd#hasParameter,parameter,Text,n,Bonus,A relevant internal parameter of the software.
 https://schema.org/featureList,featureList,Text,n,Bonus,A feature of the software.
 http://openenergy-platform.org/ontology/oeo/OEO_00000516 ,hasTemporalResolution,DefinedTerm,n,Bonus,Supported temporal resolution of the software. Temporal resolution is the resolution that indicates time-dependent the level of detail.
-https://schema.org/temporalCoverage,temporalCoverage,DefinedTerm,1,Bonus,Time scope the software was developed for (e.g. 2010, 2050).
+https://schema.org/temporalCoverage,temporalCoverage,DefinedTerm,1,Bonus,"Time scope the software was developed for (e.g. 2010, 2050)."
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:stationaryVsTransient,stationaryVsTransient,DefinedTerm,1,Bonus,Does the software support stationary or transient effects?
 http://openenergy-platform.org/ontology/oeo/OEO_00000515 ,hasSpatialResolution,Text,n,Bonus,Supported spatial resolution of the software. Spatial resolution is the resolution that indicates the geographical level of detail.
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:Dimensions,dimensions,DefinedTerm,n,Bonus,Supported dimensions of the software.
@@ -73,7 +73,7 @@ https://nfdi4energy.github.io/ERSmeta/#ersmeta:tests,tests,https://nfdi4energy.g
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,validation,https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,n,Bonus,Information on validations done for the software. Validation refers to whether the software produces results that correspond to real-world properties.
 https://schema.org/availableOnDevice,typicalHardware,DefinedTerm,n,Recommended,Typical minimal hardware which is required to run the software.
 https://schema.org/timeRequired,typicalExcecutionTime,Number,n,Recommended,Typical execution time of the software.
-https://schema.org/processorRequirements,processorRequirements,Text,1,Recommended,Processor architecture required to run the application (e.g. IA64).
+https://schema.org/processorRequirements,processorRequirements,Text,1,Recommended,"Processor architecture required to run the application (e.g. IA64)."
 https://schema.org/memoryRequirements,memoryRequirements,Text,1,Recommended,Minimum memory requirements.
 https://schema.org/storageRequirements,storageRequirements,Text,1,Recommended,Storage requirements (free space required).
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:realtimeCapability,realtimeCapablity,DefinedTerm,n,Bonus,What kind of realtime simulations are supported by the software?
@@ -81,7 +81,7 @@ https://nfdi4energy.github.io/ERSmeta/#ersmeta:parallelizationCapability,paralle
 https://schema.org/targetProduct,targetProduct,Text,n,Recommended,"Target programming enviroments to which the code applies. If applies to several versions, just the product name can be used."
 https://schema.org/operatingSystem,operatingSystem,DefinedTerm,n,Recommended,"Operating systems supported (Windows 7, OSX 10.6, Android 1.6)."
 https://schema.org/softwareRequirements,softwareRequirements,Text,n,Recommended,Required software dependencies.
-https://schema.org/fileSize,fileSize,Number,1,Bonus,Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.
+https://schema.org/fileSize,fileSize,Number,1,Bonus,"Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed."
 https://schema.org/schemaVersion,metadataVersion,Text,1,Mandatory,The type and version number of the metadata.
 https://schema.org/sdLicense,sdLicense,https://schema.org/CreativeWork,n,Mandatory,The license of the provided metadata.
 https://schema.org/sdPublisher,sdPublisher,Text,1,Mandatory,"Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisher property helps make such practices more explicit."
