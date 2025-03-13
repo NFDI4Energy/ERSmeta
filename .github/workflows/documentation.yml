@@ -15,9 +15,11 @@ jobs:
       - name: Download SHACL-Play JAR
         run: |
           wget https://github.com/sparna-git/shacl-play/releases/download/0.9.0/shacl-play-app-0.9.0-onejar.jar
+          ls -lt
 
       - name: Run SHACL-Play
         run: |
+          ls -lt
           java -jar shacl-play-0.9.0-onejar.jar doc -i ERSmeta.ttl -o ERSmeta.html -l en -m https://nfdi4energy.uol.de/images/logos/nfdi4energy_logo.svg -d
 
       - name: Upload HTML file to GitHub Pages
