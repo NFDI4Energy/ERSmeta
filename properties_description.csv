@@ -33,7 +33,7 @@ https://schema.org/maintainer,maintainer,https://schema.org/Person,1,Recommended
 https://schema.org/sourceOrganization,sourceOrganization,https://schema.org/Organization,n,Recommended,Institution which developed the software.
 https://schema.org/countryOfOrigin ,countryOfOrigin,Text,n,Recommended,"Country where the software was developed. Country codes as defined by ISO 3166-1 alpha-2 should be used."
 https://schema.org/funding,funding,https://schema.org/Grant,n,Bonus,"Information on the funding which was used to develop the software."
-https://schema.org/downloadUrl ,downloadURL,URL,1,Mandatory,If the file can be downloaded, URL to download the binary.
+https://schema.org/downloadUrl ,downloadURL,URL,1,Mandatory,"If the file can be downloaded, URL to download the binary."
 https://schema.org/codeRepository,codeRepository,URL,1,Recommended,"Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex, institutional GitLab instance, etc.)."
 https://w3id.org/okn/o/sd#hasDocumentation,documentation,URL,n,Recommended,Link to the documentation describing the code and is usful for developers.
 readme,readme,URL,1,Recommended,Link to software readme file.
