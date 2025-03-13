@@ -201,7 +201,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:datatype xsd:string ;
 		sh:description "A one-line summary of what the software does."@en ;
 		sh:maxCount 1 ;
-		sh:name "summary"@en ;
+		sh:name "abstract"@en ;
 		sh:order 8 ;
 		sh:path schema:abstract ;
 	], [
@@ -381,7 +381,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "Language used within the software (e.g. variables, documentation). Standard: IETF (BCP47)"@en ;
-		sh:name "naturalLanguage"@en ;
+		sh:name "inLanguage"@en ;
 		sh:order 7 ;
 		sh:path schema:inLanguage ;
 		sh:maxLength 2 ;
