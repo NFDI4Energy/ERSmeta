@@ -1,0 +1,27 @@
+name: SHACL-Play CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Download SHACL-Play JAR
+        run: |
+          wget https://github.com/sparna-git/shacl-play/releases/download/0.9.0/shacl-play-0.9.0.jar
+
+      - name: Run SHACL-Play
+        run: |
+          java -jar shacl-play-0.9.0.jar .\shacl-play-app-0.9.0-onejar.jar doc -i ERSmeta.ttl -o ERSmeta.html -l en -m https://nfdi4energy.uol.de/images/logos/nfdi4energy_logo.svg -dERSmeta.ttl output.html
+
+      - name: Upload HTML file to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ERSmeta.html
