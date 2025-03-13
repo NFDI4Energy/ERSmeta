@@ -160,7 +160,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 	], [
 		sh:datatype xsd:anyURI ;
 		sh:description "Homepage of the tool. URL of the item."@en ;
-		sh:name "website"@en ;
+		sh:name "url"@en ;
 		sh:order 19 ;
 		sh:path schema:url ;
 	], [
@@ -280,6 +280,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:node schema:MonetaryAmount ;
 		sh:description "Typical cost for licensing the software, if available."@en ;
 		sh:name "estimatedCost"@de, "estimatedCost"@en ;
+		sh:maxCount 1 ;
 		sh:order 29 ;
 		sh:path schema:estimatedCost ;
 	], [
@@ -429,12 +430,14 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:path ersmeta:compatibleHardware ;
 	], [
 		sh:datatype xsd:string ;
+		sh:node schema:dataSet ;
 		sh:description "Data which is compatible to this software."@en ;
 		sh:name "compatibleData"@en ;
 		sh:order 52 ;
 		sh:path ontosoft:hasRelevantDataSources ;
 	], [
 		sh:datatype xsd:string ;
+		sh:node schema:dataSet ;
 		sh:description "Data that is directly used by the provided software"@en ;
 		sh:name "usedData"@en ;
 		sh:order 53 ;
@@ -748,6 +751,7 @@ schema:DataSet a rdfs:Class, sh:NodeShape ;
 		sh:datatype xsd:string ;
 		sh:name "identifier"@en, "identifier"@de ;
 		sh:order 1 ;
+		sh:maxCount 1;
 		sh:description "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc."@en ;
 	], [
 		sh:path schema:encodingFormat ;
@@ -959,6 +963,7 @@ schema:Person a rdfs:Class, sh:NodeShape ;
 		sh:name "identifier"@de, "identifier"@en ;
 		sh:order 1 ;
 		sh:path schema:identifier ;
+		sh:maxCount 1 ;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property."@en ;
@@ -1105,11 +1110,33 @@ schema:CreativeWork a rdfs:Class, sh:NodeShape ;
 		sh:name "identifier"@de, "identifier"@en ;
 		sh:order 1 ;
 		sh:path schema:identifier ;
+		sh:description "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc.";
 	], [
 		sh:datatype xsd:string ;
 		sh:name "name"@de, "name"@en ;
 		sh:order 2 ;
 		sh:path schema:name ;
+		sh:description "The name of the item.";
+	] .
+
+schema:SoftwareApplication a rdfs:Class, sh:NodeShape ;
+	rdfs:comment "A software application."@en ;
+	sh:extends schema:Thing ;
+	rdfs:label "SoftwareApplication";
+	sh:order 3 ;
+	sh:closed false ;
+	sh:property [
+		sh:datatype xsd:anyURI ;
+		sh:name "identifier"@de, "identifier"@en ;
+		sh:order 1 ;
+		sh:path schema:identifier ;
+		sh:description "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc.,";
+	], [
+		sh:datatype xsd:string ;
+		sh:name "name"@de, "name"@en ;
+		sh:order 2 ;
+		sh:path schema:name ;
+		sh:description "Name of the compatible software.";
 	] .
 
 ersmeta:Interface a rdfs:Class, sh:NodeShape ;
