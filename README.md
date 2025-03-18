@@ -14,7 +14,7 @@ A **SHACL formalization** can be found  as [turtle file](schema/ERSmeta.ttl). It
 The metadata schema is also provided as **JSON/JSON-LD**. It consists of the JSON schema and the context file.
 The context for JSON-LD can be found in [this file](schema/ersmeta.jsonld). It maps all elements to semantic web items.
 
-The JSON schema can be found in [this file](schema/jsonschema.json). This schema includes less constrains than the SHACL formalization since some constrains can not be formalized in JSON, e.g., the limitation of a value of element to a certain ontology class.
+The JSON schema can be found in [this file](schema/ersmeta_schema.json). This schema includes less constrains than the SHACL formalization since some constrains can not be formalized in JSON, e.g., the limitation of a value of element to a certain ontology class.
 
 ## Documentation
 A **general description** of the metadata schema can be found on its [documentation website](https://nfdi4energy.github.io/ERSmeta/). The documentation is automatically build from the SHACL formalization.
@@ -29,7 +29,7 @@ We created crosswalks to the following metadata schemas:
 * [DataDesc](https://github.com/FZJ-IEK3-VSA/DataDesc/tree/main)
 * [Open Energy Platform Framework Factsheets](https://openenergyplatform.org/factsheets/frameworks/add/)
 
-All crosswalks are available in the [subfolder crosswalks](develop/crosswalks).
+All crosswalks are available in the [subfolder crosswalks](crosswalks).
 
 
 ## Background
@@ -47,4 +47,4 @@ Please open up [issues](https://github.com/NFDI4Energy/ERSmeta/issues) or send u
 ERSmeta is released under the [CC0 1.0 Universal](https://spdx.org/licenses/CC0-1.0) license.
 
 ## Acknowledgments
-The authors would like to thank the German Federal Government, the German State Governments, and the Joint Science Conference (GWK) for their funding and support as part of the [NFDI4Energy consortium](https://nfdi4energy.uol.de/). The work was partly funded by the German Research Foundation (DFG) – 501865131 within the German National Research Data Infrastructure ([NFDI](www.nfdi.de)).
+The authors would like to thank the German Federal Government, the German State Governments, and the Joint Science Conference (GWK) for their funding and support as part of the [NFDI4Energy consortium](https://nfdi4energy.uol.de/). The work was partly funded by the German Research Foundation (DFG) – 501865131 within the German National Research Data Infrastructure ([NFDI](https://www.nfdi.de)).
