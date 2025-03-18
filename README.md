@@ -8,17 +8,17 @@ ERSmeta is based on [CodeMeta](https://codemeta.github.io) and also reuses eleme
 ERSmeta is provided in two formats:
 
 #### SHACL
-A **SHACL formalization** can be found  as [turtle file](https://github.com/NFDI4Energy/ERSmeta/blob/main/schema/ERSmeta.ttl). It contains all constrains of the metadata schema.
+A **SHACL formalization** can be found  as [turtle file](schema/ERSmeta.ttl). It contains all constrains of the metadata schema.
 
 #### JSON-LD
 The metadata schema is also provided as **JSON/JSON-LD**. It consists of the JSON schema and the context file.
-The context for JSON-LD can be found in [this file](https://github.com/NFDI4Energy/ERSmeta/blob/main/schema/ersmeta.jsonld). It maps all elements to semantic web items.
+The context for JSON-LD can be found in [this file](schema/ersmeta.jsonld). It maps all elements to semantic web items.
 
-The JSON schema can be found in [this file](https://github.com/NFDI4Energy/ERSmeta/blob/main/schema/jsonschema.json). This schema includes less constrains than the SHACL formalization since some constrains can not be formalized in JSON, e.g., the limitation of a value of element to a certain ontology class.
+The JSON schema can be found in [this file](schema/jsonschema.json). This schema includes less constrains than the SHACL formalization since some constrains can not be formalized in JSON, e.g., the limitation of a value of element to a certain ontology class.
 
 ## Documentation
 A **general description** of the metadata schema can be found on its [documentation website](https://nfdi4energy.github.io/ERSmeta/). The documentation is automatically build from the SHACL formalization.
-Also, a [description of all properties](https://github.com/NFDI4Energy/ERSmeta/blob/main/schema/properties_description.csv) and [a description of all used types (and their properties)](https://github.com/NFDI4Energy/ERSmeta/blob/main/schema/type_descriptions.csv) are provided in this repository. In extension to the SHACL formalization, we add three different priority levels to the elements in the description of all properties: mandatory, recommended, and bonus.
+Also, a [description of all properties](schema/properties_description.csv) and [a description of all used types (and their properties)](schema/type_descriptions.csv) are provided in this repository. In extension to the SHACL formalization, we add three different priority levels to the elements in the description of all properties: mandatory, recommended, and bonus.
 
 ## Crosswalks
 We created crosswalks to the following metadata schemas:
@@ -29,7 +29,7 @@ We created crosswalks to the following metadata schemas:
 * [DataDesc](https://github.com/FZJ-IEK3-VSA/DataDesc/tree/main)
 * [Open Energy Platform Framework Factsheets](https://openenergyplatform.org/factsheets/frameworks/add/)
 
-All crosswalks are available in the [subfolder crosswalks](https://github.com/NFDI4Energy/ERSmeta/tree/develop/crosswalks).
+All crosswalks are available in the [subfolder crosswalks](develop/crosswalks).
 
 
 ## Background
