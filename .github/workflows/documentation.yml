@@ -25,7 +25,7 @@ jobs:
       - name: Run SHACL-Play
         run: |
           mkdir public
-          java -jar shacl-play-app-0.9.0-onejar.jar doc -i ERSmeta.ttl -o public/index.html -l en -m https://nfdi4energy.uol.de/images/logos/nfdi4energy_logo.svg -d
+          java -jar shacl-play-app-0.9.0-onejar.jar doc -i schema/ERSmeta.ttl -o public/index.html -l en -m https://nfdi4energy.uol.de/images/logos/nfdi4energy_logo.svg -d
 
       - name: Upload HTML file to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
