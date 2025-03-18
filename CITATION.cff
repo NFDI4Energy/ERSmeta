@@ -1,0 +1,25 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: ERSmeta
+message: Please cite this metadata schema by using these metadata.
+type: software
+authors:
+  - given-names: Stephan
+    family-names: Ferenz
+    email: stephan.ferenz@uol.de
+    affiliation: Carl von Ossietzky Universität Oldenburg
+    orcid: 'https://orcid.org/0000-0001-9523-7227'
+repository-code: 'https://github.com/NFDI4Energy/ERSmeta'
+url: 'https://nfdi4energy.github.io/ERSmeta/'
+abstract: >-
+  ERSmeta is a metadata schema designed to facilitate the
+  discovery, sharing, and reuse of energy research software.
+  The schema provides a standardized way to describe the
+  metadata associated with energy research software,
+  including its purpose, functionality, and usage.
+keywords:
+  - metadata schema
+  - energy research software
+license: CC0-1.0
