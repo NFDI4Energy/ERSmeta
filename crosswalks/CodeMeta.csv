@@ -1,0 +1,87 @@
+ERSmeta URI,ERSmeta Property,ERSmeta Type,ERSmeta Description,CodeMeta Property,CodeMeta Type,CodeMeta Description
+https://schema.org/name,name,Text,Name of the software.,name,Text,"The name of the item (software, Organization)"
+https://w3id.org/okn/o/sd#hasShortName,acronym,Text,Abbreviation of the software name.,,,
+https://schema.org/identifier,identifier,URL,"The identifier property represents any kind of identifier for any kind of Thing, such as DOI, ISBNs, GTIN codes, UUIDs etc.",identifier,PropertyValue or URL,"The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details."
+https://schema.org/thumbnailUrl,logo,URL,Link to the logo of the software.,,,
+https://schema.org/softwareVersion,softwareVersion,Text,Version of the software instance as used by the developers.,softwareVersion,Text,Version of the software instance.
+https://schema.org/programmingLanguage,programmingLanguage,https://schema.org/ComputerLanguage,The computer programming language in which the software is written.,programmingLanguage,ComputerLanguage  or Text,The computer programming language.
+https://schema.org/inLanguage,inLanguage,Text,"Language used within the software (e.g. variables, documentation). Standard: IETF (BCP47)",,,
+https://schema.org/abstract,abstract,Text,A one-line summary of what the software does.,,,
+https://schema.org/description,description,Text,A description of the software. Max 200 words.,description,Text,A description of the item.
+https://schema.org/keywords,keywords,Text,Keywords or tags used to describe this software.,keywords,Text,Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.
+https://schema.org/image,graphicalAbstract,URL,Graphical overview on the functionality of the software.,,,
+https://schema.org/applicationCategory,domain,DefinedTerm,Research domain for which the software was written.,applicationCategory,Text  or URL,"Type of software application, e.g. 'Game, Multimedia'."
+https://schema.org/applicationSubCategory,category,DefinedTerm,Research category for which the software was written.,applicationSubCategory,Text  or URL,"Subcategory of the application, e.g. 'Arcade Game'."
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:softwareType,softwareType,DefinedTerm,"Type of software application, e.g. 'script'.",,,
+http://www.w3.org/ns/prov#hadRole,roleInResearch,DefinedTerm,Kind of tasks that the software tasks over in research.,,,
+https://schema.org/url,url,URL,Homepage of the tool. URL of the item.,,,
+https://codemeta.github.io/terms/developmentStatus,developmentStatus,DefinedTerm,"Description of development status, e.g. Active, inactive, suspended. See repostatus.org",developmentStatus,Text,"Description of development status, e.g. Active, inactive, suspended. See repostatus.org"
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:developerStructure,developerStructure,DefinedTerm,Structure of the development team.,,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:cycleOfUpdates,cycleOfUpdates,DefinedTerm,How often is the software updated?,,,
+https://codemeta.github.io/terms/issueTracker,issueTracker,URL,Link to software bug reporting or issue tracking system,issueTracker,URL,link to software bug reporting or issue tracking system
+https://codemeta.github.io/terms/referencePublication,referencePublication,https://schema.org/ScholarlyArticle,Any academic publication which describes the software.,referencePublication,ScholarlyArticle,An academic publication related to the software.
+https://w3id.org/okn/o/sd#citation,preferredCitation,https://schema.org/ScholarlyArticle,"A reference to another work that should be cited instead of the software or dataset itself. Note that the principles of  software citation and data citation require that software should be cited on the same basis as any other research product such as a paper or a book. Adding a different preferred citation may result in a violation of the respective primary principle, Importance, when others cite this work.",,,
+https://schema.org/license,license,https://schema.org/CreativeWork,A license document that applies to this software.,license,CreativeWork  or URL,"A license document that applies to this content, typically indicated by URL."
+https://schema.org/copyrightHolder,copyrightHolder,https://schema.org/Organization,The party holding the legal copyright to the CreativeWork.,copyrightHolder,Organization  or Person,The party holding the legal copyright to the CreativeWork.
+https://schema.org/isAccessibleForFree,isAccessibleForFree,Boolean,A flag to signal that the software is accessible for free.,isAccessibleForFree,Boolean,A flag to signal that the publication is accessible for free.
+https://schema.org/estimatedCost,estimatedCost,https://schema.org/MonetaryAmount,"Typical cost for licensing the software, if available.",,,
+https://schema.org/dateCreated,dateCreated,Date,The date on which the software was initially created.,dateCreated,Date,The date on which the CreativeWork was created or the item was added to a DataFeed.
+https://schema.org/dateModified,dateModified,Date,The date on which the software was most recently modified.,dateModified,Date,The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
+https://schema.org/contributor,contributor,https://schema.org/Person,A person who has contributed to the software.,contributor,Organization  or Person,A secondary contributor to the CreativeWork or Event.
+https://schema.org/author,author,https://schema.org/Person,A person who has authored the software.,author,Organization  or Person,The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
+https://schema.org/maintainer,maintainer,https://schema.org/Person,Individual responsible for maintaining the software.,maintainer,Person,Individual responsible for maintaining the software (usually includes an email contact address)
+https://schema.org/sourceOrganization,sourceOrganization,https://schema.org/Organization,Institution which developed the software.,,,
+https://schema.org/countryOfOrigin ,countryOfOrigin,Text,Country where the software was developed. Country codes as defined by ISO 3166-1 alpha-2 should be used.,,,
+https://schema.org/funding,funding,https://schema.org/Grant,Information on the funding which was used to develop the software.,funding,Text,Funding source (e.g. specific grant)
+https://schema.org/downloadUrl ,downloadURL,URL,"If the file can be downloaded, URL to download the binary.",downloadUrl,URL,"If the file can be downloaded, URL to download the binary."
+https://schema.org/codeRepository,codeRepository,URL,"Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex, institutional GitLab instance, etc.).",codeRepository,URL,"Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex, institutional GitLab instance, etc.)."
+https://w3id.org/okn/o/sd#hasDocumentation,documentation,URL,Link to the documentation describing the code and is usful for developers.,,,
+readme,readme,URL,Link to software readme file.,readme,URL,link to software Readme file
+buildInstructions,buildInstruction,URL,Link to installation instructions/documentation.,buildInstructions,URL,link to installation instructions/documentation
+http://ontosoft.org/software#hasSoftwareSupport,supportGiven,Boolean,Is support for the software provided?,,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:requiredTrainingPeriod,requiredTrainingPeriod,Text,How long would a researcher need to be able to use the software?,,,
+https://w3id.org/okn/o/sd#hasExample,example,https://nfdi4energy.github.io/ERSmeta/#ersmeta:Example,Code examples for using the software.,,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:CommunityInteractions,communityInteractions,https://nfdi4energy.github.io/ERSmeta/#ersmeta:CommunityInteraction,Ways how the software developers interact with the software users (community).,,,
+http://ontosoft.org/software#usedInPublication,usedInPublication,https://schema.org/ScholarlyArticle,A publication which uses the software for its research.,,,
+http://purl.obolibrary.org/obo/RO_0002234,output,https://nfdi4energy.github.io/ERSmeta/#ersmeta:Interface,"Description of the output functions of the software (e.g., APIs)",,,
+http://purl.obolibrary.org/obo/RO_0002233,input,https://nfdi4energy.github.io/ERSmeta/#ersmeta:Interface,"Description of the input functions of the software (e.g., APIs)",,,
+http://ontosoft.org/software#hasCompatibleSoftware,compatibleSoftware,https://schema.org/SoftwareApplication,A software which can directly be used with the software without further changes.,softwareSuggestions,SoftwareSourceCode,"Optional dependencies, e.g. for optional features, code development, etc."
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:compatibleHardware,compatibleHardware,Text,"Hardware which is compatible to this software (e.g., in labs).",,,
+http://ontosoft.org/software#hasRelevantDataSources,compatibleData,https://schema.org/Dataset,Data which is compatible to this software.,,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:usedData,usedData,https://schema.org/Dataset,Data that is directly used by the provided software,,,
+https://w3id.org/okn/o/sd#hasPurpose,purpose,Text,A general goal/purpose of the software.,,,
+http://w3id.org/nfdi4ing/metadata4ing#implementsMethod,method,Text,An used method in the software.,,,
+http://openenergy-platform.org/ontology/oeo/OEO_00000505,coversSector,DefinedTerm,A supported sector of the software. A sector is generically dependent continuant that is a subdivision of a system.,,,
+http://openenergy-platform.org/ontology/oeo/OEO_00000521,technology,DefinedTerm,A supported energy technology of the software.,,,
+https://w3id.org/okn/o/sd#hasAssumption,assumption,Text,A required assumption of the software.,,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:useCase,useCase,Text,"Other supported use case, e.g., a research question which can be answered with the software besides the main goal.",,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:energyComponent,energyComponent,https://nfdi4energy.github.io/ERSmeta/#ersmeta:EnergyComponent,A component of the energy system included in the software.,,,
+http://ontosoft.org/software#hasUseLimitations,limitation,Text,A limitation of the software.,,,
+https://w3id.org/okn/o/sd#hasParameter,parameter,Text,A relevant internal parameter of the software.,,,
+https://schema.org/featureList,featureList,Text,A feature of the software.,,,
+http://openenergy-platform.org/ontology/oeo/OEO_00000516 ,hasTemporalResolution,DefinedTerm,Supported temporal resolution of the software. Temporal resolution is the resolution that indicates time-dependent the level of detail.,,,
+https://schema.org/temporalCoverage,temporalCoverage,DefinedTerm,"Time scope the software was developed for (e.g. 2010, 2050).",,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:stationaryVsTransient,stationaryVsTransient,DefinedTerm,Does the software support stationary or transient effects?,,,
+http://openenergy-platform.org/ontology/oeo/OEO_00000515 ,hasSpatialResolution,Text,Supported spatial resolution of the software. Spatial resolution is the resolution that indicates the geographical level of detail.,,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Dimensions,dimensions,DefinedTerm,Supported dimensions of the software.,,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:spatialScope,spatialScope,Text,"Geo scope the software was developed for (e.g., microgrid, Germany, Europe).",,,
+https://schema.org/spatialCoverage,spatialCoverage,Text,"Regions covered by the model. Leave this blank if the model and data are not limited to a specific region. Examples include: USA, Canada, Germany, western Europe.",,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:supportedVoltageLevel,supportedVoltageLevel,DefinedTerm,Supported voltage level of the software.,,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:UseOptimization,usedOptimization,https://nfdi4energy.github.io/ERSmeta/#ersmeta:OptimizationTool,Information on an optimization included in the software.,,,
+https://schema.org/review,review,https://schema.org/Review,A review of the software.,review,Review,A review of the source code.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:tests,tests,https://nfdi4energy.github.io/ERSmeta/#ersmeta:TestCollection,Information on the tests of the software.,,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,validation,https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,Information on validations done for the software. Validation refers to whether the software produces results that correspond to real-world properties.,,,
+https://schema.org/availableOnDevice,typicalHardware,DefinedTerm,Typical minimal hardware which is required to run the software.,,,
+https://schema.org/timeRequired,typicalExcecutionTime,Number,Typical execution time of the software.,,,
+https://schema.org/processorRequirements,processorRequirements,Text,Processor architecture required to run the application (e.g. IA64).,processorRequirements,Text,Processor architecture required to run the application (e.g. IA64).
+https://schema.org/memoryRequirements,memoryRequirements,Text,Minimum memory requirements.,memoryRequirements,Text  or URL,Minimum memory requirements.
+https://schema.org/storageRequirements,storageRequirements,Text,Storage requirements (free space required).,storageRequirements,Text  or URL,Storage requirements (free space required).
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:realtimeCapability,realtimeCapablity,DefinedTerm,What kind of realtime simulations are supported by the software?,,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:parallelizationCapability,parallelizationCapability,Boolean,Does the software support parallization?,,,
+https://schema.org/targetProduct,targetProduct,Text,"Target programming enviroments to which the code applies. If applies to several versions, just the product name can be used.",targetProduct,SoftwareApplication,"Target Operating System / Product to which the code applies. If applies to several versions, just the product name can be used."
+https://schema.org/operatingSystem,operatingSystem,DefinedTerm,"Operating systems supported (Windows 7, OSX 10.6, Android 1.6).",operatingSystem,Text,"Operating systems supported (Windows 7, OSX 10.6, Android 1.6)."
+https://schema.org/softwareRequirements,softwareRequirements,Text,Required software dependencies.,softwareRequirements,SoftwareSourceCode,Required software dependencies
+https://schema.org/fileSize,fileSize,Number,"Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.",fileSize,Text,"Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed."
+https://schema.org/schemaVersion,metadataVersion,Text,The type and version number of the metadata.,,,
+https://schema.org/sdLicense,sdLicense,https://schema.org/CreativeWork,The license of the provided metadata.,,,
+https://schema.org/sdPublisher,sdPublisher,Text,"Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisher property helps make such practices more explicit.",,,

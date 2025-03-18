@@ -1,0 +1,49 @@
+﻿Parent Type URI,Parent Typ Name,URI,Property,Type,Cardinality,Description
+https://schema.org/ScholarlyArticle,ScholarlyArticle,https://schema.org/identifier,identifier,URL,1,"URL identifier, ideally a DOI for a publication."
+https://schema.org/CreativeWork,CreativeWork,https://schema.org/identifier,identifier,Text,1,The SPDX identifier of the license.
+https://schema.org/CreativeWork,CreativeWork,https://schema.org/name,name,Text,1,The official (human readable) title of the license.
+https://schema.org/MonetaryAmount,MonetaryAmount,https://schema.org/value,value,Number,1,The value of the estimatedCost.
+https://schema.org/MonetaryAmount,MonetaryAmount,https://schema.org/currency,currency,Text,1,"The currency in which the monetary amount is expressed. Use standard formats: ISO 4217 currency format, e.g. USD, Ticker symbol for cryptocurrencies, e.g. BTC, well known names for Local Exchange Trading Systems (LETS) and other currency types, e.g. Ithaca HOUR."
+https://schema.org/Person,Person,https://schema.org/identifier,identifier,URL,1,"URL identifier, ideally an ORCID ID for individuals, a FundRef ID for funders."
+https://schema.org/Person,Person,https://schema.org/givenName,givenName,Text,1,"Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property."
+https://schema.org/Person,Person,https://schema.org/familyName,familyName,Text,1,"Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property."
+https://schema.org/Person,Person,https://schema.org/email,email,Text,n,Email address.
+https://schema.org/Person,Person,https://schema.org/roleName,roleName,DefinedTerm,n,Role of the contributor.
+https://schema.org/Organization,Organization,https://schema.org/identifier,identifier,URL,n,"URL identifier, ideally a ROR for institutions."
+https://schema.org/Organization,Organization,https://schema.org/legalName,legalName,Text,1,"The official name of the organization, e.g. the registered company name."
+https://schema.org/Grant,Grant,https://schema.org/name,projectName,Text,1,Name of the project during which the software was developed.
+https://schema.org/Grant,Grant,https://schema.org/identifier,grantNo,Text,1,"An identifying grant number, in case of a publicly funded project, this number is assigned by the funding agency."
+https://schema.org/Grant,Grant,https://schema.org/funder,funder,https://schema.org/Organization,n,A organization that supports (sponsors) something through some kind of financial contribution.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Example,Example,https://schema.org/additionalType,additionalType,DefinedTerm,1,Type of the example.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Example,Example,https://schema.org/name,name,Text,1,Name of the example.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Example,Example,https://schema.org/url,url,URL,1,Link to the example.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:CommunityInteraction,CommunityInteraction,https://schema.org/additionalType,additionalType,DefinedTerm,1,Type of the interaction.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:CommunityInteraction,CommunityInteraction,https://schema.org/url,url,URL,1,Link to further information on the community interaction.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Interface,Interface,https://schema.org/identifier,identifier,URL,1,"The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as Textual strings or as URL (URI) links. See background notes for more details."
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Interface,Interface,https://schema.org/description,description,Text,1,Description of the content exchanged via the interface.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Interface,Interface,http://openenergy-platform.org/ontology/oeo/OEO_00000516 ,hasTemporalResolution,Text,n,Description on the required temporal resolution for the interface.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Interface,Interface,https://schema.org/encodingFormat,encodingFormat,DefinedTerm,n,"Description of the allowed encoding format of the interface, e.g., csv"
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Interface,Interface,https://nfdi4energy.github.io/ERSmeta/#ersmeta:required,required,Boolean,1,Is it required to provide input to the interface?
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Interface,Interface,https://nfdi4energy.github.io/ERSmeta/#ersmeta:usedStandard,usedStandard,Text,n,Supported standards of the API.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Interface,Interface,https://w3id.org/okn/o/sd#hasExample,example,Text,n,Example for the interface
+https://schema.org/Dataset,Dataset,https://schema.org/identifier,identifier,URL,1,"The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc."
+https://schema.org/Dataset,Dataset,https://schema.org/encodingFormat,encodingFormat,DefinedTerm,n,Format of the dataset.
+https://schema.org/Dataset,Dataset,https://schema.org/url,url,URL,n,Link to the dataset.
+https://schema.org/SoftwareApplication,SoftwareApplication,https://schema.org/identifier,identifier,URL,n,"The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc."
+https://schema.org/SoftwareApplication,SoftwareApplication,https://schema.org/name,name,string,n,Link to the dataset.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:EnergyComponent,EnergyComponent,https://schema.org/identifier,identifier,URL,1,"The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as Textual strings or as URL (URI) links. See background notes for more details."
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:EnergyComponent,EnergyComponent,https://schema.org/name,name,Text,1,Name of the component.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:EnergyComponent,EnergyComponent,https://schema.org/additionalType,componentType,DefinedTerm,1,"Type of the component, e.g., pv"
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:EnergyComponent,EnergyComponent,https://nfdi4energy.github.io/ERSmeta/#ersmeta:levelOfDetail,levelOfDetail,DefinedTerm,1,Level of detail of the component.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:OptimizationTool,OptimizationTool,http://w3id.org/nfdi4ing/metadata4ing#implementsMethod,method,Text,n,Method of the optimization.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:OptimizationTool,OptimizationTool,https://schema.org/featureList,featureList,Text,n,Features of the optimization.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:OptimizationTool,OptimizationTool,http://openenergy-platform.org/ontology/oeo/OEO_00000392,solver,Text,n,Used solver for the optimization.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:OptimizationTool,OptimizationTool,https://nfdi4energy.github.io/ERSmeta/#ersmeta:problemType,problemType,Text,1,Problem class of the optimization.
+https://schema.org/Review,Review,https://schema.org/abstract,abstract,Text,1,A review of the source code.
+https://schema.org/Review,Review,https://schema.org/reviewBody,reviewBody,Text,1,The actual body of the review.
+https://schema.org/Review,Review,https://schema.org/reviewAspect,reviewAspect,Text,1,This Review is relevant to this part or facet of the object being review.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:TestCollection,TestCollection,https://schema.org/collectionSize,collectionSize,Integer,1,Number of the tests of the software.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:TestCollection,TestCollection,https://schema.org/url,url,URL,n,Link to one or multiple test case.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,Validation,https://schema.org/additionalType,additionalType,DefinedTerm,1,Type of the validation.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,Validation,https://schema.org/url,url,URL,1,Link to further information on the validation.
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,Validation,https://nfdi4energy.github.io/ERSmeta/#ersmeta:similarityOfResults,similarityOfResults,Number,1,Factor on how close the validation was.

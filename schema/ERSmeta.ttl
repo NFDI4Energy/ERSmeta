@@ -12,7 +12,7 @@
 @prefix ontosoft: <http://ontosoft.org/software#> .
 @prefix obo: <http://purl.obolibrary.org/obo> .
 @prefix oeo: <http://openenergy-platform.org/ontology/oeo/> .
-@prefix ersmeta: <https://nfdi4energy.github.io/terms/> .
+@prefix ersmeta: <https://nfdi4energy.github.io/ERSmeta/#ersmeta:> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
@@ -160,7 +160,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 	], [
 		sh:datatype xsd:anyURI ;
 		sh:description "Homepage of the tool. URL of the item."@en ;
-		sh:name "website"@en ;
+		sh:name "url"@en ;
 		sh:order 19 ;
 		sh:path schema:url ;
 	], [
@@ -201,7 +201,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:datatype xsd:string ;
 		sh:description "A one-line summary of what the software does."@en ;
 		sh:maxCount 1 ;
-		sh:name "summary"@en ;
+		sh:name "abstract"@en ;
 		sh:order 8 ;
 		sh:path schema:abstract ;
 	], [
@@ -280,6 +280,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:node schema:MonetaryAmount ;
 		sh:description "Typical cost for licensing the software, if available."@en ;
 		sh:name "estimatedCost"@de, "estimatedCost"@en ;
+		sh:maxCount 1 ;
 		sh:order 29 ;
 		sh:path schema:estimatedCost ;
 	], [
@@ -381,7 +382,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "Language used within the software (e.g. variables, documentation). Standard: IETF (BCP47)"@en ;
-		sh:name "naturalLanguage"@en ;
+		sh:name "inLanguage"@en ;
 		sh:order 7 ;
 		sh:path schema:inLanguage ;
 		sh:maxLength 2 ;
@@ -429,12 +430,14 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:path ersmeta:compatibleHardware ;
 	], [
 		sh:datatype xsd:string ;
+		sh:node schema:dataSet ;
 		sh:description "Data which is compatible to this software."@en ;
 		sh:name "compatibleData"@en ;
 		sh:order 52 ;
 		sh:path ontosoft:hasRelevantDataSources ;
 	], [
 		sh:datatype xsd:string ;
+		sh:node schema:dataSet ;
 		sh:description "Data that is directly used by the provided software"@en ;
 		sh:name "usedData"@en ;
 		sh:order 53 ;
@@ -688,6 +691,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:description "The type and version number of the metadata."@en ;
 		sh:name "schemaVersion"@en, "schemaVersion"@de ;
 		sh:order 87 ;
+		sh:minCount 1 ;
 		sh:maxCount 1 ;
 		sh:path schema:schemaVersion ;
 		sh:defaultValue "1.5" ;
@@ -695,12 +699,14 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:node schema:CreativeWork ;
 		sh:description "The license of the provided metadata."@en ;
 		sh:name "sdLicense"@en, "sdLicense"@de ;
+		sh:minCount 1 ;
 		sh:order 88 ;
 		sh:path schema:sdLicense ;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisher property helps make such practices more explicit."@en ;
 		sh:name "sdPublisher"@en, "sdPublisher"@de ;
+		sh:minCount 1 ;
 		sh:maxCount 1 ;
 		sh:order 89 ;
 		sh:path schema:sdPublisher ;
@@ -745,6 +751,7 @@ schema:DataSet a rdfs:Class, sh:NodeShape ;
 		sh:datatype xsd:string ;
 		sh:name "identifier"@en, "identifier"@de ;
 		sh:order 1 ;
+		sh:maxCount 1;
 		sh:description "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc."@en ;
 	], [
 		sh:path schema:encodingFormat ;
@@ -956,6 +963,7 @@ schema:Person a rdfs:Class, sh:NodeShape ;
 		sh:name "identifier"@de, "identifier"@en ;
 		sh:order 1 ;
 		sh:path schema:identifier ;
+		sh:maxCount 1 ;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property."@en ;
@@ -1102,11 +1110,33 @@ schema:CreativeWork a rdfs:Class, sh:NodeShape ;
 		sh:name "identifier"@de, "identifier"@en ;
 		sh:order 1 ;
 		sh:path schema:identifier ;
+		sh:description "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc.";
 	], [
 		sh:datatype xsd:string ;
 		sh:name "name"@de, "name"@en ;
 		sh:order 2 ;
 		sh:path schema:name ;
+		sh:description "The name of the item.";
+	] .
+
+schema:SoftwareApplication a rdfs:Class, sh:NodeShape ;
+	rdfs:comment "A software application."@en ;
+	sh:extends schema:Thing ;
+	rdfs:label "SoftwareApplication";
+	sh:order 3 ;
+	sh:closed false ;
+	sh:property [
+		sh:datatype xsd:anyURI ;
+		sh:name "identifier"@de, "identifier"@en ;
+		sh:order 1 ;
+		sh:path schema:identifier ;
+		sh:description "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc.,";
+	], [
+		sh:datatype xsd:string ;
+		sh:name "name"@de, "name"@en ;
+		sh:order 2 ;
+		sh:path schema:name ;
+		sh:description "Name of the compatible software.";
 	] .
 
 ersmeta:Interface a rdfs:Class, sh:NodeShape ;
