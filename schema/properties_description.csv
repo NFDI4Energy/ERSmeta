@@ -12,7 +12,7 @@ https://schema.org/keywords,keywords,Text,n,Mandatory,Keywords or tags used to d
 https://schema.org/image,graphicalAbstract,URL,1,Bonus,Graphical overview on the functionality of the software.
 https://schema.org/applicationCategory,domain,DefinedTerm,n,Recommended,Research domain for which the software was written.
 https://schema.org/applicationSubCategory,category,DefinedTerm,n,Recommended,Research category for which the software was written.
-https://nfdi4energy.github.io/ERSmeta/#ersmeta:softwareType,softwareType,DefinedTerm,1,Mandatory,"Type of software application, e.g. 'script'."
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:softwareType,softwareType,DefinedTerm,n,Mandatory,"Type of software application, e.g. 'script'."
 http://www.w3.org/ns/prov#hadRole,roleInResearch,DefinedTerm,n,Recommended,Kind of tasks that the software tasks over in research.
 https://schema.org/url,url,URL,n,Recommended,Homepage of the tool. URL of the item.
 https://codemeta.github.io/terms/developmentStatus,developmentStatus,DefinedTerm,1,Mandatory,"Description of development status, e.g. Active, inactive, suspended. See repostatus.org"

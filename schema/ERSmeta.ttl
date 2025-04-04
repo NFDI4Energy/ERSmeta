@@ -178,7 +178,6 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		) ;
 	], [
 		sh:description "Type of software application, e.g. 'script'."@en ;
-		sh:maxCount 1 ;
 		sh:minCount 1 ;
 		sh:name "softwareType"@en ;
 		sh:order 14 ;
@@ -405,7 +404,8 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 			"Fluid Mechanics, Technical Thermodynamics and Thermal Energy Engineering"
 			"Materials Engineering"
 			"Materials Science"
-			"System Engineering; Electrical Engineering and Information Technology"
+			"Systems Engineering"
+			"Electrical Engineering and Information Technology"
 			"Computer Science"
 			"Construction Engineering and Architecture"
 		) ;

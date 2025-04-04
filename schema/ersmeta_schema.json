@@ -17,7 +17,7 @@
     "dateCreated",
     "contributor",
     "downloadUrl",
-    "schemaVersion",
+    "metadataVersion",
     "sdLicense",
     "sdPublisher"
   ],
@@ -61,7 +61,7 @@
       "type": "array",
       "title": "inLanguage",
       "items": {
-        "type":  "string"
+        "type": "string"
       }
     },
     "abstract": {
@@ -106,7 +106,8 @@
           "Mechanics and Constructive Mechanical Engineering",
           "Process Engineering, Technical Chemistry",
           "Production Technology",
-          "System Engineering; Electrical Engineering and Information Technology",
+          "Systems Engineering",
+          "Electrical Engineering and Information Technology",
           "Fluid Mechanics, Technical Thermodynamics and Thermal Energy Engineering",
           "Physics"
         ]
@@ -130,20 +131,23 @@
     "softwareType": {
       "description": "Type of software application, e.g. 'script'.",
       "title": "softwareType",
-      "enum": [
-        "Workflow",
-        "Workbench",
-        "Library",
-        "Script",
-        "Web API",
-        "GUI-framework",
-        "Desktop application",
-        "Plug-in",
-        "Web application",
-        "Database portal",
-        "Web service",
-        "Command-line tool"
-      ]
+      "type": "array",
+      "items": {
+        "enum": [
+          "Workflow",
+          "Workbench",
+          "Library",
+          "Script",
+          "Web API",
+          "GUI-framework",
+          "Desktop application",
+          "Plug-in",
+          "Web application",
+          "Database portal",
+          "Web service",
+          "Command-line tool"
+        ]
+      }
     },
     "roleInResearch": {
       "description": "Kind of tasks that the software tasks over in research.",
@@ -704,7 +708,7 @@
       "description": "Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisher property helps make such practices more explicit.",
       "type": "string",
       "title": "sdPublisher"
-    },
+    }
   },
   "$id": "https://nfdi4energy.github.io/ERSmeta/#ersmeta:EnergyResearchSoftware",
   "$defs": {
@@ -717,7 +721,7 @@
       "description": "",
       "type": "object",
       "title": "Validation",
-      "required": [ ],
+      "required": [],
       "properties": {
         "additionalType": {
           "description": "Type of the validation.",
@@ -805,7 +809,7 @@
       "description": "A body of structured information describing some topic(s) of interest.",
       "type": "object",
       "title": "DataSet",
-      "required": [ ],
+      "required": [],
       "properties": {
         "identifier": {
           "description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc.",
@@ -891,7 +895,7 @@
       "description": "A review of a software.",
       "type": "object",
       "title": "Review",
-      "required": [ ],
+      "required": [],
       "properties": {
         "reviewAspect": {
           "description": "This Review is relevant to this part or facet of the object being review.",
@@ -914,7 +918,7 @@
       "description": "An energy component modelled within a simulation software",
       "type": "object",
       "title": "EnergyComponent",
-      "required": [ ],
+      "required": [],
       "properties": {
         "identifier": {
           "description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as Textual strings or as URL (URI) links. See background notes for more details.",
@@ -945,7 +949,7 @@
       "description": "A tool used for optimization",
       "type": "object",
       "title": "OptimizationTool",
-      "required": [ ],
+      "required": [],
       "properties": {
         "featureList": {
           "description": "Features of the optimization.",
@@ -1100,7 +1104,7 @@
       "description": "A collection of Software Tests",
       "type": "object",
       "title": "TestCollection",
-      "required": [ ],
+      "required": [],
       "properties": {
         "collectionSize": {
           "description": "Number of the tests of the software.",
