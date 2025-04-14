@@ -132,11 +132,15 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:order 21 ;
 		sh:path ersmeta:developerStructure ;
 		sh:in (
+			"Community (Open Source Research Software)",
+			"Community (Closed Source Research Software)",
+			"Community (Research Software as a Service)",
+			"Local Research Group",
+			"Project Group",
+			"Contractor (Open Source Resarch Software)",
+			"Contractor (Closed Source Research Software)",
+			"Contractor (Research Software as a Service)",
 			"Individual Researcher"
-			"Local Research Group"
-			"Project Group"
-			"Community (Open Source Resarch Software, Closed Source Research Software, Research Software as a Service)"
-			"Contractor (Open Source Resarch Software, Closed Source Research Software, Research Software as a Service)"
 		) ;
 	], [
 		sh:datatype xsd:string ;
@@ -355,7 +359,6 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 	], [
 		sh:node schema:Person ;
 		sh:description "Individual responsible for maintaining the software."@en ;
-		sh:maxCount 1 ;
 		sh:name "maintainer"@de, "maintainer"@en ;
 		sh:order 34 ;
 		sh:path schema:maintainer ;

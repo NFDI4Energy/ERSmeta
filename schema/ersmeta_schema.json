@@ -208,10 +208,14 @@
       "type": "array",
       "items": {
         "enum": [
-          "Community (Open Source Resarch Software, Closed Source Research Software, Research Software as a Service)",
+          "Community (Open Source Research Software)",
+          "Community (Closed Source Research Software)",
+          "Community (Research Software as a Service)",
           "Local Research Group",
           "Project Group",
-          "Contractor (Open Source Resarch Software, Closed Source Research Software, Research Software as a Service)",
+          "Contractor (Open Source Resarch Software)",
+          "Contractor (Closed Source Research Software)",
+          "Contractor (Research Software as a Service)",
           "Individual Researcher"
         ]
       }
@@ -296,7 +300,8 @@
     "maintainer": {
       "description": "Individual responsible for maintaining the software.",
       "title": "maintainer",
-      "$ref": "#/$defs/Person"
+      "type": "array",
+      "items": { "$ref": "#/$defs/Person" }
     },
     "sourceOrganization": {
       "minItems": 1,
@@ -1078,118 +1083,121 @@
         "roleName": {
           "description": "Detailed role of a person.",
           "title": "roleName",
-          "enum": [
-            "Architecture",
-            "Documentation",
-            "Design",
-            "Support",
-            "Maintenance",
-            "Coding",
-            "Testing",
-            "Debugging",
-            "Management"
-          ]
-        },
-        "email": {
-          "description": "Email address.",
-          "title": "email",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "TestCollection": {
-      "description": "A collection of Software Tests",
-      "type": "object",
-      "title": "TestCollection",
-      "required": [],
-      "properties": {
-        "collectionSize": {
-          "description": "Number of the tests of the software.",
-          "type": "string",
-          "title": "collectionSize"
-        },
-        "url": {
-          "description": "Link to one or multiple test case.",
-          "title": "url",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "Interface": {
-      "description": "An interface of a software",
-      "type": "object",
-      "title": "Interface",
-      "required": [],
-      "properties": {
-        "identifier": {
-          "description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as Textual strings or as URL (URI) links. See background notes for more details.",
-          "type": "string",
-          "title": "identifier"
-        },
-        "usedStandard": {
-          "description": "Supported standards of the API.",
-          "title": "usedStandard",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "example": {
-          "description": "Example for the interface.",
-          "title": "example",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "description": {
-          "description": "Description of the content exchanged via the interface.",
-          "type": "string",
-          "title": "description"
-        },
-        "encodingFormat": {
-          "description": "Description of the allowed encoding format of the interface, e.g., csv",
-          "title": "encodingFormat",
           "type": "array",
           "items": {
             "enum": [
-              "JSON",
-              "db",
-              "txt",
-              "xlsx",
-              "Python dict",
-              "other",
-              "xml",
-              "Pandas",
-              "mat",
-              "csv",
-              "mdf5",
-              "binary",
-              "DataFrame/Serie",
-              "YAML"
+              "Architecture",
+              "Documentation",
+              "Design",
+              "Support",
+              "Maintenance",
+              "Coding",
+              "Testing",
+              "Debugging",
+              "Management"
             ]
           }
         },
-        "hasTemporalResolution": {
-          "description": "Description on the required temporal resolution for the interface.",
-          "title": "hasTemporalResolution",
-          "type": "array",
-          "items": {
-            "type": "string"
+          "email": {
+            "description": "Email address.",
+            "title": "email",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
-        },
-        "required": {
-          "description": "Is it required to provide input to the interface?",
-          "type": "string",
-          "title": "required"
+        }
+      },
+      "TestCollection": {
+        "description": "A collection of Software Tests",
+        "type": "object",
+        "title": "TestCollection",
+        "required": [],
+        "properties": {
+          "collectionSize": {
+            "description": "Number of the tests of the software.",
+            "type": "string",
+            "title": "collectionSize"
+          },
+          "url": {
+            "description": "Link to one or multiple test case.",
+            "title": "url",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Interface": {
+        "description": "An interface of a software",
+        "type": "object",
+        "title": "Interface",
+        "required": [],
+        "properties": {
+          "identifier": {
+            "description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as Textual strings or as URL (URI) links. See background notes for more details.",
+            "type": "string",
+            "title": "identifier"
+          },
+          "usedStandard": {
+            "description": "Supported standards of the API.",
+            "title": "usedStandard",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "example": {
+            "description": "Example for the interface.",
+            "title": "example",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "description": "Description of the content exchanged via the interface.",
+            "type": "string",
+            "title": "description"
+          },
+          "encodingFormat": {
+            "description": "Description of the allowed encoding format of the interface, e.g., csv",
+            "title": "encodingFormat",
+            "type": "array",
+            "items": {
+              "enum": [
+                "JSON",
+                "db",
+                "txt",
+                "xlsx",
+                "Python dict",
+                "other",
+                "xml",
+                "Pandas",
+                "mat",
+                "csv",
+                "mdf5",
+                "binary",
+                "DataFrame/Serie",
+                "YAML"
+              ]
+            }
+          },
+          "hasTemporalResolution": {
+            "description": "Description on the required temporal resolution for the interface.",
+            "title": "hasTemporalResolution",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "required": {
+            "description": "Is it required to provide input to the interface?",
+            "type": "string",
+            "title": "required"
+          }
         }
       }
     }
   }
-}

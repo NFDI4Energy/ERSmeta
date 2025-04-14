@@ -29,7 +29,7 @@ https://schema.org/dateCreated,dateCreated,Date,1,Mandatory,The date on which th
 https://schema.org/dateModified,dateModified,Date,1,Recommended,"The date on which the software was most recently modified."
 https://schema.org/contributor,contributor,https://schema.org/Person,n,Mandatory,A person who has contributed to the software.
 https://schema.org/author,author,https://schema.org/Person,n,Recommended,A person who has authored the software.
-https://schema.org/maintainer,maintainer,https://schema.org/Person,1,Recommended,Individual responsible for maintaining the software.
+https://schema.org/maintainer,maintainer,https://schema.org/Person,n,Recommended,Individual responsible for maintaining the software.
 https://schema.org/sourceOrganization,sourceOrganization,https://schema.org/Organization,n,Recommended,Institution which developed the software.
 https://schema.org/countryOfOrigin ,countryOfOrigin,Text,n,Recommended,"Country where the software was developed. Country codes as defined by ISO 3166-1 alpha-2 should be used."
 https://schema.org/funding,funding,https://schema.org/Grant,n,Bonus,"Information on the funding which was used to develop the software."
