@@ -72,7 +72,7 @@ https://schema.org/review,review,https://schema.org/Review,n,Bonus,A review of t
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:tests,tests,https://nfdi4energy.github.io/ERSmeta/#ersmeta:TestCollection,n,Bonus,Information on the tests of the software.
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,validation,https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,n,Bonus,Information on validations done for the software. Validation refers to whether the software produces results that correspond to real-world properties.
 https://schema.org/availableOnDevice,typicalHardware,DefinedTerm,n,Recommended,Typical minimal hardware which is required to run the software.
-https://schema.org/timeRequired,typicalExcecutionTime,Number,n,Recommended,Typical execution time of the software.
+https://schema.org/timeRequired,typicalExcecutionTime,Number,n,Recommended,Typical execution time of the software in seconds.
 https://schema.org/processorRequirements,processorRequirements,Text,1,Recommended,"Processor architecture required to run the application (e.g. IA64)."
 https://schema.org/memoryRequirements,memoryRequirements,Text,1,Recommended,Minimum memory requirements.
 https://schema.org/storageRequirements,storageRequirements,Text,1,Recommended,Storage requirements (free space required).

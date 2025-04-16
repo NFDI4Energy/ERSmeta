@@ -79,7 +79,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:order 38 ;
 		sh:path schema:downloadUrl ;
 	], [
-		sh:datatype xsd:string ;
+		sh:datatype xsd:anyURI ;
 		sh:description "Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex, institutional GitLab instance, etc.)."@en ;
 		sh:name "codeRepository"@de, "codeRepository"@en ;
 		sh:order 39 ;
@@ -132,14 +132,14 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:order 21 ;
 		sh:path ersmeta:developerStructure ;
 		sh:in (
-			"Community (Open Source Research Software)",
-			"Community (Closed Source Research Software)",
-			"Community (Research Software as a Service)",
-			"Local Research Group",
-			"Project Group",
-			"Contractor (Open Source Resarch Software)",
-			"Contractor (Closed Source Research Software)",
-			"Contractor (Research Software as a Service)",
+			"Community (Open Source Research Software)"
+			"Community (Closed Source Research Software)"
+			"Community (Research Software as a Service)"
+			"Local Research Group"
+			"Project Group"
+			"Contractor (Open Source Resarch Software)"
+			"Contractor (Closed Source Research Software)"
+			"Contractor (Research Software as a Service)"
 			"Individual Researcher"
 		) ;
 	], [
@@ -355,7 +355,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "programmingLanguage"@en ;
 		sh:order 6 ;
 		sh:path schema:programmingLanguage ;
-		sh:class <https://www.wikidata.org/wiki/Q9143> ;
+		sh:class <https://www.wikidata.org/entity/Q9143> ;
 	], [
 		sh:node schema:Person ;
 		sh:description "Individual responsible for maintaining the software."@en ;
@@ -622,7 +622,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		) ;
 	], [
 		sh:datatype xsd:float ;
-		sh:description "Typical execution time of the software."@en ;
+		sh:description "Typical execution time of the software in seconds."@en ;
 		sh:name "typicalExcecutionTime"@en, "typicalExcecutionTime"@de ;
 		sh:order 77 ;
 		sh:path schema:timeRequired ;
@@ -675,7 +675,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "operatingSystem"@en, "operatingSystem"@de ;
 		sh:order 84 ;
 		sh:path schema:operatingSystem ;
-		sh:class <https://www.wikidata.org/wiki/Q9135> ;
+		sh:class <https://www.wikidata.org/entity/Q9135> ;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "Required software dependencies."@en ;
@@ -741,7 +741,7 @@ ersmeta:CommunityInteraction a rdfs:Class, sh:NodeShape ;
 		sh:order 2 ;
 		sh:maxCount 1 ;
 		sh:path schema:url ;
-		sh:datatype xsd:string ;
+		sh:datatype xsd:anyURI ;
 	] .
 
 schema:DataSet a rdfs:Class, sh:NodeShape ;
@@ -1064,7 +1064,7 @@ ersmeta:TestCollection a rdfs:Class, sh:NodeShape ;
 		sh:description "Number of the tests of the software."@en ;
 	], [
 		sh:path schema:url ;
-		sh:datatype xsd:string ;
+		sh:datatype xsd:anyURI ;
 		sh:name "url"@en, "url"@de ;
 		sh:order 2 ;
 		sh:description "Link to one or multiple test case."@en ;
@@ -1109,7 +1109,7 @@ schema:CreativeWork a rdfs:Class, sh:NodeShape ;
 	sh:order 3 ;
 	sh:closed false ;
 	sh:property [
-		sh:datatype xsd:anyURI ;
+		sh:nodeKind sh:IRIOrLiteral ;
 		sh:name "identifier"@de, "identifier"@en ;
 		sh:order 1 ;
 		sh:path schema:identifier ;

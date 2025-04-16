@@ -41,110 +41,467 @@
     "Validation": "ersmeta:Validation",
 
 
-    "abstract": {"@id":"schema:abstract", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "additionalType": {"@id":"schema:additionalType", "@type":"@id"},
-    "domain": {"@id":"schema:applicationCategory", "@container":"@set"},
-    "category": {"@id":"schema:applicationSubCategory", "@container":"@set"},
-    "author": {"@id":"schema:author", "@type":"@id", "@container":"@set"},
-    "availableOnDevice": {"@id":"schema:availableOnDevice", "@container":"@set"},
-    "buildInstruction": {"@id":"codemeta:buildInstruction", "@type":"http://www.w3.org/2001/XMLSchema#anyURI"},
-    "preferredCitation": {"@id":"okn:citation", "@type":"@id"},
-    "codeRepository": {"@id":"schema:codeRepository", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "collectionSize": {"@id":"schema:collectionSize", "@type":"http://www.w3.org/2001/XMLSchema#integer"},
-    "communityInteractions": {"@id":"ersmeta:communityInteractions", "@type":"@id", "@container":"@set"},
-    "compatibleHardware": {"@id":"ersmeta:compatibleHardware", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "contributor": {"@id":"schema:contributor", "@type":"@id", "@container":"@set"},
-    "copyrightHolder": {"@id":"schema:copyrightHolder", "@type":"@id", "@container":"@set"},
-    "countryOfOrigin": {"@id":"schema:countryOfOrigin", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "currency": {"@id":"schema:currency", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "cycleOfUpdates": {"@id":"ersmeta:cycleOfUpdates", "@container":"@set"},
-    "dateCreated": {"@id":"schema:dateCreated", "@type":"http://www.w3.org/2001/XMLSchema#date"},
-    "dateModified": {"@id":"schema:dateModified", "@type":"http://www.w3.org/2001/XMLSchema#date"},
-    "description": {"@id":"schema:description", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "developerStructure": {"@id":"ersmeta:developerStructure", "@container":"@set"},
-    "developmentStatus": {"@id":"codemeta:developmentStatus", "@container":"@set"},
-    "dimensions": {"@id":"ersmeta:dimensions", "@container":"@set"},
-    "downloadUrl": {"@id":"schema:downloadUrl", "@type":"http://www.w3.org/2001/XMLSchema#anyURI"},
-    "email": {"@id":"schema:email", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "encodingFormat": {"@id":"schema:encodingFormat", "@container":"@set"},
-    "energyComponent": {"@id":"ersmeta:energyComponent", "@type":"@id", "@container":"@set"},
-    "estimatedCost": {"@id":"schema:estimatedCost", "@type":"@id", "@container":"@set"},
-    "familyName": {"@id":"schema:familyName", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "featureList": {"@id":"schema:featureList", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "fileSize": {"@id":"schema:fileSize", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "funder": {"@id":"schema:funder", "@type":"@id", "@container":"@set"},
-    "funding": {"@id":"schema:funding", "@type":"@id", "@container":"@set"},
-    "givenName": {"@id":"schema:givenName", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "roleInResearch": {"@id":"prov:hadRole", "@container":"@set"},
-    "assumption": {"@id":"okn:hasAssumption", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "compatibleSoftware": {"@id":"ontosoft:hasCompatibleSoftware", "@type":"@id", "@container":"@set"},
-    "documentation": {"@id":"okn:hasDocumentation", "@type":"http://www.w3.org/2001/XMLSchema#anyURI"},
-    "example": {"@id":"okn:hasExample", "@type":"@id", "@container":"@set"},
-    "parameter": {"@id":"okn:hasParameter", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "purpose": {"@id":"okn:hasPurpose", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "compatibleData": {"@id":"ontosoft:hasRelevantDataSources", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "acronym": {"@id":"okn:hasShortName", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "supportGiven": {"@id":"ontosoft:hasSoftwareSupport", "@type":"http://www.w3.org/2001/XMLSchema#boolean"},
-    "limitation": {"@id":"ontosoft:hasUseLimitations", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
+    "abstract": {
+      "@id": "schema:abstract",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "additionalType": {
+      "@id": "schema:additionalType",
+      "@type": "@id"
+    },
+    "domain": {
+      "@id": "schema:applicationCategory",
+      "@container": "@set"
+    },
+    "category": {
+      "@id": "schema:applicationSubCategory",
+      "@container": "@set"
+    },
+    "author": {
+      "@id": "schema:author",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "availableOnDevice": {
+      "@id": "schema:availableOnDevice",
+      "@container": "@set"
+    },
+    "buildInstruction": {
+      "@id": "codemeta:buildInstruction",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "preferredCitation": {
+      "@id": "okn:citation",
+      "@type": "@id"
+    },
+    "codeRepository": {
+      "@id": "schema:codeRepository",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "collectionSize": {
+      "@id": "schema:collectionSize",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "communityInteractions": {
+      "@id": "ersmeta:communityInteractions",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "compatibleHardware": {
+      "@id": "ersmeta:compatibleHardware",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "contributor": {
+      "@id": "schema:contributor",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "copyrightHolder": {
+      "@id": "schema:copyrightHolder",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "countryOfOrigin": {
+      "@id": "schema:countryOfOrigin",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "currency": {
+      "@id": "schema:currency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "cycleOfUpdates": {
+      "@id": "ersmeta:cycleOfUpdates",
+      "@container": "@set"
+    },
+    "dateCreated": {
+      "@id": "schema:dateCreated",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dateModified": {
+      "@id": "schema:dateModified",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "description": {
+      "@id": "schema:description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "developerStructure": {
+      "@id": "ersmeta:developerStructure",
+      "@container": "@set"
+    },
+    "developmentStatus": {
+      "@id": "codemeta:developmentStatus",
+      "@container": "@set"
+    },
+    "dimensions": {
+      "@id": "ersmeta:dimensions",
+      "@container": "@set"
+    },
+    "downloadUrl": {
+      "@id": "schema:downloadUrl",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "email": {
+      "@id": "schema:email",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "encodingFormat": {
+      "@id": "schema:encodingFormat",
+      "@container": "@set"
+    },
+    "energyComponent": {
+      "@id": "ersmeta:energyComponent",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "estimatedCost": {
+      "@id": "schema:estimatedCost",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "familyName": {
+      "@id": "schema:familyName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "featureList": {
+      "@id": "schema:featureList",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "fileSize": {
+      "@id": "schema:fileSize",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "funder": {
+      "@id": "schema:funder",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "funding": {
+      "@id": "schema:funding",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "givenName": {
+      "@id": "schema:givenName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "roleInResearch": {
+      "@id": "prov:hadRole",
+      "@container": "@set"
+    },
+    "assumption": {
+      "@id": "okn:hasAssumption",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "compatibleSoftware": {
+      "@id": "ontosoft:hasCompatibleSoftware",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "documentation": {
+      "@id": "okn:hasDocumentation",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "example": {
+      "@id": "okn:hasExample",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "parameter": {
+      "@id": "okn:hasParameter",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "purpose": {
+      "@id": "okn:hasPurpose",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "compatibleData": {
+      "@id": "ontosoft:hasRelevantDataSources",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "acronym": {
+      "@id": "okn:hasShortName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "supportGiven": {
+      "@id": "ontosoft:hasSoftwareSupport",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "limitation": {
+      "@id": "ontosoft:hasUseLimitations",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
     "identifier": "schema:identifier",
-    "image": {"@id":"schema:image", "@type":"http://www.w3.org/2001/XMLSchema#anyURI", "@container":"@set"},
-    "method": {"@id":"m4i:implementsMethod", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "inLanguage": {"@id":"schema:inLanguage", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "isAccessibleForFree": {"@id":"schema:isAccessibleForFree", "@type":"http://www.w3.org/2001/XMLSchema#boolean", "@container":"@set"},
-    "issueTracker": {"@id":"codemeta:issueTracker", "@type":"http://www.w3.org/2001/XMLSchema#anyURI", "@container":"@set"},
-    "keywords": {"@id":"schema:keywords", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "legalName": {"@id":"schema:legalName", "@type":"http://www.w3.org/2001/XMLSchema#string"},
+    "image": {
+      "@id": "schema:image",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "@container": "@set"
+    },
+    "method": {
+      "@id": "m4i:implementsMethod",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "inLanguage": {
+      "@id": "schema:inLanguage",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "isAccessibleForFree": {
+      "@id": "schema:isAccessibleForFree",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean",
+      "@container": "@set"
+    },
+    "issueTracker": {
+      "@id": "codemeta:issueTracker",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "@container": "@set"
+    },
+    "keywords": {
+      "@id": "schema:keywords",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "legalName": {
+      "@id": "schema:legalName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "levelOfDetail": "ersmeta:levelOfDetail",
-    "license": {"@id":"schema:license", "@type":"@id", "@container":"@set"},
-    "maintainer": {"@id":"schema:maintainer", "@type":"@id"},
-    "memoryRequirements": {"@id":"schema:memoryRequirements", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "name": {"@id":"schema:name", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "input": {"@id":"obo:RO_0002233", "@type":"@id", "@container":"@set"},
-    "output": {"@id":"obo:RO_0002234", "@type":"@id", "@container":"@set"},
-    "solver": {"@id":"oeo:OEO_00000392", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "coversSector": {"@id":"oeo:OEO_00000505", "@type":"@id", "@container":"@set"},
-    "hasSpatialResolution": {"@id":"oeo:OEO_00000515", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "hasTemporalResolution": {"@id":"oeo:OEO_00000516", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "technology": {"@id":"oeo:OEO_00000521", "@type":"@id", "@container":"@set"},
-    "operatingSystem": {"@id":"schema:operatingSystem", "@type":"@id", "@container":"@set"},
-    "parallelizationCapability": {"@id":"ersmeta:parallelizationCapability", "@type":"http://www.w3.org/2001/XMLSchema#boolean"},
-    "problemType": {"@id":"ersmeta:problemType", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "processorRequirements": {"@id":"schema:processorRequirements", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "programmingLanguage": {"@id":"schema:programmingLanguage", "@type":"@id", "@container":"@set"},
-    "readme": {"@id":"codemeta:readme", "@type":"http://www.w3.org/2001/XMLSchema#anyURI"},
-    "realtimeCapability": {"@id":"ersmeta:realtimeCapability", "@container":"@set"},
-    "referencePublication": {"@id":"codemeta:referencePublication", "@type":"@id", "@container":"@set"},
-    "required": {"@id":"ersmeta:required", "@type":"http://www.w3.org/2001/XMLSchema#boolean"},
-    "requiredTrainingPeriod": {"@id":"ersmeta:requiredTrainingPeriod", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "review": {"@id":"schema:review", "@type":"@id", "@container":"@set"},
-    "reviewAspect": {"@id":"schema:reviewAspect", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "reviewBody": {"@id":"schema:reviewBody", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "roleName": {"@id":"schema:roleName", "@container":"@set"},
-    "metadataVersion": {"@id":"schema:schemaVersion", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "sdLicense": {"@id":"schema:sdLicense", "@type":"@id", "@container":"@set"},
-    "sdPublisher": {"@id":"schema:sdPublisher", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "similarityOfResults": {"@id":"ersmeta:similarityOfResults", "@type":"http://www.w3.org/2001/XMLSchema#float"},
-    "softwareRequirements": {"@id":"schema:softwareRequirements", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
+    "license": {
+      "@id": "schema:license",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "maintainer": {
+      "@id": "schema:maintainer",
+      "@type": "@id"
+    },
+    "memoryRequirements": {
+      "@id": "schema:memoryRequirements",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "name": {
+      "@id": "schema:name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "input": {
+      "@id": "obo:RO_0002233",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "output": {
+      "@id": "obo:RO_0002234",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "solver": {
+      "@id": "oeo:OEO_00000392",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "coversSector": {
+      "@id": "oeo:OEO_00000505",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "hasSpatialResolution": {
+      "@id": "oeo:OEO_00000515",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "hasTemporalResolution": {
+      "@id": "oeo:OEO_00000516",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "technology": {
+      "@id": "oeo:OEO_00000521",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "operatingSystem": {
+      "@id": "schema:operatingSystem",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "parallelizationCapability": {
+      "@id": "ersmeta:parallelizationCapability",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "problemType": {
+      "@id": "ersmeta:problemType",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "processorRequirements": {
+      "@id": "schema:processorRequirements",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "programmingLanguage": {
+      "@id": "schema:programmingLanguage",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "readme": {
+      "@id": "codemeta:readme",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "realtimeCapability": {
+      "@id": "ersmeta:realtimeCapability",
+      "@container": "@set"
+    },
+    "referencePublication": {
+      "@id": "codemeta:referencePublication",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "required": {
+      "@id": "ersmeta:required",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "requiredTrainingPeriod": {
+      "@id": "ersmeta:requiredTrainingPeriod",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "review": {
+      "@id": "schema:review",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "reviewAspect": {
+      "@id": "schema:reviewAspect",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "reviewBody": {
+      "@id": "schema:reviewBody",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "roleName": {
+      "@id": "schema:roleName",
+      "@container": "@set"
+    },
+    "metadataVersion": {
+      "@id": "schema:schemaVersion",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sdLicense": {
+      "@id": "schema:sdLicense",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "sdPublisher": {
+      "@id": "schema:sdPublisher",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "similarityOfResults": {
+      "@id": "ersmeta:similarityOfResults",
+      "@type": "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "softwareRequirements": {
+      "@id": "schema:softwareRequirements",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
     "softwareType": "ersmeta:softwareType",
-    "softwareVersion": {"@id":"schema:softwareVersion", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "sourceOrganization": {"@id":"schema:sourceOrganization", "@type":"@id", "@container":"@set"},
-    "spatialCoverage": {"@id":"schema:spatialCoverage", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "spatialScope": {"@id":"ersmeta:spatialScope", "@type":"http://www.w3.org/2001/XMLSchema#string"},
+    "softwareVersion": {
+      "@id": "schema:softwareVersion",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sourceOrganization": {
+      "@id": "schema:sourceOrganization",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "spatialCoverage": {
+      "@id": "schema:spatialCoverage",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "spatialScope": {
+      "@id": "ersmeta:spatialScope",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "stationaryVsTransient": "ersmeta:stationaryVsTransient",
-    "storageRequirements": {"@id":"schema:storageRequirements", "@type":"http://www.w3.org/2001/XMLSchema#string"},
-    "supportedVoltageLevel": {"@id":"ersmeta:supportedVoltageLevel", "@container":"@set"},
-    "targetProduct": {"@id":"schema:targetProduct", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
+    "storageRequirements": {
+      "@id": "schema:storageRequirements",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "supportedVoltageLevel": {
+      "@id": "ersmeta:supportedVoltageLevel",
+      "@container": "@set"
+    },
+    "targetProduct": {
+      "@id": "schema:targetProduct",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
     "temporalCoverage": "schema:temporalCoverage",
-    "tests": {"@id":"ersmeta:tests", "@type":"@id", "@container":"@set"},
-    "logo": {"@id":"schema:thumbnailUrl", "@type":"http://www.w3.org/2001/XMLSchema#anyURI"},
-    "typicalExcecutionTime": {"@id":"schema:timeRequired", "@type":"http://www.w3.org/2001/XMLSchema#float", "@container":"@set"},
-    "url": "schema:url",
-    "useCase": {"@id":"ersmeta:useCase", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "usedData": {"@id":"ersmeta:usedData", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "usedInPublication": {"@id":"ontosoft:usedInPublication", "@type":"@id", "@container":"@set"},
-    "usedOptimization": {"@id":"ersmeta:usedOptimization", "@type":"@id", "@container":"@set"},
-    "usedStandard": {"@id":"ersmeta:usedStandard", "@type":"http://www.w3.org/2001/XMLSchema#string", "@container":"@set"},
-    "validation": {"@id":"ersmeta:validation", "@type":"@id", "@container":"@set"},
-    "value": {"@id":"schema:value", "@type":"http://www.w3.org/2001/XMLSchema#float", "@container":"@set"}
+    "tests": {
+      "@id": "ersmeta:tests",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "logo": {
+      "@id": "schema:thumbnailUrl",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "typicalExcecutionTime": {
+      "@id": "schema:timeRequired",
+      "@type": "http://www.w3.org/2001/XMLSchema#float",
+      "@container": "@set"
+    },
+    "url": {
+      "@id": "schema:url",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "useCase": {
+      "@id": "ersmeta:useCase",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "usedData": {
+      "@id": "ersmeta:usedData",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "usedInPublication": {
+      "@id": "ontosoft:usedInPublication",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "usedOptimization": {
+      "@id": "ersmeta:usedOptimization",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "usedStandard": {
+      "@id": "ersmeta:usedStandard",
+      "@type": "http://www.w3.org/2001/XMLSchema#string",
+      "@container": "@set"
+    },
+    "validation": {
+      "@id": "ersmeta:validation",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "value": {
+      "@id": "schema:value",
+      "@type": "http://www.w3.org/2001/XMLSchema#float",
+      "@container": "@set"
+    },
+    "grantNo": {
+      "@id": "schema:identifier",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    }
   }
 }

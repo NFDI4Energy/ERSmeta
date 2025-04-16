@@ -629,11 +629,11 @@
       }
     },
     "typicalExcecutionTime": {
-      "description": "Typical execution time of the software.",
+      "description": "Typical execution time of the software in seconds.",
       "title": "typicalExcecutionTime",
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "float"
       }
     },
     "processorRequirements": {
