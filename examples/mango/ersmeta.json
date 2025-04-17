@@ -1,0 +1,298 @@
+{
+  "@context": "https://github.com/NFDI4Energy/ERSmeta/blob/main/schema/ersmeta.jsonld",
+  "name": "mango",
+  "acronym": "mango",
+  "logo": "https://github.com/OFFIS-DAI/mango/logo.png",
+  "softwareVersion": "2.1.5",
+  "programmingLanguage": [ "Python" ],
+  "inLanguage": [ "en" ],
+  "abstract": "Modular Python-based agent framework to implement multi-agent systems",
+  "description": "mango (modular python agent framework) is a python library for multi-agent systems (MAS). It is written on top of asyncio and is released under the MIT license. mango allows the user to create simple agents with little effort and in the same time offers options to structure agents with complex behaviour. The main features of mango are: Container mechanism to speedup local message exchange; Message definition based on the FIPA ACL standard; Structuring complex agents with loose coupling and agent roles; Built-in codecs: JSON and protobuf; Supports communication between agents directly via TCP or via an external MQTT broker",
+  "keywords": [
+    "agent",
+    "agent-based",
+    "agent-based-control",
+    "agent-based-simulation",
+    "distributed-computing",
+    "distributed-systems",
+    "multi-agent-systems"
+  ],
+  "domain": [ "Computer Science", "Electrical Engineering and Information Technology" ],
+  "category": [ "Control strategies for energy systems" ],
+  "softwareType": [ "Library" ],
+  "roleInResearch": [ "Modeling and Simulation", "Agent-based Modeling", "Proof-of-Concept Software" ],
+  "developmentStatus": "Active",
+  "developerStructure": [ "Local Research Group", "Community (Open Source Research Software)" ],
+  "cycleOfUpdates": "Monthly",
+  "issueTracker": "https://github.com/OFFIS-DAI/mango/issues",
+  "referencePublication": [
+    {
+      "identifier": "https://doi.org/10.1016/j.softx.2024.101791"
+    }
+  ],
+  "preferredCitation": {
+    "identifier": "https://doi.org/10.1016/j.softx.2024.101791"
+  },
+  "license": [
+    {
+      "identifier": "MIT",
+      "name": "MIT License"
+    }
+  ],
+  "copyrightHolder": [
+    {
+      "legalName": "OFFIS e.V.",
+      "identifier": "https://ror.org/003sav189"
+    }
+  ],
+  "isAccessibleForFree": true,
+  "dateCreated": "2020-09-25",
+  "dateModified": "2025-04-09",
+  "contributor": [
+    {
+      "givenName": "Alexander",
+      "familyName": "Hill",
+      "email": [ "alexander.hill@offis.de" ],
+      "identifier": "https://orcid.org/0000-0002-9270-9871",
+      "roleName": [
+        "Coding"
+      ]
+    },
+    {
+      "givenName": "Emilie",
+      "familyName": "Frost",
+      "email": [ "emilie.frost@offis.de" ],
+      "identifier": "https://orcid.org/0000-0003-4791-2333",
+      "roleName": [
+        "Coding"
+      ]
+    },
+    {
+      "givenName": "Florian",
+      "familyName": "Maurer",
+      "email": [ "maurer@fh-aachen.de" ],
+      "identifier": "https://orcid.org/0000-0001-8345-3889",
+      "roleName": [
+        "Coding",
+        "Maintenance"
+      ]
+    },
+    {
+      "givenName": "Jens",
+      "familyName": "Sager",
+      "email": [ "jens.sager@offis.de" ],
+      "identifier": "https://orcid.org/0000-0001-6352-4213",
+      "roleName": [
+        "Coding",
+        "Architecture"
+      ]
+    },
+    {
+      "givenName": "Rico",
+      "familyName": "Schrage",
+      "email": [ "rico.schrage@uni-oldenburg.de" ],
+      "identifier": "https://orcid.org/0000-0001-5339-6553",
+      "roleName": [
+        "Coding",
+        "Maintenance",
+        "Architecture"
+      ]
+    },
+    {
+      "givenName": "Marvin",
+      "familyName": "Werner-Nebel",
+      "roleName": [
+        "Coding",
+        "Architecture",
+        "Maintenance",
+        "Management"
+      ]
+    },
+    {
+      "givenName": "Stefanie",
+      "familyName": "Holly",
+      "email": [ "stefanie.holly@offis.de" ],
+      "identifier": "https://orcid.org/0009-0005-6965-1877",
+      "roleName": [
+        "Management"
+      ]
+    },
+    {
+      "givenName": "Jan Philipp",
+      "familyName": "Hörding",
+      "email": [ "jan.philipp.hoerding@offis.de" ],
+      "roleName": [
+        "Documentation"
+      ]
+    }
+  ],
+  "author": [
+    {
+      "givenName": "Jens",
+      "familyName": "Sager",
+      "email": [ "jens.sager@offis.de" ],
+      "identifier": "https://orcid.org/0000-0001-6352-4213"
+    },
+    {
+      "givenName": "Rico",
+      "familyName": "Schrage",
+      "email": [ "rico.schrage@uni-oldenburg.de" ],
+      "identifier": "https://orcid.org/0000-0001-5339-6553"
+    },
+    {
+      "givenName": "Stefanie",
+      "familyName": "Holly",
+      "email": [ "stefanie.holly@offis.de" ],
+      "identifier": "https://orcid.org/0009-0005-6965-1877"
+    }
+  ],
+  "maintainer": [
+    {
+      "givenName": "Rico",
+      "familyName": "Schrage",
+      "email": [ "rico.schrage@uni-oldenburg.de" ],
+      "identifier": "https://orcid.org/0000-0001-5339-6553"
+    },
+    {
+      "givenName": "Florian",
+      "familyName": "Maurer",
+      "email": [ "maurer@fh-aachen.de" ],
+      "identifier": "https://orcid.org/0000-0001-8345-3889"
+    }
+  ],
+  "sourceOrganization": [
+    {
+      "legalName": "OFFIS e.V.",
+      "identifier": "https://ror.org/003sav189"
+    }
+  ],
+  "countryOfOrigin": [ "DE" ],
+  "funding": [
+    {
+      "funder": [
+        {
+          "legalName": "Deutsche Forschungsgemeinschaft (DFG)",
+          "identifier": "https://ror.org/018mejw64"
+        }
+      ],
+      "grantNo": "359941476",
+      "projectName": "Vermeidung von emergierenden Controller-Konflikten in multimodalen Smart Energy Systems"
+    },
+    {
+      "funder": [
+        {
+          "legalName": "Volkswagen Foundation",
+          "identifier": "https://ror.org/03bsmfz84"
+        },
+        {
+          "legalName": "Niedersächsisches Ministerium für Wissenschaft und Kultur",
+          "identifier": "https://ror.org/0116z8r77"
+        }
+      ],
+      "grantNo": "11-76251-13-3/19 – ZN3488",
+      "projectName": "Zukunftslabor Energie (ZLE)"
+    }
+  ],
+  "downloadUrl": "https://pypi.org/project/mango-agents/",
+  "codeRepository": "https://github.com/OFFIS-DAI/mango",
+  "documentation": [ "https://mango-agents.readthedocs.io/en/latest/index.html" ],
+  "readme": "https://raw.githubusercontent.com/OFFIS-DAI/mango/master/README.md",
+  "buildInstruction": "https://mango-agents.readthedocs.io/en/latest/installation.html",
+  "supportGiven": true,
+  "requiredTrainingPeriod": "1 week",
+  "example": [
+    {
+      "additionalType": "Minimal",
+      "name": "Getting Started",
+      "url": "https://mango-agents.readthedocs.io/en/latest/getting_started.html"
+    },
+    {
+      "additionalType": "Long",
+      "name": "Tutorial",
+      "url": "https://mango-agents.readthedocs.io/en/latest/tutorial.html"
+    }
+  ],
+  "communityInteractions": [
+    {
+      "additionalType": "Github discussions",
+      "url": "https://github.com/OFFIS-DAI/mango/discussions"
+    },
+    {
+      "additionalType": "Issues",
+      "url": "https://github.com/OFFIS-DAI/mango/issues"
+    }
+  ],
+  "usedInPublication": [
+    {
+      "identifier": "https://doi.org/10.1145/3666043.3666046"
+    },
+    {
+      "identifier": "https://doi.org/10.1016/j.softx.2024.101667"
+    },
+    {
+      "identifier": "https://doi.org/10.1186/s42162-024-00464-7"
+    },
+    {
+      "identifier": "https://doi.org/10.1109/CIEES62939.2024.10811119"
+    },
+    {
+      "identifier": "https://doi.org/10.1007/s41109-023-00553-8"
+    },
+    {
+      "identifier": "https://doi.org/10.1145/3447555.3465415"
+    },
+    {
+      "identifier": "http://doi.org/10.15439/2021F60"
+    }
+  ],
+  "compatibleSoftware": [
+    {
+      "name": "Cosima",
+      "url": "https://cosima.offis.de/"
+    },
+    {
+      "name": "mosaik",
+      "url": "https://mosaik.offis.de/"
+    }
+  ],
+  "purpose": [ "Simulation", "Analysis", "Support of agent based architectures", "Support for communcation simulations of distributed systems" ],
+  "method": [ "agent-based modeling" ],
+  "coversSector": [ "ICT" ],
+  "useCase": [ "Energy market analysis", "Control strategies for energy systems", "Distributed optimization" ],
+  "limitation": [ "Limited to smaller systems" ],
+  "featureList": [ "Structuring complex agents with loose coupling and agent roles", "Supports communication between agents directly via TCP or via an external MQTT broker", "Built-in codecs: JSON and protobuf", "Message definition based on the FIPA ACL standard", "Container mechanism to speedup local message exchange" ],
+  "tests": [
+    {
+      "collectionSize": "4",
+      "url": [ "https://github.com/OFFIS-DAI/mango/tree/development/tests/integration_tests" ]
+    },
+    {
+      "collectionSize": "15",
+      "url": [ "https://github.com/OFFIS-DAI/mango/tree/development/tests/unit_tests" ]
+    }
+  ],
+  "typicalHardware": [ "Laptop" ],
+  "typicalExcecutionTime": [ "1" ],
+  "processorRequirements": "x86_64",
+  "memoryRequirements": "8GB",
+  "storageRequirements": "500MB",
+  "parallelizationCapability": true,
+  "targetProduct": [ "Python 3.10", "Python 3.11", "Python 3.12", "Python 3.13" ],
+  "operatingSystem": [ "Windows", "Linux", "MacOS" ],
+  "softwareRequirements": [
+    "paho-mqtt>=2.1.0",
+    "python-dateutil>=2.9.0",
+    "dill>=0.3.8",
+    "protobuf==5.27.2",
+    "networkx>=3.4.1"
+  ],
+  "fileSize": "136KB",
+  "metadataVersion": "0.7",
+  "sdLicense": [
+    {
+      "identifier": "CC0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal"
+    }
+  ],
+  "sdPublisher":"OFFIS e.V."
+}
