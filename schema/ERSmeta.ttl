@@ -636,7 +636,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 	], [
 		sh:datatype xsd:float ;
 		sh:description "Typical execution time of the software in seconds."@en ;
-		sh:name "typicalExcecutionTime"@en, "typicalExcecutionTime"@de ;
+		sh:name "typicalExecutionTime"@en, "typicalExecutionTime"@de ;
 		sh:order 77 ;
 		sh:path schema:timeRequired ;
 	], [
