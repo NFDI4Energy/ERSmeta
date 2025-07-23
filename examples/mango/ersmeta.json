@@ -272,7 +272,7 @@
     }
   ],
   "typicalHardware": [ "Laptop" ],
-  "typicalExcecutionTime": [ 1.0 ],
+  "typicalExecutionTime": [ 1.0 ],
   "processorRequirements": "x86_64",
   "memoryRequirements": "8GB",
   "storageRequirements": "500MB",

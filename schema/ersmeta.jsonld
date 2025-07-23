@@ -455,7 +455,7 @@
       "@id": "schema:thumbnailUrl",
       "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
-    "typicalExcecutionTime": {
+    "typicalExecutionTime": {
       "@id": "schema:timeRequired",
       "@type": "http://www.w3.org/2001/XMLSchema#float",
       "@container": "@set"

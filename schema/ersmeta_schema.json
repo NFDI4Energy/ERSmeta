@@ -51,7 +51,7 @@
     "coversSector",
     "technology",
     "typicalHardware",
-    "typicalExcecutionTime",
+    "typicalExecutionTime",
     "processorRequirements",
     "memoryRequirements",
     "storageRequirements",
@@ -1707,9 +1707,9 @@
         ]
       }
     },
-    "typicalExcecutionTime": {
+    "typicalExecutionTime": {
       "description": "Typical execution time of the software in seconds.",
-      "title": "typicalExcecutionTime",
+      "title": "typicalExecutionTime",
       "type": "array",
       "items": {
         "type": "number"
