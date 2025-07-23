@@ -152,7 +152,7 @@
       schema:identifier "https://ror.org/0116z8r77"^^xsd:anyURI ;
       schema:legalName "Niedersaechsisches Ministerium fuer Wissenschaft und Kultur"^^xsd:string
   ] ] ;
-  schema:inLanguage "en"^^xsd:string ;
+  schema:inLanguage "en-US"^^xsd:string ;
   schema:isAccessibleForFree true ;
   schema:keywords "agent"^^xsd:string, "agent-based"^^xsd:string, "agent-based-control"^^xsd:string, "agent-based-simulation"^^xsd:string, "distributed-computing"^^xsd:string, "distributed-systems"^^xsd:string, "multi-agent-systems"^^xsd:string ;
   schema:license [
@@ -177,7 +177,7 @@
   schema:operatingSystem wd:Q388, wd:Q1406, wd:14116 ;
   schema:processorRequirements "x86_64"^^xsd:string ;
   schema:programmingLanguage wd:Q31205855  ;
-  schema:schemaVersion "0.7"^^xsd:string ;
+  schema:schemaVersion "0.8"^^xsd:string ;
   schema:sdLicense [
     a schema:CreativeWork ;
     schema:identifier "CC0-1.0"^^xsd:string ;

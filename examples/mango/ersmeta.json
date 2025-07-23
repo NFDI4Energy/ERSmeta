@@ -5,7 +5,7 @@
   "logo": "https://github.com/OFFIS-DAI/mango/logo.png",
   "softwareVersion": "2.1.5",
   "programmingLanguage": [ "Python" ],
-  "inLanguage": [ "en" ],
+  "inLanguage": [ "en-US" ],
   "abstract": "Modular Python-based agent framework to implement multi-agent systems",
   "description": "mango (modular python agent framework) is a python library for multi-agent systems (MAS). It is written on top of asyncio and is released under the MIT license. mango allows the user to create simple agents with little effort and in the same time offers options to structure agents with complex behaviour. The main features of mango are: Container mechanism to speedup local message exchange; Message definition based on the FIPA ACL standard; Structuring complex agents with loose coupling and agent roles; Built-in codecs: JSON and protobuf; Supports communication between agents directly via TCP or via an external MQTT broker",
   "keywords": [
@@ -248,11 +248,11 @@
   "compatibleSoftware": [
     {
       "name": "Cosima",
-      "url": "https://cosima.offis.de/"
+      "url": [ "https://cosima.offis.de/" ]
     },
     {
       "name": "mosaik",
-      "url": "https://mosaik.offis.de/"
+      "url": [ "https://mosaik.offis.de/" ]
     }
   ],
   "purpose": [ "Simulation", "Analysis", "Support of agent based architectures", "Support for communcation simulations of distributed systems" ],
@@ -272,13 +272,13 @@
     }
   ],
   "typicalHardware": [ "Laptop" ],
-  "typicalExcecutionTime": [ "1" ],
+  "typicalExcecutionTime": [ 1.0 ],
   "processorRequirements": "x86_64",
   "memoryRequirements": "8GB",
   "storageRequirements": "500MB",
   "parallelizationCapability": true,
   "targetProduct": [ "Python 3.10", "Python 3.11", "Python 3.12", "Python 3.13" ],
-  "operatingSystem": [ "Windows", "Linux", "MacOS" ],
+  "operatingSystem": [ "Microsoft Windows", "Linux", "MacOS" ],
   "softwareRequirements": [
     "paho-mqtt>=2.1.0",
     "python-dateutil>=2.9.0",
@@ -287,7 +287,7 @@
     "networkx>=3.4.1"
   ],
   "fileSize": "136KB",
-  "metadataVersion": "0.7",
+  "metadataVersion": "0.8",
   "sdLicense": [
     {
       "identifier": "CC0-1.0",
