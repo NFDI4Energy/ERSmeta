@@ -2,23 +2,23 @@
 https://schema.org/name,name,Text,1,Mandatory,Name of the software.
 https://w3id.org/okn/o/sd#hasShortName,acronym,Text,1,Bonus,Abbreviation of the software name.
 https://schema.org/identifier,identifier,URL,1,Recommended,"The identifier property represents any kind of identifier for any kind of Thing, such as DOI, ISBNs, GTIN codes, UUIDs etc."
-https://schema.org/thumbnailUrl,logo,URL,1,Bonus,Link to the logo of the software.
+https://schema.org/thumbnailUrl,logo,URL,1,Bonus,Link (URL) to the logo of the software.
 https://schema.org/softwareVersion,softwareVersion,Text,1,Mandatory,Version of the software instance as used by the developers.
 https://schema.org/programmingLanguage,programmingLanguage,https://schema.org/ComputerLanguage,n,Mandatory,The computer programming language in which the software is written.
 https://schema.org/inLanguage,inLanguage,Text,n,Recommended,"Language used within the software (e.g. variables, documentation). Standard: IETF (BCP47)"
 https://schema.org/abstract,abstract,Text,1,Recommended,A one-line summary of what the software does.
 https://schema.org/description,description,Text,1,Mandatory,A description of the software. Max 200 words.
 https://schema.org/keywords,keywords,Text,n,Mandatory,Keywords or tags used to describe this software.
-https://schema.org/image,graphicalAbstract,URL,1,Bonus,Graphical overview on the functionality of the software.
+https://schema.org/image,graphicalAbstract,URL,1,Bonus,Link (URL) to a graphical overview on the functionality of the software.
 https://schema.org/applicationCategory,domain,DefinedTerm,n,Recommended,Research domain for which the software was written.
 https://schema.org/applicationSubCategory,category,DefinedTerm,n,Recommended,Research category for which the software was written.
-https://nfdi4energy.github.io/ERSmeta/#ersmeta:softwareType,softwareType,DefinedTerm,1,Mandatory,"Type of software application, e.g. 'script'."
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:softwareType,softwareType,DefinedTerm,n,Mandatory,"Type of software application, e.g. 'script'."
 http://www.w3.org/ns/prov#hadRole,roleInResearch,DefinedTerm,n,Recommended,Kind of tasks that the software tasks over in research.
 https://schema.org/url,url,URL,n,Recommended,Homepage of the tool. URL of the item.
 https://codemeta.github.io/terms/developmentStatus,developmentStatus,DefinedTerm,1,Mandatory,"Description of development status, e.g. Active, inactive, suspended. See repostatus.org"
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:developerStructure,developerStructure,DefinedTerm,n,Recommended,Structure of the development team.
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:cycleOfUpdates,cycleOfUpdates,DefinedTerm,1,Recommended,How often is the software updated?
-https://codemeta.github.io/terms/issueTracker,issueTracker,URL,1,Bonus,Link to software bug reporting or issue tracking system
+https://codemeta.github.io/terms/issueTracker,issueTracker,URL,1,Bonus,Link (URL) to software bug reporting or issue tracking system
 https://codemeta.github.io/terms/referencePublication,referencePublication,https://schema.org/ScholarlyArticle,n,Recommended,Any academic publication which describes the software.
 https://w3id.org/okn/o/sd#citation,preferredCitation,https://schema.org/ScholarlyArticle,1,Recommended,"A reference to another work that should be cited instead of the software or dataset itself. Note that the principles of  ""software citation"" and ""data citation"" require that software should be cited on the same basis as any other research product such as a paper or a book. Adding a different preferred citation may result in a violation of the respective primary principle, ""Importance"", when others cite this work."
 https://schema.org/license,license,https://schema.org/CreativeWork,n,Mandatory,A license document that applies to this software.
@@ -27,17 +27,17 @@ https://schema.org/isAccessibleForFree,isAccessibleForFree,Boolean,1,Bonus,A fla
 https://schema.org/estimatedCost,estimatedCost,https://schema.org/MonetaryAmount,1,Bonus,"Typical cost for licensing the software, if available."
 https://schema.org/dateCreated,dateCreated,Date,1,Mandatory,The date on which the software was initially created.
 https://schema.org/dateModified,dateModified,Date,1,Recommended,"The date on which the software was most recently modified."
-https://schema.org/contributor,contributor,https://schema.org/Person,n,Mandatory,A person who has contributed to the software.
-https://schema.org/author,author,https://schema.org/Person,n,Recommended,A person who has authored the software.
-https://schema.org/maintainer,maintainer,https://schema.org/Person,1,Recommended,Individual responsible for maintaining the software.
+https://schema.org/contributor,contributor,https://schema.org/Person,n,Mandatory,"A person who has contributed to the software. A contributor refers to anyone who aids in software development in any capacity, from coding to testing, highlighting the collaborative nature of software projects."
+https://schema.org/author,author,https://schema.org/Person,n,Recommended,"A person who has authored the software. An author in software authorship is someone who significantly contributes to the creation and development of software, including roles like coding, project management, and documentation."
+https://schema.org/maintainer,maintainer,https://schema.org/Person,n,Recommended,Individual responsible for maintaining the software.
 https://schema.org/sourceOrganization,sourceOrganization,https://schema.org/Organization,n,Recommended,Institution which developed the software.
 https://schema.org/countryOfOrigin ,countryOfOrigin,Text,n,Recommended,"Country where the software was developed. Country codes as defined by ISO 3166-1 alpha-2 should be used."
 https://schema.org/funding,funding,https://schema.org/Grant,n,Bonus,"Information on the funding which was used to develop the software."
 https://schema.org/downloadUrl ,downloadURL,URL,1,Mandatory,"If the file can be downloaded, URL to download the binary."
-https://schema.org/codeRepository,codeRepository,URL,1,Recommended,"Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex, institutional GitLab instance, etc.)."
-https://w3id.org/okn/o/sd#hasDocumentation,documentation,URL,n,Recommended,Link to the documentation describing the code and is usful for developers.
-readme,readme,URL,1,Recommended,Link to software readme file.
-buildInstructions,buildInstruction,URL,1,Bonus,Link to installation instructions/documentation.
+https://schema.org/codeRepository,codeRepository,URL,1,Recommended,"Link (URL) to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex, institutional GitLab instance, etc.)."
+https://w3id.org/okn/o/sd#hasDocumentation,documentation,URL,n,Recommended,Link (URL) to the documentation describing the code and is usful for developers.
+readme,readme,URL,1,Recommended,Link (URL) to software readme file.
+buildInstructions,buildInstruction,URL,1,Bonus,Link (URL) to installation instructions/documentation.
 http://ontosoft.org/software#hasSoftwareSupport,supportGiven,Boolean,1,Recommended,Is support for the software provided?
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:requiredTrainingPeriod,requiredTrainingPeriod,Text,1,Bonus,How long would a researcher need to be able to use the software?
 https://w3id.org/okn/o/sd#hasExample,example,https://nfdi4energy.github.io/ERSmeta/#ersmeta:Example,n,Bonus,Code examples for using the software.
@@ -72,7 +72,7 @@ https://schema.org/review,review,https://schema.org/Review,n,Bonus,A review of t
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:tests,tests,https://nfdi4energy.github.io/ERSmeta/#ersmeta:TestCollection,n,Bonus,Information on the tests of the software.
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,validation,https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,n,Bonus,Information on validations done for the software. Validation refers to whether the software produces results that correspond to real-world properties.
 https://schema.org/availableOnDevice,typicalHardware,DefinedTerm,n,Recommended,Typical minimal hardware which is required to run the software.
-https://schema.org/timeRequired,typicalExcecutionTime,Number,n,Recommended,Typical execution time of the software.
+https://schema.org/timeRequired,typicalExecutionTime,Number,n,Recommended,Typical execution time of the software in seconds.
 https://schema.org/processorRequirements,processorRequirements,Text,1,Recommended,"Processor architecture required to run the application (e.g. IA64)."
 https://schema.org/memoryRequirements,memoryRequirements,Text,1,Recommended,Minimum memory requirements.
 https://schema.org/storageRequirements,storageRequirements,Text,1,Recommended,Storage requirements (free space required).

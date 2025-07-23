@@ -19,12 +19,13 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 	dcterms:title "EnergyResearchSoftware"@en ;
 	rdfs:label "EnergyResearchSoftware";
 	dcterms:created "2025-02-18"^^xsd:date ;
-	dcterms:modified "2025-03-11"^^xsd:date ;
+	dcterms:modified "2025-07-22"^^xsd:date ;
 	dcterms:creator "Stephan Ferenz" ;
 	dcterms:description "This metadata schema includes general metadata elements for research software in the energy domain."@en ;
 	dcterms:license <http://spdx.org/licenses/CC0-1.0> ;
 	dcterms:subject <https://github.com/tibonto/dfgfo/408-03> ;
 	skos:definition "This is the main element to describe energy research software." ;
+	schema:version "0.8";
 	sh:extends schema:SoftwareApplication ;
 	sh:order 1;
 	sh:closed false ;
@@ -53,7 +54,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:path schema:description ;
 	], [
 		sh:datatype xsd:anyURI ;
-		sh:description "Graphical overview on the functionality of the software."@en ;
+		sh:description "Link (URL) to a graphical overview on the functionality of the software."@en ;
 		sh:name "graphicalAbstract"@en ;
 		sh:order 11 ;
 		sh:path schema:image ;
@@ -79,8 +80,8 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:order 38 ;
 		sh:path schema:downloadUrl ;
 	], [
-		sh:datatype xsd:string ;
-		sh:description "Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex, institutional GitLab instance, etc.)."@en ;
+		sh:datatype xsd:anyURI ;
+		sh:description "Link (URL) to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex, institutional GitLab instance, etc.)."@en ;
 		sh:name "codeRepository"@de, "codeRepository"@en ;
 		sh:order 39 ;
 		sh:path schema:codeRepository ;
@@ -94,21 +95,21 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:path schema:dateCreated ;
 	], [
 		sh:datatype xsd:anyURI ;
-		sh:description "Link to the documentation describing the code and is usful for developers."@en ;
+		sh:description "Link (URL) to the documentation describing the code and is useful for developers."@en ;
 		sh:maxCount 1 ;
 		sh:name "documentation"@en ;
 		sh:order 40 ;
 		sh:path okn:hasDocumentation ;
 	], [
 		sh:datatype xsd:anyURI ;
-		sh:description """Link to the documentation describing the code and is usful for developers."""@en ;
+		sh:description "Link (URL) to the documentation describing the code and is useful for developers."@en ;
 		sh:maxCount 1 ;
 		sh:name "readme"@de, "readme"@en ;
 		sh:order 41 ;
 		sh:path codemeta:readme ;
 	], [
 		sh:datatype xsd:anyURI ;
-		sh:description "Link to installation instructions/documentation."@en ;
+		sh:description "Link (URL) to installation instructions/documentation."@en ;
 		sh:name "buildInstruction"@en ;
 		sh:maxCount 1 ;
 		sh:order 42 ;
@@ -131,12 +132,17 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "developerStructure"@en ;
 		sh:order 21 ;
 		sh:path ersmeta:developerStructure ;
+		sh:datatype xsd:string ;
 		sh:in (
+			"Community (Closed Source Research Software)"
+			"Community (Open Source Research Software)"
+			"Community (Research Software as a Service)"
+			"Contractor (Closed Source Research Software)"
+			"Contractor (Open Source Resarch Software)"
+			"Contractor (Research Software as a Service)"
 			"Individual Researcher"
 			"Local Research Group"
 			"Project Group"
-			"Community (Open Source Resarch Software, Closed Source Research Software, Research Software as a Service)"
-			"Contractor (Open Source Resarch Software, Closed Source Research Software, Research Software as a Service)"
 		) ;
 	], [
 		sh:datatype xsd:string ;
@@ -168,31 +174,32 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "category"@en ;
 		sh:order 13 ;
 		sh:path schema:applicationSubCategory ;
+		sh:datatype xsd:string ;
 		sh:in (
-			"Research on components"
 			"Control strategies for energy systems"
-			"Grid planning"
-			"Transition of the energy system,"
 			"Energy markets"
+			"Grid planning"
 			"Other"
+			"Research on components"
+			"Transition of the energy system"
 		) ;
 	], [
 		sh:description "Type of software application, e.g. 'script'."@en ;
-		sh:maxCount 1 ;
 		sh:minCount 1 ;
 		sh:name "softwareType"@en ;
 		sh:order 14 ;
 		sh:path ersmeta:softwareType ;
+		sh:datatype xsd:string ;
 		sh:in (
-			"GUI-framework"
 			"Command-line tool"
 			"Database portal"
 			"Desktop application"
+			"GUI-framework"
 			"Library"
 			"Plug-in"
 			"Script"
-			"Web application"
 			"Web API"
+			"Web application"
 			"Web service"
 			"Workbench"
 			"Workflow"
@@ -209,29 +216,30 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "roleInResearch"@de, "roleInResearch"@en ;
 		sh:order 18 ;
 		sh:path prov:hadRole ;
+		sh:datatype xsd:string ;
 		sh:in (
+			"Agent-based Modeling"
+			"Collaboration Software"
+			"Control and Monitoring Software (Embedded, Web-based, Native)"
+			"Data Analytics"
+			"Data Assimilation"
+			"Data Collection"
+			"Data Management"
+			"Decision Analysis"
+			"Integrative Analysis"
+			"Laboratory Notebooks"
+			"Libraries"
+			"Machine Learning"
 			"Modeling and Simulation"
 			"Numerical Modeling"
-			"Agent-based Modeling"
-			"Data Analytics"
 			"Observation Data Analytics"
-			" Simulation Data Analytics"
-			"Statistical Analysis"
-			"Machine Learning"
-			"Integrative Analysis"
-			"Data Assimilation"
-			"Decision Analysis"
-			"Scientific Visualization"
+			"Pipelines/Workflows"
 			"Proof-of-Concept Software"
 			"Research Infrastructure Software"
-			"Control and Monitoring Software (Embedded, Web-based, Native)"
-			"Data Collection"
-			"Pipelines/Workflows"
-			"Libraries"
-			"Laboratiry Notebooks"
-			"Data Management"
+			"Scientific Visualization"
+			"Simulation Data Analytics"
 			"Software Management"
-			"Collaboration Software"
+			"Statistical Analysis"
 		) ;
 	], [
 		sh:datatype xsd:string ;
@@ -246,15 +254,16 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:minCount 1 ;
 		sh:order 20 ;
 		sh:path codemeta:developmentStatus ;
+		sh:datatype xsd:string ;
 		sh:in (
-			"Concept"
-			"WIP"
-			"Suspended"
 			"Abandoned"
 			"Active"
+			"Concept"
 			"Inactive"
-			"Unsupported"
 			"Moved"
+			"Suspended"
+			"Unsupported"
+			"WIP"
 		) ;
 	], [
 		sh:node ersmeta:CommunityInteraction ;
@@ -271,7 +280,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:path schema:dateModified ;
 	], [
 		sh:node schema:Person ;
-		sh:description "A person who has contributed to the software."@en ;
+		sh:description "A person who has contributed to the software. A contributor refers to anyone who aids in software development in any capacity, from coding to testing, highlighting the collaborative nature of software projects."@en ;
 		sh:minCount 1 ;
 		sh:name "contributor"@de, "contributor"@en ;
 		sh:order 32 ;
@@ -292,14 +301,14 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:path okn:citation ;
 	], [
 		sh:datatype xsd:anyURI ;
-		sh:description "Link to the logo of the software."@en ;
+		sh:description "Link (URL) to the logo of the software."@en ;
 		sh:maxCount 1 ;
 		sh:name "logo"@en ;
 		sh:order 4 ;
 		sh:path schema:thumbnailUrl ;
 	], [
 		sh:datatype xsd:anyURI ;
-		sh:description """Link to software bug reporting or issue tracking system"""@en ;
+		sh:description "Link (URL) to software bug reporting or issue tracking system"@en ;
 		sh:name "issueTracker"@en ;
 		sh:order 23 ;
 		sh:path codemeta:issueTracker ;
@@ -320,6 +329,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "cycleOfUpdates"@en ;
 		sh:order 22 ;
 		sh:path ersmeta:cycleOfUpdates ;
+		sh:datatype xsd:string ;
 		sh:in (
 			"Weekly"
 			"Monthly"
@@ -342,7 +352,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:path schema:softwareVersion ;
 	], [
 		sh:node schema:Person ;
-		sh:description "A person who has authored the software."@en ;
+		sh:description "A person who has authored the software. An author in software authorship is someone who significantly contributes to the creation and development of software, including roles like coding, project management, and documentation."@en ;
 		sh:name "author"@de, "author"@en ;
 		sh:order 33 ;
 		sh:path schema:author ;
@@ -352,11 +362,10 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "programmingLanguage"@en ;
 		sh:order 6 ;
 		sh:path schema:programmingLanguage ;
-		sh:class <https://www.wikidata.org/wiki/Q9143> ;
+		sh:class <https://www.wikidata.org/entity/Q9143> ;
 	], [
 		sh:node schema:Person ;
 		sh:description "Individual responsible for maintaining the software."@en ;
-		sh:maxCount 1 ;
 		sh:name "maintainer"@de, "maintainer"@en ;
 		sh:order 34 ;
 		sh:path schema:maintainer ;
@@ -391,23 +400,25 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "domain"@en ;
 		sh:order 12 ;
 		sh:path schema:applicationCategory ;
+		sh:datatype xsd:string ;
 		sh:in (
-			"Social Science"
-			"Economics"
-			"Jurisprudence"
 			"Chemistry"
-			"Physics"
-			"Mathematics"
-			"Geosciences"
-			"Production Technology"
-			"Mechanics and Constructive Mechanical Engineering"
-			"Process Engineering, Technical Chemistry"
-			"Fluid Mechanics, Technical Thermodynamics and Thermal Energy Engineering"
-			"Materials Engineering"
-			"Materials Science"
-			"System Engineering; Electrical Engineering and Information Technology"
 			"Computer Science"
 			"Construction Engineering and Architecture"
+			"Economics"
+			"Electrical Engineering and Information Technology"
+			"Fluid Mechanics, Technical Thermodynamics and Thermal Energy Engineering"
+			"Geosciences"
+			"Jurisprudence"
+			"Materials Engineering"
+			"Materials Science"
+			"Mathematics"
+			"Mechanics and Constructive Mechanical Engineering"
+			"Physics"
+			"Process Engineering, Technical Chemistry"
+			"Production Technology"
+			"Social Science"
+			"Systems Engineering"
 		) ;
 	], [
 		sh:node schema:CreativeWork ;
@@ -480,7 +491,6 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:path ersmeta:useCase ;
 	], [
 		sh:node ersmeta:EnergyComponent ;
-		sh:datatype xsd:string ;
 		sh:description "A component of the energy system included in the software."@en ;
 		sh:name "energyComponent"@en ;
 		sh:order 60 ;
@@ -508,18 +518,19 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "hasTemporalResolution"@en ;
 		sh:order 64 ;
 		sh:path oeo:OEO_00000516 ;
+		sh:datatype xsd:string ;
 		sh:in (
 			"annual"
-			"monthly"
-			"weekly"
 			"daily"
 			"hourly"
-			"quarter-hourly"
 			"minutely"
+			"monthly"
+			"none"
+			"other"
+			"quarter-hourly"
 			"secondly"
 			"unlimited"
-			"other"
-			"none"
+			"weekly"
 		) ;
 	], [
 		sh:description "Time scope the software was developed for (e.g. 2010, 2050)."@en ;
@@ -527,6 +538,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "temporalCoverage"@en, "temporalCoverage"@de ;
 		sh:order 65 ;
 		sh:path schema:temporalCoverage ;
+		sh:datatype xsd:string ;
 		sh:in (
 			"Short term (<= 5 years)"
 			"Medium term (>5-<15)"
@@ -539,6 +551,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:maxCount 1 ;
 		sh:order 66 ;
 		sh:path ersmeta:stationaryVsTransient ;
+		sh:datatype xsd:string ;
 		sh:in (
 			"Stationary"
 			"Transient"
@@ -554,6 +567,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "dimensions"@en ;
 		sh:order 68 ;
 		sh:path ersmeta:dimensions ;
+		sh:datatype xsd:string ;
 		sh:in (
 			"1D"
 			"2D"
@@ -577,11 +591,12 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "supportedVoltageLevel"@en ;
 		sh:order 71 ;
 		sh:path ersmeta:supportedVoltageLevel ;
+		sh:datatype xsd:string ;
 		sh:in (
+			"High Voltage"
 			"Low Voltage"
 			"Medium Voltage"
-			"High Voltage"
-			""
+			"None"
 		) ;
 	], [
 		sh:node ersmeta:OptimizationTool ;
@@ -612,6 +627,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "typicalHardware"@en ;
 		sh:order 76 ;
 		sh:path schema:availableOnDevice ;
+		sh:datatype xsd:string ;
 		sh:in (
 			"Laptop"
 			"Desktop Computer/Work station"
@@ -619,8 +635,8 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		) ;
 	], [
 		sh:datatype xsd:float ;
-		sh:description "Typical execution time of the software."@en ;
-		sh:name "typicalExcecutionTime"@en, "typicalExcecutionTime"@de ;
+		sh:description "Typical execution time of the software in seconds."@en ;
+		sh:name "typicalExecutionTime"@en, "typicalExecutionTime"@de ;
 		sh:order 77 ;
 		sh:path schema:timeRequired ;
 	], [
@@ -649,6 +665,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "realtimeCapablity"@en ;
 		sh:order 81 ;
 		sh:path ersmeta:realtimeCapability ;
+		sh:datatype xsd:string ;
 		sh:in (
 			"Hard"
 			"Firm"
@@ -672,7 +689,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "operatingSystem"@en, "operatingSystem"@de ;
 		sh:order 84 ;
 		sh:path schema:operatingSystem ;
-		sh:class <https://www.wikidata.org/wiki/Q9135> ;
+		sh:class <https://www.wikidata.org/entity/Q9135> ;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "Required software dependencies."@en ;
@@ -720,6 +737,7 @@ ersmeta:CommunityInteraction a rdfs:Class, sh:NodeShape ;
 	sh:extends schema:Thing ;
 	sh:property [
 		sh:description "Type of the interaction."@en ;
+		sh:datatype xsd:string ;
 		sh:in (
 			"Mailinglist"
 			"Issues"
@@ -733,12 +751,12 @@ ersmeta:CommunityInteraction a rdfs:Class, sh:NodeShape ;
 		sh:maxCount 1 ;
 		sh:path schema:additionalType ;
 	], [
-		sh:description "Link to further information on the community interaction."@en ;
+		sh:description "Link (URL) to further information on the community interaction."@en ;
 		sh:name "url"@de, "url"@en ;
 		sh:order 2 ;
 		sh:maxCount 1 ;
 		sh:path schema:url ;
-		sh:datatype xsd:string ;
+		sh:datatype xsd:anyURI ;
 	] .
 
 schema:DataSet a rdfs:Class, sh:NodeShape ;
@@ -758,27 +776,28 @@ schema:DataSet a rdfs:Class, sh:NodeShape ;
 		sh:name "encodingFormat"@en, "encodingFormat"@de ;
 		sh:order 3 ;
 		sh:description "Format of the dataset."@en ;
+		sh:datatype xsd:string ;
 		sh:in (
-			"csv"
-			"xlsx"
-			"xml"
-			"mdf5"
-			"JSON"
-			"YAML"
 			"binary"
-			"Pandas"
-			"DataFrame/Serie"
-			"Python dict"
-			"db"
-			"mat"
-			"other"
+			"csv"
+            "DataFrame/Serie"
+            "db"
+            "JSON"
+            "mat"
+            "mdf5"
+            "other"
+            "Pandas"
+            "txt"
+            "xml"
+            "xlsx"
+            "YAML"
 		) ;
 	], [
 		sh:path schema:url ;
 		sh:datatype xsd:string ;
 		sh:name "url"@en, "url"@de ;
 		sh:order 4 ;
-		sh:description "Link to the dataset."@en ;
+		sh:description "Link (URL) to the dataset."@en ;
 	] .
 
 ersmeta:EnergyComponent	a rdfs:Class, sh:NodeShape ;
@@ -814,6 +833,7 @@ ersmeta:EnergyComponent	a rdfs:Class, sh:NodeShape ;
 		sh:order 4 ;
 		sh:maxCount 1 ;
 		sh:description "Level of detail of the component."@en ;
+		sh:datatype xsd:string ;
 		sh:in (
 			"low (simple timeseries)"
 			"middle (linear equations with some parameters)"
@@ -828,6 +848,7 @@ ersmeta:Example a rdfs:Class, sh:NodeShape ;
 	sh:extends schema:Thing ;
 	sh:property [
 		sh:description "Type of the example."@en ;
+		sh:datatype xsd:string ;
 		sh:in (
 			"Minimal"
 			"Long"
@@ -846,7 +867,7 @@ ersmeta:Example a rdfs:Class, sh:NodeShape ;
 		sh:path schema:name ;
 		sh:datatype xsd:string ;
 	], [
-		sh:description "Link to the example."@en ;
+		sh:description "Link (URL) to the example."@en ;
 		sh:name "url"@de, "url"@en ;
 		sh:order 3 ;
 		sh:maxCount 1 ;
@@ -991,16 +1012,17 @@ schema:Person a rdfs:Class, sh:NodeShape ;
 		sh:name "roleName"@de, "roleName"@en ;
 		sh:order 5 ;
 		sh:path schema:roleName ;
+		sh:datatype xsd:string ;
 		sh:in (
-			"Design"
-			"Coding"
-			"Testing"
-			"Debugging"
 			"Architecture"
-			"Support"
-			"Maintenance"
-			"Documentation"
-			"Management"
+            "Coding"
+            "Debugging"
+            "Design"
+            "Documentation"
+            "Maintenance"
+            "Management"
+            "Support"
+            "Testing"
 		) ;
 	] .
 
@@ -1061,10 +1083,10 @@ ersmeta:TestCollection a rdfs:Class, sh:NodeShape ;
 		sh:description "Number of the tests of the software."@en ;
 	], [
 		sh:path schema:url ;
-		sh:datatype xsd:string ;
+		sh:datatype xsd:anyURI ;
 		sh:name "url"@en, "url"@de ;
 		sh:order 2 ;
-		sh:description "Link to one or multiple test case."@en ;
+		sh:description "Link (URL) to one or multiple test case."@en ;
 	] .
 
 ersmeta:Validation a rdfs:Class, sh:NodeShape ;
@@ -1074,6 +1096,7 @@ ersmeta:Validation a rdfs:Class, sh:NodeShape ;
 	sh:closed false ;
 	sh:property [
 		sh:description "Type of the validation."@en ;
+		sh:datatype xsd:string ;
 		sh:in (
 			"Empirical validation"
 			"Analytical verification"
@@ -1084,7 +1107,7 @@ ersmeta:Validation a rdfs:Class, sh:NodeShape ;
 		sh:order 1 ;
 		sh:path schema:additionalType ;
 	], [
-		sh:description "Link to further information on the validation."@en ;
+		sh:description "Link (URL) to further information on the validation."@en ;
 		sh:name "url"@de, "url"@en ;
 		sh:order 2 ;
 		sh:maxCount 1 ;
@@ -1106,7 +1129,7 @@ schema:CreativeWork a rdfs:Class, sh:NodeShape ;
 	sh:order 3 ;
 	sh:closed false ;
 	sh:property [
-		sh:datatype xsd:anyURI ;
+		sh:nodeKind sh:IRIOrLiteral ;
 		sh:name "identifier"@de, "identifier"@en ;
 		sh:order 1 ;
 		sh:path schema:identifier ;
@@ -1170,6 +1193,7 @@ ersmeta:Interface a rdfs:Class, sh:NodeShape ;
 		sh:name "encodingFormat"@en, "encodingFormat"@de ;
 		sh:order 4 ;
 		sh:description "Description of the allowed encoding format of the interface, e.g., csv"@en ;
+		sh:datatype xsd:string ;
 		sh:in (
 			"csv"
 			"xlsx"

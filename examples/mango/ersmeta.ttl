@@ -1,0 +1,249 @@
+@prefix ontosoft: <http://ontosoft.org/software#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oeo: <http://openenergy-platform.org/ontology/oeo/> .
+@prefix m4i: <http://w3id.org/nfdi4ing/metadata4ing#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix codemeta: <https://codemeta.github.io/terms/> .
+@prefix ersmeta: <https://nfdi4energy.github.io/ERSmeta/#ersmeta:> .
+@prefix okn: <https://w3id.org/okn/o/sd#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+[] a ersmeta:EnergyResearchSoftware;
+  ontosoft:hasCompatibleSoftware [
+    schema:name "Cosima"^^xsd:string ;
+    schema:url "https://cosima.offis.de/"^^xsd:string
+  ], [
+    schema:name "mosaik"^^xsd:string ;
+    schema:url "https://mosaik.offis.de/"^^xsd:string
+  ] ;
+  ontosoft:hasSoftwareSupport true ;
+  ontosoft:hasUseLimitations "Limited to smaller systems"^^xsd:string ;
+  ontosoft:usedInPublication [ 
+    a schema:ScholarlyArticle ;
+    schema:identifier "https://doi.org/10.1145/3666043.3666046"^^xsd:anyURI 
+  ], [ 
+    a schema:ScholarlyArticle ;
+    schema:identifier "https://doi.org/10.1016/j.softx.2024.101667"^^xsd:anyURI 
+  ], [ 
+    a schema:ScholarlyArticle ;
+    schema:identifier "https://doi.org/10.1186/s42162-024-00464-7"^^xsd:anyURI 
+  ], [ 
+    a schema:ScholarlyArticle ;
+    schema:identifier "https://doi.org/10.1109/CIEES62939.2024.10811119"^^xsd:anyURI 
+  ], [ 
+    a schema:ScholarlyArticle ;
+    schema:identifier "https://doi.org/10.1007/s41109-023-00553-8"^^xsd:anyURI 
+  ], [ 
+    a schema:ScholarlyArticle ;
+    schema:identifier "https://doi.org/10.1145/3447555.3465415"^^xsd:anyURI 
+  ], [ 
+    a schema:ScholarlyArticle ;
+    schema:identifier "http://doi.org/10.15439/2021F60"^^xsd:anyURI 
+  ] ;
+  schema:abstract "Modular Python-based agent framework to implement multi-agent systems"^^xsd:string ;
+  schema:applicationCategory "Computer Science"^^xsd:string, "Electrical Engineering and Information Technology"^^xsd:string ;
+  schema:applicationSubCategory "Control strategies for energy systems"^^xsd:string ;
+  schema:author [
+    a schema:Person ;
+    schema:email "jens.sager@offis.de"^^xsd:string ;
+    schema:familyName "Sager"^^xsd:string ;
+    schema:givenName "Jens"^^xsd:string ;
+    schema:identifier "https://orcid.org/0000-0001-6352-4213"^^xsd:anyURI
+  ], [
+    a schema:Person ;
+    schema:email "rico.schrage@uni-oldenburg.de"^^xsd:string ;
+    schema:familyName "Schrage"^^xsd:string ;
+    schema:givenName "Rico"^^xsd:string ;
+    schema:identifier "https://orcid.org/0000-0001-5339-6553"^^xsd:anyURI
+  ], [
+    a schema:Person ;
+    schema:email "stefanie.holly@offis.de"^^xsd:string ;
+    schema:familyName "Holly"^^xsd:string ;
+    schema:givenName "Stefanie"^^xsd:string ;
+    schema:identifier "https://orcid.org/0009-0005-6965-1877"^^xsd:anyURI
+  ] ;
+  schema:codeRepository "https://github.com/OFFIS-DAI/mango"^^xsd:anyURI ;
+  schema:contributor [
+    a schema:Person ;
+    schema:email "alexander.hill@offis.de"^^xsd:string ;
+    schema:familyName "Hill"^^xsd:string ;
+    schema:givenName "Alexander"^^xsd:string ;
+    schema:identifier "https://orcid.org/0000-0002-9270-9871"^^xsd:anyURI ;
+    schema:roleName "Coding"^^xsd:string
+  ], [
+    a schema:Person ;
+    schema:email "emilie.frost@offis.de"^^xsd:string ;
+    schema:familyName "Frost"^^xsd:string ;
+    schema:givenName "Emilie"^^xsd:string ;
+    schema:identifier "https://orcid.org/0000-0003-4791-2333"^^xsd:anyURI ;
+    schema:roleName "Coding"^^xsd:string
+  ], [
+    a schema:Person ;
+    schema:email "maurer@fh-aachen.de"^^xsd:string ;
+    schema:familyName "Maurer"^^xsd:string ;
+    schema:givenName "Florian"^^xsd:string ;
+    schema:identifier "https://orcid.org/0000-0001-8345-3889"^^xsd:anyURI ;
+    schema:roleName "Coding"^^xsd:string, "Maintenance"^^xsd:string
+  ], [
+    a schema:Person ;
+    schema:email "jens.sager@offis.de"^^xsd:string ;
+    schema:familyName "Sager"^^xsd:string ;
+    schema:givenName "Jens"^^xsd:string ;
+    schema:identifier "https://orcid.org/0000-0001-6352-4213"^^xsd:anyURI ;
+    schema:roleName "Coding"^^xsd:string, "Architecture"^^xsd:string
+  ], [
+    a schema:Person ;
+    schema:email "rico.schrage@uni-oldenburg.de"^^xsd:string ;
+    schema:familyName "Schrage"^^xsd:string ;
+    schema:givenName "Rico"^^xsd:string ;
+    schema:identifier "https://orcid.org/0000-0001-5339-6553"^^xsd:anyURI ;
+    schema:roleName "Coding"^^xsd:string, "Maintenance"^^xsd:string, "Architecture"^^xsd:string
+  ], [
+    a schema:Person ;
+    schema:familyName "Werner-Nebel"^^xsd:string ;
+    schema:givenName "Marvin"^^xsd:string ;
+    schema:roleName "Coding"^^xsd:string, "Architecture"^^xsd:string, "Maintenance"^^xsd:string, "Management"^^xsd:string
+  ], [
+    a schema:Person ;
+    schema:email "stefanie.holly@offis.de"^^xsd:string ;
+    schema:familyName "Holly"^^xsd:string ;
+    schema:givenName "Stefanie"^^xsd:string ;
+    schema:identifier "https://orcid.org/0009-0005-6965-1877"^^xsd:anyURI ;
+    schema:roleName "Management"^^xsd:string
+  ], [
+    a schema:Person ;
+    schema:email "jan.philipp.hoerding@offis.de"^^xsd:string ;
+    schema:familyName "Hoerding"^^xsd:string ;
+    schema:givenName "Jan Philipp"^^xsd:string ;
+    schema:roleName "Documentation"^^xsd:string
+  ] ;
+  schema:copyrightHolder [
+    a schema:Organization ;
+    schema:identifier "https://ror.org/003sav189"^^xsd:anyURI ;
+    schema:legalName "OFFIS e.V."^^xsd:string
+  ] ;
+  schema:countryOfOrigin "DE"^^xsd:string ;
+  schema:dateCreated "2020-09-25"^^xsd:date ;
+  schema:dateModified "2025-04-09"^^xsd:date ;
+  schema:description "mango (modular python agent framework) is a python library for multi-agent systems (MAS). It is written on top of asyncio and is released under the MIT license. mango allows the user to create simple agents with little effort and in the same time offers options to structure agents with complex behaviour. The main features of mango are: Container mechanism to speedup local message exchange; Message definition based on the FIPA ACL standard; Structuring complex agents with loose coupling and agent roles; Built-in codecs: JSON and protobuf; Supports communication between agents directly via TCP or via an external MQTT broker"^^xsd:string ;
+  schema:downloadUrl "https://pypi.org/project/mango-agents/"^^xsd:anyURI ;
+  schema:featureList "Structuring complex agents with loose coupling and agent roles"^^xsd:string, "Supports communication between agents directly via TCP or via an external MQTT broker"^^xsd:string, "Built-in codecs: JSON and protobuf"^^xsd:string, "Message definition based on the FIPA ACL standard"^^xsd:string, "Container mechanism to speedup local message exchange"^^xsd:string ;
+  schema:fileSize "136KB"^^xsd:string ;
+  schema:funding [ 
+    a schema:Grant ;
+    schema:name "Vermeidung von emergierenden Controller-Konflikten in multimodalen Smart Energy Systems"^^xsd:string ;
+    schema:identifier "359941476" ;
+    schema:funder [
+      a schema:Organization ;
+      schema:identifier "https://ror.org/018mejw64"^^xsd:anyURI ;
+      schema:legalName "Deutsche Forschungsgemeinschaft (DFG)"^^xsd:string
+    ] 
+  ], [ 
+    a schema:Grant ;
+    schema:name "Zukunftslabor Energie (ZLE)"^^xsd:string ;
+    schema:identifier "11-76251-13-3/19 - ZN3488" ;
+    schema:funder [
+      a schema:Organization ;
+      schema:identifier "https://ror.org/03bsmfz84"^^xsd:anyURI ;
+      schema:legalName "Volkswagen Foundation"^^xsd:string
+    ], [
+      a schema:Organization ;
+      schema:identifier "https://ror.org/0116z8r77"^^xsd:anyURI ;
+      schema:legalName "Niedersaechsisches Ministerium fuer Wissenschaft und Kultur"^^xsd:string
+  ] ] ;
+  schema:inLanguage "en-US"^^xsd:string ;
+  schema:isAccessibleForFree true ;
+  schema:keywords "agent"^^xsd:string, "agent-based"^^xsd:string, "agent-based-control"^^xsd:string, "agent-based-simulation"^^xsd:string, "distributed-computing"^^xsd:string, "distributed-systems"^^xsd:string, "multi-agent-systems"^^xsd:string ;
+  schema:license [
+    schema:identifier "MIT"^^xsd:string ;
+    schema:name "MIT License"^^xsd:string
+  ] ;
+  schema:maintainer [
+    a schema:Person ;
+    schema:email "rico.schrage@uni-oldenburg.de"^^xsd:string ;
+    schema:familyName "Schrage"^^xsd:string ;
+    schema:givenName "Rico"^^xsd:string ;
+    schema:identifier "https://orcid.org/0000-0001-5339-6553"^^xsd:anyURI
+  ], [
+    a schema:Person ;
+    schema:email "maurer@fh-aachen.de"^^xsd:string ;
+    schema:familyName "Maurer"^^xsd:string ;
+    schema:givenName "Florian"^^xsd:string ;
+    schema:identifier "https://orcid.org/0000-0001-8345-3889"^^xsd:anyURI
+  ] ;
+  schema:memoryRequirements "8GB"^^xsd:string ;
+  schema:name "mango"^^xsd:string ;
+  schema:operatingSystem wd:Q388, wd:Q1406, wd:14116 ;
+  schema:processorRequirements "x86_64"^^xsd:string ;
+  schema:programmingLanguage wd:Q31205855  ;
+  schema:schemaVersion "0.8"^^xsd:string ;
+  schema:sdLicense [
+    a schema:CreativeWork ;
+    schema:identifier "CC0-1.0"^^xsd:string ;
+    schema:name "Creative Commons Zero v1.0 Universal"^^xsd:string
+  ] ;
+  schema:sdPublisher "OFFIS e.V."^^xsd:string ;
+  schema:softwareRequirements "paho-mqtt>=2.1.0"^^xsd:string, "python-dateutil>=2.9.0"^^xsd:string, "dill>=0.3.8"^^xsd:string, "protobuf==5.27.2"^^xsd:string, "networkx>=3.4.1"^^xsd:string ;
+  schema:softwareVersion "2.1.5"^^xsd:string ;
+  schema:sourceOrganization [
+    a schema:Organization ;
+    schema:identifier "https://ror.org/003sav189"^^xsd:anyURI ;
+    schema:legalName "OFFIS e.V."^^xsd:string
+  ] ;
+  schema:storageRequirements "500MB"^^xsd:string ;
+  schema:targetProduct "Python 3.10"^^xsd:string, "Python 3.11"^^xsd:string, "Python 3.12"^^xsd:string, "Python 3.13"^^xsd:string ;
+  schema:thumbnailUrl "https://github.com/OFFIS-DAI/mango/logo.png"^^xsd:anyURI ;
+  schema:timeRequired "1"^^xsd:float ;
+  m4i:implementsMethod "agent-based modeling"^^xsd:string ;
+  prov:hadRole "Modeling and Simulation"^^xsd:string, "Agent-based Modeling"^^xsd:string, "Proof-of-Concept Software"^^xsd:string ;
+  codemeta:buildInstruction "https://mango-agents.readthedocs.io/en/latest/installation.html"^^xsd:anyURI ;
+  codemeta:developmentStatus "Active"^^xsd:string ;
+  codemeta:issueTracker "https://github.com/OFFIS-DAI/mango/issues"^^xsd:anyURI ;
+  codemeta:readme "https://raw.githubusercontent.com/OFFIS-DAI/mango/master/README.md"^^xsd:anyURI ;
+  codemeta:referencePublication [ 
+    a schema:ScholarlyArticle ;
+    schema:identifier "https://doi.org/10.1016/j.softx.2024.101791"^^xsd:anyURI 
+  ] ;
+  ersmeta:communityInteractions [
+    a ersmeta:CommunityInteraction ;
+    schema:additionalType "Github discussions"^^xsd:string ;
+    schema:url "https://github.com/OFFIS-DAI/mango/discussions"^^xsd:anyURI
+  ], [
+    a ersmeta:CommunityInteraction ;
+    schema:additionalType "Issues"^^xsd:string ;
+    schema:url "https://github.com/OFFIS-DAI/mango/issues"^^xsd:anyURI
+  ] ;
+  ersmeta:cycleOfUpdates "Monthly"^^xsd:string ;
+  ersmeta:developerStructure "Local Research Group"^^xsd:string, "Community (Open Source Research Software)"^^xsd:string ;
+  ersmeta:parallelizationCapability true ;
+  ersmeta:requiredTrainingPeriod "1 week"^^xsd:string ;
+  ersmeta:softwareType "Library"^^xsd:string ;
+  ersmeta:tests [
+    a ersmeta:TestCollection ;
+    schema:collectionSize 4 ;
+    schema:url "https://github.com/OFFIS-DAI/mango/tree/development/tests/integration_tests"^^xsd:anyURI
+  ], [
+    a ersmeta:TestCollection ;
+    schema:collectionSize 15 ;
+    schema:url "https://github.com/OFFIS-DAI/mango/tree/development/tests/unit_tests"^^xsd:anyURI
+  ] ;
+  ersmeta:useCase "Energy market analysis"^^xsd:string, "Control strategies for energy systems"^^xsd:string, "Distributed optimization"^^xsd:string ;
+  okn:citation [ 
+    a schema:ScholarlyArticle ;
+    schema:identifier "https://doi.org/10.1016/j.softx.2024.101791"^^xsd:anyURI 
+  ] ;
+  okn:hasDocumentation "https://mango-agents.readthedocs.io/en/latest/index.html"^^xsd:anyURI ;
+  okn:hasExample [
+    a ersmeta:Example ;
+    schema:additionalType "Minimal"^^xsd:string ;
+    schema:name "Getting Started"^^xsd:string ;
+    schema:url "https://mango-agents.readthedocs.io/en/latest/getting_started.html"^^xsd:anyURI
+  ], [
+    a ersmeta:Example ;
+    schema:additionalType "Long"^^xsd:string ;
+    schema:name "Tutorial"^^xsd:string ;
+    schema:url "https://mango-agents.readthedocs.io/en/latest/tutorial.html"^^xsd:anyURI
+  ] ;
+  okn:hasPurpose "Simulation"^^xsd:string, "Analysis"^^xsd:string, "Support of agent based architectures"^^xsd:string, "Support for communcation simulations of distributed systems"^^xsd:string ;
+  okn:hasShortName "mango"^^xsd:string .
