@@ -227,7 +227,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 			"Data Management"
 			"Decision Analysis"
 			"Integrative Analysis"
-			"Laboratiry Notebooks"
+			"Laboratory Notebooks"
 			"Libraries"
 			"Machine Learning"
 			"Modeling and Simulation"
