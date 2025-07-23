@@ -1364,7 +1364,7 @@
       "title": "codeRepository"
     },
     "documentation": {
-      "description": "Link (URL) to the documentation describing the code and is usful for developers.",
+      "description": "Link (URL) to the documentation describing the code and is useful for developers.",
       "title": "documentation",
       "type": "array",
       "items": {
