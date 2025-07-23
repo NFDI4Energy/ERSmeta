@@ -43,6 +43,16 @@ The metadata schema is based on an [extensive requirement analysis](https://ecea
 We welcome help to improve the schema and/or its documentation!
 Please open up [issues](https://github.com/NFDI4Energy/ERSmeta/issues) or send us a pull request if you have any updates to our schema or crosswalks!
 
+## Hints on Validating Metadata against the Metadata Schema
+If you have metadata as RDF or JSON and want to validate it against the schema we recommend the following tools:
+* RDF - SHACL validation: https://shacl-playground.zazuko.com/
+* JSON - JSON schema validation: https://www.jsonschemavalidator.net/
+
+## Information for Developers
+We recommend the following tools for testing and verifying during the development:
+* For JSON-LD: https://json-ld.org/playground/
+
+
 ## License
 ERSmeta is released under the [CC0 1.0 Universal](https://spdx.org/licenses/CC0-1.0) license.
 
