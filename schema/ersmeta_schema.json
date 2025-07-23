@@ -3,6 +3,7 @@
   "description": "This metadata schema includes general metadata elements for research software in the energy domain.",
   "additionalProperties": false,
   "type": "object",
+  "version": "0.8",
   "title": "EnergyResearchSoftware",
   "required": [
     "@context",
@@ -1711,7 +1712,7 @@
       "title": "typicalExcecutionTime",
       "type": "array",
       "items": {
-        "type": "float"
+        "type": "number"
       }
     },
     "processorRequirements": {
@@ -1855,7 +1856,7 @@
           "description": "A organization that supports (sponsors) something through some kind of financial contribution.",
           "type": "array",
           "title": "funder",
-          "items": { "type": "string" }
+          "items": { "$ref": "#/$defs/Organization" }
         }
       }
     },
@@ -2336,7 +2337,7 @@
         },
         "required": {
           "description": "Is it required to provide input to the interface?",
-          "type": "bool",
+          "type": "boolean",
           "title": "required"
         }
       }
