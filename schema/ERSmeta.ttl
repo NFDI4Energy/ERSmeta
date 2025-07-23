@@ -95,7 +95,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:path schema:dateCreated ;
 	], [
 		sh:datatype xsd:anyURI ;
-		sh:description "Link (URL) to the documentation describing the code and is usful for developers."@en ;
+		sh:description "Link (URL) to the documentation describing the code and is useful for developers."@en ;
 		sh:maxCount 1 ;
 		sh:name "documentation"@en ;
 		sh:order 40 ;
