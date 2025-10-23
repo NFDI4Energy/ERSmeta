@@ -941,7 +941,7 @@
           "Data Management",
           "Decision Analysis",
           "Integrative Analysis",
-          "Laboratiry Notebooks",
+          "Laboratory Notebooks",
           "Libraries",
           "Machine Learning",
           "Modeling and Simulation",
@@ -1364,7 +1364,7 @@
       "title": "codeRepository"
     },
     "documentation": {
-      "description": "Link (URL) to the documentation describing the code and is usful for developers.",
+      "description": "Link (URL) to the documentation describing the code and is useful for developers.",
       "title": "documentation",
       "type": "array",
       "items": {
@@ -1372,7 +1372,7 @@
       }
     },
     "readme": {
-      "description": "Link (URL) to the documentation describing the code and is usful for developers.",
+      "description": "Link (URL) to the documentation describing the code and is useful for developers.",
       "type": "string",
       "title": "readme"
     },
