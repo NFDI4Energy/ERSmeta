@@ -18,7 +18,7 @@ The JSON schema can be found in [this file](schema/ersmeta_schema.json). This sc
 
 ## Documentation
 A **general description** of the metadata schema can be found on its [documentation website](https://nfdi4energy.github.io/ERSmeta/). The documentation is automatically build from the SHACL formalization.
-Also, a [description of all properties](schema/properties_description.csv) and [a description of all used types (and their properties)](schema/type_descriptions.csv) are provided in this repository. In extension to the SHACL formalization, we add three different priority levels to the elements in the description of all properties: mandatory, recommended, and bonus.
+Also, a [description of all properties](schema/properties_description.csv) and [a description of all used types (and their properties)](schema/type_descriptions.csv) are provided in this repository. In extension to the SHACL formalization, we add three different priority levels to the elements in the description of all properties: mandatory, recommended, and optional.
 
 ## Crosswalks
 We created crosswalks to the following metadata schemas:
