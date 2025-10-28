@@ -84,4 +84,4 @@ https://schema.org/softwareRequirements,softwareRequirements,Text,n,Recommended,
 https://schema.org/fileSize,fileSize,Number,1,Optional,"Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed."
 https://schema.org/schemaVersion,metadataVersion,Text,1,Mandatory,The type and version number of the metadata.
 https://schema.org/sdLicense,sdLicense,https://schema.org/CreativeWork,n,Mandatory,The license of the provided metadata.
-https://schema.org/sdPublisher,sdPublisher,Text,1,Mandatory,"Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisher property helps make such practices more explicit."
+https://schema.org/sdPublisher,sdPublisher,Text,1,Mandatory,"Indicates the party responsible for generating and publishing this metadata."
