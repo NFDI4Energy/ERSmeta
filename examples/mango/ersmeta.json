@@ -255,7 +255,7 @@
       "url": [ "https://mosaik.offis.de/" ]
     }
   ],
-  "purpose": [ "Simulation", "Analysis", "Support of agent based architectures", "Support for communcation simulations of distributed systems" ],
+  "purpose": [ "Simulation", "Analysis", "Support of agent based architectures", "Support for communication simulations of distributed systems" ],
   "method": [ "agent-based modeling" ],
   "coversSector": [ "ICT" ],
   "useCase": [ "Energy market analysis", "Control strategies for energy systems", "Distributed optimization" ],
