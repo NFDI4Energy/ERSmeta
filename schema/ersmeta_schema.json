@@ -927,7 +927,7 @@
       }
     },
     "roleInResearch": {
-      "description": "Kind of tasks that the software tasks over in research.",
+      "description": "Kind of tasks that the software takes over in research.",
       "title": "roleInResearch",
       "type": "array",
       "items": {
@@ -991,7 +991,7 @@
           "Community (Open Source Research Software)",
           "Community (Research Software as a Service)",
           "Contractor (Closed Source Research Software)",
-          "Contractor (Open Source Resarch Software)",
+          "Contractor (Open Source Research Software)",
           "Contractor (Research Software as a Service)",
           "Individual Researcher",
           "Local Research Group",
@@ -1483,7 +1483,7 @@
       }
     },
     "method": {
-      "description": "An used method in the software.",
+      "description": "A used method in the software.",
       "title": "method",
       "type": "array",
       "items": {
@@ -1732,7 +1732,7 @@
     },
     "realtimeCapability": {
       "description": "What kind of realtime simulations are supported by the software?",
-      "title": "realtimeCapablity",
+      "title": "realtimeCapability",
       "type": "array",
       "items": {
         "enum": [
@@ -1744,12 +1744,12 @@
       }
     },
     "parallelizationCapability": {
-      "description": "Does the software support parallization?",
+      "description": "Does the software support parallelization?",
       "type": "boolean",
       "title": "parallelizationCapability"
     },
     "targetProduct": {
-      "description": "Target programming enviroments to which the code applies. If applies to several versions, just the product name can be used.",
+      "description": "Target programming environments to which the code applies. If applies to several versions, just the product name can be used.",
       "title": "targetProduct",
       "type": "array",
       "items": {
@@ -1853,7 +1853,7 @@
         },
         "funder": {
           "minItems": 1,
-          "description": "A organization that supports (sponsors) something through some kind of financial contribution.",
+          "description": "An organization that supports (sponsors) something through some kind of financial contribution.",
           "type": "array",
           "title": "funder",
           "items": { "$ref": "#/$defs/Organization" }
@@ -1915,7 +1915,7 @@
             "enum": [
               "binary",
               "csv",
-              "DataFrame/Serie",
+              "DataFrame/Series",
               "db",
               "JSON",
               "mat",
@@ -1989,7 +1989,7 @@
       "required": [],
       "properties": {
         "reviewAspect": {
-          "description": "This Review is relevant to this part or facet of the object being review.",
+          "description": "This Review is relevant to this part or facet of the object being reviewed.",
           "type": "string",
           "title": "reviewAspect"
         },
@@ -2207,7 +2207,7 @@
           "title": "givenName"
         },
         "familyName": {
-          "description": "Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property.",
+          "description": "Family name. In the U.S., the last name of a Person. This can be used along with givenName instead of the name property.",
           "type": "string",
           "title": "familyName"
         },
@@ -2300,7 +2300,7 @@
             "enum": [
               "binary",
               "csv",
-              "DataFrame/Serie",
+              "DataFrame/Series",
               "db",
               "JSON",
               "mat",

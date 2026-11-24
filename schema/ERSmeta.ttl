@@ -138,7 +138,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 			"Community (Open Source Research Software)"
 			"Community (Research Software as a Service)"
 			"Contractor (Closed Source Research Software)"
-			"Contractor (Open Source Resarch Software)"
+			"Contractor (Open Source Research Software)"
 			"Contractor (Research Software as a Service)"
 			"Individual Researcher"
 			"Local Research Group"
@@ -212,7 +212,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:order 8 ;
 		sh:path schema:abstract ;
 	], [
-		sh:description "Kind of tasks that the software tasks over in research."@en ;
+		sh:description "Kind of tasks that the software takes over in research."@en ;
 		sh:name "roleInResearch"@de, "roleInResearch"@en ;
 		sh:order 18 ;
 		sh:path prov:hadRole ;
@@ -460,7 +460,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:order 54 ;
 		sh:path okn:hasPurpose ;
 	], [
-		sh:description "An used method in the software."@en ;
+		sh:description "A used method in the software."@en ;
 		sh:name "implementsMethod"@en, "implementsMethod"@de ;
 		sh:order 55 ;
 		sh:path m4i:implementsMethod ;
@@ -662,7 +662,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:path schema:storageRequirements ;
 	], [
 		sh:description "What kind of realtime simulations are supported by the software?"@en ;
-		sh:name "realtimeCapablity"@en ;
+		sh:name "realtimeCapability"@en ;
 		sh:order 81 ;
 		sh:path ersmeta:realtimeCapability ;
 		sh:datatype xsd:string ;
@@ -674,14 +674,14 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		) ;
 	], [
 		sh:datatype xsd:boolean ;
-		sh:description "Does the software support parallization?"@en ;
+		sh:description "Does the software support parallelization?"@en ;
 		sh:name "parallelizationCapability"@en ;
 		sh:maxCount 1 ;
 		sh:order 82 ;
 		sh:path ersmeta:parallelizationCapability ;
 	], [
 		sh:datatype xsd:string ;
-		sh:description "Target programming enviroments to which the code applies. If applies to several versions, just the product name can be used."@en ;
+		sh:description "Target programming environments to which the code applies. If applies to several versions, just the product name can be used."@en ;
 		sh:name "targetProduct"@en, "targetProduct"@de ;
 		sh:order 83 ;
 		sh:path schema:targetProduct ;
@@ -780,7 +780,7 @@ schema:DataSet a rdfs:Class, sh:NodeShape ;
 		sh:in (
 			"binary"
 			"csv"
-            "DataFrame/Serie"
+            "DataFrame/Series"
             "db"
             "JSON"
             "mat"
@@ -895,7 +895,7 @@ schema:Grant a rdfs:Class, sh:NodeShape ;
 		sh:path schema:identifier ;
 	], [
 		sh:node schema:Organization ;
-		sh:description "A organization that supports (sponsors) something through some kind of financial contribution."@en ;
+		sh:description "An organization that supports (sponsors) something through some kind of financial contribution."@en ;
 		sh:name "funder"@de, "funder"@en ;
 		sh:order 3 ;
 		sh:path schema:funder ;
@@ -995,7 +995,7 @@ schema:Person a rdfs:Class, sh:NodeShape ;
 		sh:maxCount 1 ;
 	], [
 		sh:datatype xsd:string ;
-		sh:description "Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property."@en ;
+		sh:description "Family name. In the U.S., the last name of a Person. This can be used along with givenName instead of the name property."@en ;
 		sh:name "familyName"@de, "familyName"@en ;
 		sh:order 3 ;
 		sh:path schema:familyName ;
@@ -1050,7 +1050,7 @@ schema:Review a rdfs:Class, sh:NodeShape;
 		sh:datatype xsd:string ;
 		sh:name "reviewAspect"@en, "reviewAspect"@de ;
 		sh:order 3 ;
-		sh:description "This Review is relevant to this part or facet of the object being review."@en ;
+		sh:description "This Review is relevant to this part or facet of the object being reviewed."@en ;
 		sh:maxCount 1 ;
 	] .
 
@@ -1204,7 +1204,7 @@ ersmeta:Interface a rdfs:Class, sh:NodeShape ;
 			"YAML"
 			"binary"
 			"Pandas"
-			"DataFrame/Serie"
+			"DataFrame/Series"
 			"Python dict"
 			"db"
 			"mat"

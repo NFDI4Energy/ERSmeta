@@ -13,7 +13,7 @@ https://schema.org/image,graphicalAbstract,URL,Graphical overview on the functio
 https://schema.org/applicationCategory,domain,DefinedTerm,Research domain for which the software was written.,,,,
 https://schema.org/applicationSubCategory,category,DefinedTerm,Research category for which the software was written.,,,,
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:softwareType,softwareType,DefinedTerm,"Type of software application, e.g. 'script'.",,,,
-http://www.w3.org/ns/prov#hadRole,roleInResearch,DefinedTerm,Kind of tasks that the software tasks over in research.,,,,
+http://www.w3.org/ns/prov#hadRole,roleInResearch,DefinedTerm,Kind of tasks that the software takes over in research.,,,,
 https://schema.org/url,url,URL,Homepage of the tool. URL of the item.,https://w3id.org/okn/o/sd#website,website,any uri,Website of the software
 https://codemeta.github.io/terms/developmentStatus,developmentStatus,DefinedTerm,"Description of development status, e.g. Active, inactive, suspended. See repostatus.org",,,,
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:developerStructure,developerStructure,DefinedTerm,Structure of the development team.,,,,
@@ -35,7 +35,7 @@ https://schema.org/countryOfOrigin ,countryOfOrigin,Text,Country where the softw
 https://schema.org/funding,funding,https://schema.org/Grant,Information on the funding which was used to develop the software.,https://w3id.org/okn/o/sd#hasFunding,has funding information,Funding Information,Property that links a software project to its funding information
 https://schema.org/downloadUrl ,downloadURL,URL,"If the file can be downloaded, URL to download the binary.",https://w3id.org/okn/o/sd#hasDownloadURL,has download URL,any uri,Download URL where to obtain the source/executable of the software
 https://schema.org/codeRepository,codeRepository,URL,"Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex, institutional GitLab instance, etc.).",http://schema.org/codeRepository,codeRepository,any uri,URL to the code repository of a software component
-https://w3id.org/okn/o/sd#hasDocumentation,documentation,URL,Link to the documentation describing the code and is usful for developers.,https://w3id.org/okn/o/sd#hasDocumentation,has documentation,any uri,Pointer to the documentation of the model
+https://w3id.org/okn/o/sd#hasDocumentation,documentation,URL,Link to the documentation describing the code and is useful for developers.,https://w3id.org/okn/o/sd#hasDocumentation,has documentation,any uri,Pointer to the documentation of the model
 readme,readme,URL,Link to software readme file.,https://codemeta.github.io/terms/readme,readme,any uri,URl to the readme file of a software component
 buildInstructions,buildInstruction,URL,Link to installation instructions/documentation.,https://w3id.org/okn/o/sd#hasInstallationInstructions,,,
 http://ontosoft.org/software#hasSoftwareSupport,supportGiven,Boolean,Is support for the software provided?,https://w3id.org/okn/o/sd#supportDetails,support details,string,"Property to link details, such as mailing lists in case a contact person is not provided"
@@ -50,7 +50,7 @@ https://nfdi4energy.github.io/ERSmeta/#ersmeta:compatibleHardware,compatibleHard
 http://ontosoft.org/software#hasRelevantDataSources,compatibleData,https://schema.org/Dataset,Data which is compatible to this software.,,,,
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:usedData,usedData,https://schema.org/Dataset,Data that is directly used by the provided software,,,,
 https://w3id.org/okn/o/sd#hasPurpose,purpose,Text,A general goal/purpose of the software.,https://w3id.org/okn/o/sd#hasPurpose,has purpose,string,Objective or main functionality that can be achieved by running this software
-http://w3id.org/nfdi4ing/metadata4ing#implementsMethod,method,Text,An used method in the software.,,,,
+http://w3id.org/nfdi4ing/metadata4ing#implementsMethod,method,Text,A used method in the software.,,,,
 http://openenergy-platform.org/ontology/oeo/OEO_00000505,coversSector,DefinedTerm,A supported sector of the software. A sector is generically dependent continuant that is a subdivision of a system.,,,,
 http://openenergy-platform.org/ontology/oeo/OEO_00000521,technology,DefinedTerm,A supported energy technology of the software.,,,,
 https://w3id.org/okn/o/sd#hasAssumption,assumption,Text,A required assumption of the software.,https://w3id.org/okn/o/sd#hasAssumption,has assumption,string,"Assumptions of a software, e.g. the solver being used for a particular model, the source of the data (e.g., all data must have a given resolution), etc."
@@ -72,13 +72,13 @@ https://schema.org/review,review,https://schema.org/Review,A review of the softw
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:tests,tests,https://nfdi4energy.github.io/ERSmeta/#ersmeta:TestCollection,Information on the tests of the software.,,,,
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,validation,https://nfdi4energy.github.io/ERSmeta/#ersmeta:Validation,Information on validations done for the software. Validation refers to whether the software produces results that correspond to real-world properties.,,,,
 https://schema.org/availableOnDevice,typicalHardware,DefinedTerm,Typical minimal hardware which is required to run the software.,,,,
-https://schema.org/timeRequired,typicalExcecutionTime,Number,Typical execution time of the software.,,,,
+https://schema.org/timeRequired,typicalExecutionTime,Number,Typical execution time of the software.,,,,
 https://schema.org/processorRequirements,processorRequirements,Text,Processor architecture required to run the application (e.g. IA64).,,,,
 https://schema.org/memoryRequirements,memoryRequirements,Text,Minimum memory requirements.,http://schema.org/processorRequirements,processorRequirements,string,Processor requirements of a software component
 https://schema.org/storageRequirements,storageRequirements,Text,Storage requirements (free space required).,http://schema.org/memoryRequirements,memoryRequirements,string,Memory requirements of a software
-https://nfdi4energy.github.io/ERSmeta/#ersmeta:realtimeCapability,realtimeCapablity,DefinedTerm,What kind of realtime simulations are supported by the software?,,,,
-https://nfdi4energy.github.io/ERSmeta/#ersmeta:parallelizationCapability,parallelizationCapability,Boolean,Does the software support parallization?,,,,
-https://schema.org/targetProduct,targetProduct,Text,"Target programming enviroments to which the code applies. If applies to several versions, just the product name can be used.",,,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:realtimeCapability,realtimeCapability,DefinedTerm,What kind of realtime simulations are supported by the software?,,,,
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:parallelizationCapability,parallelizationCapability,Boolean,Does the software support parallelization?,,,,
+https://schema.org/targetProduct,targetProduct,Text,"Target programming environments to which the code applies. If applies to several versions, just the product name can be used.",,,,
 https://schema.org/operatingSystem,operatingSystem,DefinedTerm,"Operating systems supported (Windows 7, OSX 10.6, Android 1.6).",http://schema.org/operatingSystems,operatingSystems,string,Operating systems under which a software component can operate
 https://schema.org/softwareRequirements,softwareRequirements,Text,Required software dependencies.,,,,
 https://schema.org/fileSize,fileSize,Number,"Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.",,,,

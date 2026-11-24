@@ -245,5 +245,5 @@
     schema:name "Tutorial"^^xsd:string ;
     schema:url "https://mango-agents.readthedocs.io/en/latest/tutorial.html"^^xsd:anyURI
   ] ;
-  okn:hasPurpose "Simulation"^^xsd:string, "Analysis"^^xsd:string, "Support of agent based architectures"^^xsd:string, "Support for communcation simulations of distributed systems"^^xsd:string ;
+  okn:hasPurpose "Simulation"^^xsd:string, "Analysis"^^xsd:string, "Support of agent based architectures"^^xsd:string, "Support for communication simulations of distributed systems"^^xsd:string ;
   okn:hasShortName "mango"^^xsd:string .
