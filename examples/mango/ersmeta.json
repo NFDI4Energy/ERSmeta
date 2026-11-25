@@ -257,7 +257,6 @@
   ],
   "purpose": [ "Simulation", "Analysis", "Support of agent based architectures", "Support for communication simulations of distributed systems" ],
   "method": [ "agent-based modeling" ],
-  "coversSector": [ "ICT" ],
   "useCase": [ "Energy market analysis", "Control strategies for energy systems", "Distributed optimization" ],
   "limitation": [ "Limited to smaller systems" ],
   "featureList": [ "Structuring complex agents with loose coupling and agent roles", "Supports communication between agents directly via TCP or via an external MQTT broker", "Built-in codecs: JSON and protobuf", "Message definition based on the FIPA ACL standard", "Container mechanism to speedup local message exchange" ],
