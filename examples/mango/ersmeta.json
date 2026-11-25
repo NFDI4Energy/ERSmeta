@@ -195,7 +195,7 @@
   ],
   "downloadUrl": "https://pypi.org/project/mango-agents/",
   "codeRepository": "https://github.com/OFFIS-DAI/mango",
-  "documentation": [ "https://mango-agents.readthedocs.io/en/latest/index.html" ],
+  "documentation": "https://mango-agents.readthedocs.io/en/latest/index.html",
   "readme": "https://raw.githubusercontent.com/OFFIS-DAI/mango/master/README.md",
   "buildInstruction": "https://mango-agents.readthedocs.io/en/latest/installation.html",
   "supportGiven": true,
@@ -263,11 +263,11 @@
   "featureList": [ "Structuring complex agents with loose coupling and agent roles", "Supports communication between agents directly via TCP or via an external MQTT broker", "Built-in codecs: JSON and protobuf", "Message definition based on the FIPA ACL standard", "Container mechanism to speedup local message exchange" ],
   "tests": [
     {
-      "collectionSize": "4",
+      "collectionSize": 4,
       "url": [ "https://github.com/OFFIS-DAI/mango/tree/development/tests/integration_tests" ]
     },
     {
-      "collectionSize": "15",
+      "collectionSize": 15,
       "url": [ "https://github.com/OFFIS-DAI/mango/tree/development/tests/unit_tests" ]
     }
   ],
@@ -287,7 +287,7 @@
     "networkx>=3.4.1"
   ],
   "fileSize": "136KB",
-  "metadataVersion": "0.8",
+  "metadataVersion": "0.9",
   "sdLicense": [
     {
       "identifier": "CC0-1.0",

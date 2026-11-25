@@ -25,7 +25,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 	dcterms:license <http://spdx.org/licenses/CC0-1.0> ;
 	dcterms:subject <https://github.com/tibonto/dfgfo/408-03> ;
 	skos:definition "This is the main element to describe energy research software." ;
-	schema:version "0.8";
+	schema:version "0.9";
 	sh:extends schema:SoftwareApplication ;
 	sh:order 1;
 	sh:closed false ;
@@ -57,6 +57,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:description "Link (URL) to a graphical overview on the functionality of the software."@en ;
 		sh:name "graphicalAbstract"@en ;
 		sh:order 11 ;
+		sh:maxCount 1 ;
 		sh:path schema:image ;
 	], [
 		sh:datatype xsd:anyURI ;
@@ -70,6 +71,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:description "A flag to signal that the software is accessible for free."@en ;
 		sh:name "isAccessibleForFree"@de, "isAccessibleForFree"@en ;
 		sh:order 28 ;
+		sh:maxCount 1 ;
 		sh:path schema:isAccessibleForFree ;
 	], [
 		sh:datatype xsd:anyURI ;
@@ -84,6 +86,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:description "Link (URL) to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex, institutional GitLab instance, etc.)."@en ;
 		sh:name "codeRepository"@de, "codeRepository"@en ;
 		sh:order 39 ;
+		sh:maxCount 1 ;
 		sh:path schema:codeRepository ;
 	], [
 		sh:datatype xsd:date ;
@@ -253,6 +256,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:name "developmentStatus"@en ;
 		sh:minCount 1 ;
 		sh:order 20 ;
+		sh:maxCount 1 ;
 		sh:path codemeta:developmentStatus ;
 		sh:datatype xsd:string ;
 		sh:in (
@@ -311,6 +315,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:description "Link (URL) to software bug reporting or issue tracking system"@en ;
 		sh:name "issueTracker"@en ;
 		sh:order 23 ;
+		sh:maxCount 1 ;
 		sh:path codemeta:issueTracker ;
 	], [
 		sh:node schema:ScholarlyArticle ;
@@ -328,6 +333,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:description """How often is the software updated?"""@en ;
 		sh:name "cycleOfUpdates"@en ;
 		sh:order 22 ;
+		sh:maxCount 1 ;
 		sh:path ersmeta:cycleOfUpdates ;
 		sh:datatype xsd:string ;
 		sh:in (
@@ -461,7 +467,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 		sh:path okn:hasPurpose ;
 	], [
 		sh:description "A used method in the software."@en ;
-		sh:name "implementsMethod"@en, "implementsMethod"@de ;
+		sh:name "method"@en, "method"@de ;
 		sh:order 55 ;
 		sh:path m4i:implementsMethod ;
 		sh:datatype xsd:string ;
@@ -706,7 +712,7 @@ ersmeta:EnergyResearchSoftware a rdfs:Class, sh:NodeShape, owl:Ontology;
 	], [
 		sh:datatype xsd:string ;
 		sh:description "The type and version number of the metadata."@en ;
-		sh:name "schemaVersion"@en, "schemaVersion"@de ;
+		sh:name "metadataVersion"@en, "metadataVersion"@de ;
 		sh:order 87 ;
 		sh:minCount 1 ;
 		sh:maxCount 1 ;
@@ -759,9 +765,9 @@ ersmeta:CommunityInteraction a rdfs:Class, sh:NodeShape ;
 		sh:datatype xsd:anyURI ;
 	] .
 
-schema:DataSet a rdfs:Class, sh:NodeShape ;
+schema:Dataset a rdfs:Class, sh:NodeShape ;
 	rdfs:comment "A body of structured information describing some topic(s) of interest."@en ;
-	rdfs:label "DataSet" ;
+	rdfs:label "Dataset" ;
 	sh:order 4;
 	sh:closed false ;
 	sh:property [
@@ -787,6 +793,7 @@ schema:DataSet a rdfs:Class, sh:NodeShape ;
             "mdf5"
             "other"
             "Pandas"
+			"Python dict"
             "txt"
             "xml"
             "xlsx"
@@ -911,12 +918,14 @@ schema:MonetaryAmount a rdfs:Class, sh:NodeShape ;
 		sh:name "value"@de, "value"@en ;
 		sh:description "The value of the estimatedCost."@en ;
 		sh:order 1 ;
+		sh:maxCount 1 ;
 		sh:path schema:value ;
 	], [
 		sh:datatype xsd:string ;
 		sh:name "currency"@de, "currency"@en ;
 		sh:description "The currency in which the monetary amount is expressed. Use standard formats: ISO 4217 currency format, e.g. USD; Ticker symbol for cryptocurrencies, e.g. BTC; well known names for Local Exchange Trading Systems (LETS) and other currency types, e.g. Ithaca HOUR."@en ;
 		sh:order 2 ;
+		sh:maxCount 1 ;
 		sh:path schema:currency ;
 	] .
 
@@ -929,7 +938,7 @@ ersmeta:OptimizationTool a rdfs:Class, sh:NodeShape ;
 	sh:property [
 		sh:path m4i:implementsMethod ;
 		sh:datatype xsd:string ;
-		sh:name "implementsMethod"@en, "implementsMethod"@de ;
+		sh:name "method"@en, "method"@de ;
 		sh:order 1 ;
 		sh:description "Method of the optimization."@en ;
 	], [
@@ -963,6 +972,7 @@ schema:Organization a rdfs:Class, sh:NodeShape ;
 		sh:description "URL identifier, ideally a ROR for institutions."@en ;
 		sh:name "identifier"@de, "identifier"@en ;
 		sh:order 1 ;
+		sh:maxCount 1 ;
 		sh:path schema:identifier ;
 	], [
 		sh:datatype xsd:string ;
@@ -1132,12 +1142,14 @@ schema:CreativeWork a rdfs:Class, sh:NodeShape ;
 		sh:nodeKind sh:IRIOrLiteral ;
 		sh:name "identifier"@de, "identifier"@en ;
 		sh:order 1 ;
+		sh:maxCount 1 ;
 		sh:path schema:identifier ;
 		sh:description "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc.";
 	], [
 		sh:datatype xsd:string ;
 		sh:name "name"@de, "name"@en ;
 		sh:order 2 ;
+		sh:maxCount 1 ;
 		sh:path schema:name ;
 		sh:description "The name of the item.";
 	] .
@@ -1152,14 +1164,22 @@ schema:SoftwareApplication a rdfs:Class, sh:NodeShape ;
 		sh:datatype xsd:anyURI ;
 		sh:name "identifier"@de, "identifier"@en ;
 		sh:order 1 ;
+		sh:maxCount 1 ;
 		sh:path schema:identifier ;
 		sh:description "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc.,";
 	], [
 		sh:datatype xsd:string ;
 		sh:name "name"@de, "name"@en ;
 		sh:order 2 ;
+		sh:maxCount 1 ;
 		sh:path schema:name ;
 		sh:description "Name of the compatible software.";
+	], [
+		sh:datatype xsd:anyURI ;
+		sh:name "url"@de, "url"@en ;
+		sh:order 3 ;
+		sh:path schema:url ;
+		sh:description "Link (URL) to the software.";
 	] .
 
 ersmeta:Interface a rdfs:Class, sh:NodeShape ;

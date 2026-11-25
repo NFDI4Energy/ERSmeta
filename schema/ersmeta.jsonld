@@ -25,7 +25,7 @@
 
     "CommunityInteraction": "ersmeta:CommunityInteraction",
     "CreativeWork": "schema:CreativeWork",
-    "DataSet": "schema:DataSet",
+    "Dataset": "schema:Dataset",
     "EnergyComponent": "ersmeta:EnergyComponent",
     "EnergyResearchSoftware": "ersmeta:EnergyResearchSoftware",
     "Example": "ersmeta:Example",
@@ -62,7 +62,7 @@
       "@type": "@id",
       "@container": "@set"
     },
-    "availableOnDevice": {
+    "typicalHardware": {
       "@id": "schema:availableOnDevice",
       "@container": "@set"
     },
@@ -76,8 +76,7 @@
     },
     "codeRepository": {
       "@id": "schema:codeRepository",
-      "@type": "http://www.w3.org/2001/XMLSchema#string",
-      "@container": "@set"
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "collectionSize": {
       "@id": "schema:collectionSize",
@@ -110,12 +109,10 @@
     },
     "currency": {
       "@id": "schema:currency",
-      "@type": "http://www.w3.org/2001/XMLSchema#string",
-      "@container": "@set"
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
     "cycleOfUpdates": {
-      "@id": "ersmeta:cycleOfUpdates",
-      "@container": "@set"
+      "@id": "ersmeta:cycleOfUpdates"
     },
     "dateCreated": {
       "@id": "schema:dateCreated",
@@ -134,8 +131,7 @@
       "@container": "@set"
     },
     "developmentStatus": {
-      "@id": "codemeta:developmentStatus",
-      "@container": "@set"
+      "@id": "codemeta:developmentStatus"
     },
     "dimensions": {
       "@id": "ersmeta:dimensions",
@@ -243,10 +239,9 @@
       "@container": "@set"
     },
     "identifier": "schema:identifier",
-    "image": {
+    "graphicalAbstract": {
       "@id": "schema:image",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-      "@container": "@set"
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "method": {
       "@id": "m4i:implementsMethod",
@@ -260,13 +255,11 @@
     },
     "isAccessibleForFree": {
       "@id": "schema:isAccessibleForFree",
-      "@type": "http://www.w3.org/2001/XMLSchema#boolean",
-      "@container": "@set"
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "issueTracker": {
       "@id": "codemeta:issueTracker",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-      "@container": "@set"
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "keywords": {
       "@id": "schema:keywords",
@@ -496,11 +489,14 @@
     },
     "value": {
       "@id": "schema:value",
-      "@type": "http://www.w3.org/2001/XMLSchema#float",
-      "@container": "@set"
+      "@type": "http://www.w3.org/2001/XMLSchema#float"
     },
     "grantNo": {
       "@id": "schema:identifier",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "projectName": {
+      "@id": "schema:name",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     }
   }

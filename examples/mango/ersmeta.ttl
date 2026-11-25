@@ -177,7 +177,7 @@
   schema:operatingSystem wd:Q388, wd:Q1406, wd:14116 ;
   schema:processorRequirements "x86_64"^^xsd:string ;
   schema:programmingLanguage wd:Q31205855  ;
-  schema:schemaVersion "0.8"^^xsd:string ;
+  schema:schemaVersion "0.9"^^xsd:string ;
   schema:sdLicense [
     a schema:CreativeWork ;
     schema:identifier "CC0-1.0"^^xsd:string ;
