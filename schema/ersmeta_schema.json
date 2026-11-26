@@ -3,7 +3,7 @@
   "description": "This metadata schema includes general metadata elements for research software in the energy domain.",
   "additionalProperties": false,
   "type": "object",
-  "version": "0.8",
+  "version": "0.9",
   "title": "EnergyResearchSoftware",
   "required": [
     "@context",
@@ -1366,10 +1366,7 @@
     "documentation": {
       "description": "Link (URL) to the documentation describing the code and is useful for developers.",
       "title": "documentation",
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "type": "string"
     },
     "readme": {
       "description": "Link (URL) to the documentation describing the code and is useful for developers.",
@@ -1466,13 +1463,13 @@
       "description": "Data which is compatible to this software.",
       "title": "compatibleData",
       "type": "array",
-      "items": { "$ref": "#/$defs/DataSet" }
+      "items": { "$ref": "#/$defs/Dataset" }
     },
     "usedData": {
       "description": "Data that is directly used by the provided software",
       "title": "usedData",
       "type": "array",
-      "items": { "$ref": "#/$defs/DataSet" }
+      "items": { "$ref": "#/$defs/Dataset" }
     },
     "purpose": {
       "description": "A general goal/purpose of the software.",
@@ -1825,7 +1822,7 @@
         },
         "similarityOfResults": {
           "description": "Factor on how close the validation was.",
-          "type": "string",
+          "type": "number",
           "title": "similarityOfResults"
         },
         "url": {
@@ -1841,12 +1838,12 @@
       "title": "",
       "required": [],
       "properties": {
-        "name": {
+        "projectName": {
           "description": "Name of the project during which the software was developed.",
           "type": "string",
           "title": "projectName"
         },
-        "identifier": {
+        "grantNo": {
           "description": "An identifying grant number, in case of a publicly funded project, this number is assigned by the funding agency.",
           "type": "string",
           "title": "grantNo"
@@ -1879,7 +1876,7 @@
       }
     },
     "MonetaryAmount": {
-      "description": "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between ?1,000 and ?1,000,000 GBP, or the value of a salary, etc. It is recommended to use PriceSpecification Types to describe the price of an Offer, Invoice, etc.",
+      "description": "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use PriceSpecification Types to describe the price of an Offer, Invoice, etc.",
       "type": "object",
       "title": "MonetaryAmount",
       "required": [],
@@ -1891,15 +1888,15 @@
         },
         "value": {
           "description": "The value of the estimatedCost.",
-          "type": "string",
+          "type": "number",
           "title": "value"
         }
       }
     },
-    "DataSet": {
+    "Dataset": {
       "description": "A body of structured information describing some topic(s) of interest.",
       "type": "object",
-      "title": "DataSet",
+      "title": "Dataset",
       "required": [],
       "properties": {
         "identifier": {
@@ -1922,6 +1919,7 @@
               "mdf5",
               "other",
               "Pandas",
+			  "Python dict",
               "txt",
               "xml",
               "xlsx",
@@ -2154,7 +2152,7 @@
     "SoftwareApplication": {
       "description": "A software application.",
       "type": "object",
-      "title": "CreativeWork",
+      "title": "SoftwareApplication",
       "required": [],
       "properties": {
         "identifier": {
@@ -2247,7 +2245,7 @@
       "properties": {
         "collectionSize": {
           "description": "Number of the tests of the software.",
-          "type": "string",
+          "type": "integer",
           "title": "collectionSize"
         },
         "url": {
@@ -2307,6 +2305,7 @@
               "mdf5",
               "other",
               "Pandas",
+			  "Python dict",
               "txt",
               "xml",
               "xlsx",

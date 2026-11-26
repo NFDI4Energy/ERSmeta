@@ -31,9 +31,9 @@ https://schema.org/contributor,contributor,https://schema.org/Person,A person wh
 https://schema.org/author,author,https://schema.org/Person,A person who has authored the software.,,,
 https://schema.org/maintainer,maintainer,https://schema.org/Person,Individual responsible for maintaining the software.,Current contact person,string,Who is the main contact person?
 https://schema.org/sourceOrganization,sourceOrganization,https://schema.org/Organization,Institution which developed the software.,Institution(s),string,Which institutions develop(ed) the model?
-https://schema.org/countryOfOrigin ,countryOfOrigin,Text,Country where the software was developed. Country codes as defined by ISO 3166-1 alpha-2 should be used.,,,
+https://schema.org/countryOfOrigin,countryOfOrigin,Text,Country where the software was developed. Country codes as defined by ISO 3166-1 alpha-2 should be used.,,,
 https://schema.org/funding,funding,https://schema.org/Grant,Information on the funding which was used to develop the software.,,,
-https://schema.org/downloadUrl ,downloadURL,URL,"If the file can be downloaded, URL to download the binary.",,,
+https://schema.org/downloadUrl,downloadUrl,URL,"If the file can be downloaded, URL to download the binary.",,,
 https://schema.org/codeRepository,codeRepository,URL,"Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex, institutional GitLab instance, etc.).",Code availability,string,What is the link to the source code?
 https://w3id.org/okn/o/sd#hasDocumentation,documentation,URL,Link to the documentation describing the code and is useful for developers.,Link to User Documentation,string,Is a user documentation available for the framework? Please insert the link
 readme,readme,URL,Link to software readme file.,,,
@@ -59,10 +59,10 @@ https://nfdi4energy.github.io/ERSmeta/#ersmeta:energyComponent,energyComponent,h
 http://ontosoft.org/software#hasUseLimitations,limitation,Text,A limitation of the software.,,,
 https://w3id.org/okn/o/sd#hasParameter,parameter,Text,A relevant internal parameter of the software.,,,
 https://schema.org/featureList,featureList,Text,A feature of the software.,,,
-http://openenergy-platform.org/ontology/oeo/OEO_00000516 ,hasTemporalResolution,DefinedTerm,Supported temporal resolution of the software. Temporal resolution is the resolution that indicates time-dependent the level of detail.,Commonly used time step,DefinedTerms,What is/are the commonly used time step that are already modelled with the framework?
+http://openenergy-platform.org/ontology/oeo/OEO_00000516,hasTemporalResolution,DefinedTerm,Supported temporal resolution of the software. Temporal resolution is the resolution that indicates time-dependent the level of detail.,Commonly used time step,DefinedTerms,What is/are the commonly used time step that are already modelled with the framework?
 https://schema.org/temporalCoverage,temporalCoverage,DefinedTerm,"Time scope the software was developed for (e.g. 2010, 2050).",Commonly modelled time horizon,DefinedTerms,What is/are the commonly used time horizon that are already modelled with the framework?
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:stationaryVsTransient,stationaryVsTransient,DefinedTerm,Does the software support stationary or transient effects?,,,
-http://openenergy-platform.org/ontology/oeo/OEO_00000515 ,hasSpatialResolution,Text,Supported spatial resolution of the software. Spatial resolution is the resolution that indicates the geographical level of detail.,,,
+http://openenergy-platform.org/ontology/oeo/OEO_00000515,hasSpatialResolution,Text,Supported spatial resolution of the software. Spatial resolution is the resolution that indicates the geographical level of detail.,,,
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:Dimensions,dimensions,DefinedTerm,Supported dimensions of the software.,,,
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:spatialScope,spatialScope,Text,"Geo scope the software was developed for (e.g., microgrid, Germany, Europe).",Geographical Scope,DefinedTerms,What geographical scope was modelled with the framework?
 https://schema.org/spatialCoverage,spatialCoverage,Text,"Regions covered by the model. Leave this blank if the model and data are not limited to a specific region. Examples include: USA, Canada, Germany, western Europe.",,,

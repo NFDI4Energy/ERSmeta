@@ -31,9 +31,10 @@ https://schema.org/Dataset,Dataset,https://schema.org/encodingFormat,encodingFor
 https://schema.org/Dataset,Dataset,https://schema.org/url,url,URL,n,Link to the dataset.
 https://schema.org/SoftwareApplication,SoftwareApplication,https://schema.org/identifier,identifier,URL,n,"The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc."
 https://schema.org/SoftwareApplication,SoftwareApplication,https://schema.org/name,name,string,n,Name of the software.
+https://schema.org/SoftwareApplication,SoftwareApplication,https://schema.org/url,url,URL,n,Link (URL) to the software.
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:EnergyComponent,EnergyComponent,https://schema.org/identifier,identifier,URL,1,"The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as Textual strings or as URL (URI) links. See background notes for more details."
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:EnergyComponent,EnergyComponent,https://schema.org/name,name,Text,1,Name of the component.
-https://nfdi4energy.github.io/ERSmeta/#ersmeta:EnergyComponent,EnergyComponent,https://schema.org/additionalType,componentType,DefinedTerm,1,"Type of the component, e.g., pv"
+https://nfdi4energy.github.io/ERSmeta/#ersmeta:EnergyComponent,EnergyComponent,https://schema.org/additionalType,additionalType,DefinedTerm,1,"Type of the component, e.g., pv"
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:EnergyComponent,EnergyComponent,https://nfdi4energy.github.io/ERSmeta/#ersmeta:levelOfDetail,levelOfDetail,DefinedTerm,1,Level of detail of the component.
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:OptimizationTool,OptimizationTool,http://w3id.org/nfdi4ing/metadata4ing#implementsMethod,method,Text,n,Method of the optimization.
 https://nfdi4energy.github.io/ERSmeta/#ersmeta:OptimizationTool,OptimizationTool,https://schema.org/featureList,featureList,Text,n,Features of the optimization.
